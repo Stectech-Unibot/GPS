@@ -19,9 +19,12 @@ gulp.task('server', function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("./assets/scss/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("./assets/css"))
+    return gulp.src(['./assets/scss/*.scss',
+                     './assets/scss/*/*.scss'])
+        .pipe(sourcemaps.init())
+        .pipe(sass({style: 'compact'}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream());
 });
 
@@ -36,6 +39,7 @@ gulp.task('minify-css', function() {
 
 gulp.task('watch', function(){
 	gulp.watch('./assets/scss/*.scss', ['sass']);
+    gulp.watch('./assets/scss/*/*.scss', ['sass']);
 	gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
