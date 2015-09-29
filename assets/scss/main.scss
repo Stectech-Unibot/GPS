@@ -1,3 +1,18 @@
-body {
-	background: #000;
-}
+
+//font weights
+$light: 100;
+$regular: 400;
+$bold: bold;
+
+// Base Font
+$base-font-family: 'avenir';
+
+//default colors
+$orange: #f8533b;
+$dark-green: #364447;
+$dark-orange: #d54e3e;
+$light-grey: #eeeeee;
+
+
+@import "partials/typography";
+//@import "partials/buttons";
