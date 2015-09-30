@@ -1,0 +1,30 @@
+//  GLOBAL
+.container {
+	@media (min-width: 1200px) {
+		width: 1200px;
+	}
+}
+
+
+// LOGO
+
+span.logo {
+	margin-top: 26px;
+	display: block;
+	img {
+		width: 100%;
+	}
+}
+
+
+// HERO IMAGE
+
+#hero {
+    background-image: url("../img/hero.jpg");
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    height: 600px;
+    margin-top: 40px;
+    background-position-x: 30%;
+}

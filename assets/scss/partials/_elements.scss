@@ -1,0 +1,76 @@
+
+
+@mixin circles {
+	width: 218px;
+	background-image: url(../img/circles.png);
+	width: 218px;
+	height: 218px;
+	margin: auto;
+}
+
+// TOP HEADER
+
+.button-orange {
+    border-radius: 10px;
+    border: 2px solid $dark-orange;
+    color: $dark-orange;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 992px) {
+		width: 238px;
+		margin: auto;
+	}
+}
+
+.burger-nav {
+	@include burger(40px, 2.5px, 5.5px, $orange);
+	margin-top: 50px;
+	@media screen and (min-width: 992px) {
+		@include burger(51px, 5px, 10.5px, $orange);
+	}
+}
+
+// EVENT FORECAST
+
+#event-forecast h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.circles {
+	span {
+		line-height: 218px;
+		text-align: center;
+		width: 218px;
+		display: block;
+		font-size: 30px;
+	}
+	.red-circle {
+		@include circles;
+	}
+
+	.blue-circle {
+		@include circles;
+		background-position-y: -218px;
+	}
+
+	.green-circle {
+		@include circles;
+		background-position-y: -436px;
+	}
+
+	.clabel {
+		text-align: center;
+		margin-top: 26px;
+		margin-bottom: 26px;
+		font-size: 21px;
+		letter-spacing: .15px;
+	}
+}
