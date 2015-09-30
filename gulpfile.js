@@ -12,7 +12,7 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('server', function() {
 		browserSync.init({
 		server: "./",
-        notify: true,
+        notify: false,
         reloadDebounce: 5000
     });
 });
@@ -38,7 +38,7 @@ gulp.task('minify-css', function() {
 });
 
 gulp.task('watch', function(){
-	gulp.watch('./assets/scss/*.scss', ['sass']);
+	gulp.watch('./assets/scss/*/*.scss', ['sass']);
     gulp.watch('./assets/scss/*/*.scss', ['sass']);
 	gulp.watch("./*.html").on('change', browserSync.reload);
 });
