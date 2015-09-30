@@ -1,0 +1,32 @@
+{
+  "name": "eagle-eye",
+  "homepage": "https://github.com/develodesign/eagle-eye",
+  "authors": [
+    "Paul Bill <paul@develodesign.co.uk>"
+  ],
+  "description": "Simple jQuery plugin that'll test to see if an element is visible on the users window",
+  "main": "scripts/eagle-eye.js",
+  "keywords": [
+    "jQuery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower-components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "_release": "743f14580f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "743f14580f25da8aab05a7889dc730b2bb2d9624"
+  },
+  "_source": "git://github.com/develodesign/eagle-eye.git",
+  "_target": "*",
+  "_originalSource": "eagle-eye"
+}
