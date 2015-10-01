@@ -1,10 +1,10 @@
 //  GLOBAL
+
 .container {
 	@media (min-width: 1200px) {
 		width: 1200px;
 	}
 }
-
 
 // LOGO
 
@@ -16,7 +16,6 @@ span.logo {
 	}
 }
 
-
 // HERO IMAGE
 
 #hero {
@@ -27,4 +26,30 @@ span.logo {
     height: 600px;
     margin-top: 40px;
     background-position-x: 30%;
+}
+
+// FEATURES
+
+#features {
+	.row {
+		color: white;
+		min-height: 200px;
+		h2 {
+			margin-left: 12px;
+		}
+	}
+	.data {
+		background: url("../img/data-icon.png") $dark-green no-repeat;
+		background-position-x: right;	
+	}
+	.analyze {
+		text-shadow: 1px 1px $orange;
+		background: url("../img/analyze-icon.png") $orange no-repeat;
+		background-position-x: right;	
+	}
+	.achieve {
+		text-shadow: 1px 1px $dark-green;
+		background: url("../img/achieve-icon.png") $dark-green no-repeat;
+		background-position-x: right;	
+	}
 }
