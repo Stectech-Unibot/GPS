@@ -64,12 +64,12 @@ span.logo {
 		padding-top: 40px;
 		text-align: center;
 		margin: auto;
-		min-height: 400px;
+		height: 400px;
 	}
 	.rightbox {
 		background: url("../img/freedom.jpg");
 		background-size: cover;
-		min-height: 350px;
+		height: 350px;
 	}
 	span {
 		display: inline-block;
@@ -87,8 +87,22 @@ span.logo {
 			line-height: 48px;
 			list-style: none;
 			color: white;
-			font-size: 18px;
+			font-size: 16px;
 			margin-top: 30px;
 		}
+	}
+	.diamond {
+		text-align: center;
+	}
+}
+
+// SIGN UP
+
+#signup {
+	background: $dark-green;
+	color: white;
+	p {
+		padding: 21px;
+		font-size: 21px;
 	}
 }

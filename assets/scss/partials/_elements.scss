@@ -8,6 +8,18 @@
 	margin: auto;
 }
 
+@mixin rotate( $degrees ) {
+	-webkit-transform: rotate(#{$degrees}deg);
+	-moz-transform: rotate(#{$degrees}deg);
+	-ms-transform: rotate(#{$degrees}deg);
+	-o-transform: rotate(#{$degrees}deg);
+	transform: rotate(#{$degrees}deg);
+
+	filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+}
+
 // TOP HEADER
 
 .button-orange {
@@ -71,7 +83,7 @@
 
 // FUTURE RELEASE
 .check {
-	background-image: url("../img/check.png") ;
+	background-image: url("../img/check.png");
 	height: 46px;
 	width: 46px;
 	display: inline-block;
