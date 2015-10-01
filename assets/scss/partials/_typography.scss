@@ -4,20 +4,33 @@ body {
 }
 
 h1 {
-    font-size: 43.69px;
-    font-weight: $light;
+	font-size: 31px;
+    text-align: center;
+    margin-bottom: 30px;
+	font-weight: $light;
     letter-spacing: .9px;
+    text-align: center;
+	@media screen and (min-width: 992px) {
+	    font-size: 43.69px;
+	}
 }
 
 h2 {
-	font-size: 31px;
+	font-size: 21px;
 	letter-spacing: .9px;
 	font-weight: $light;
+	@media screen and (min-width: 992px) {
+	    font-size: 31px;
+	}
 }
 
 p {
-	font-size: 21px;
-    line-height: 38px;
+	font-size: 14px;
+    line-height: 31px;
+    @media screen and (min-width: 992px) {
+	    font-size: 21px;
+	    line-height: 38px;
+	}
 }
 
 
