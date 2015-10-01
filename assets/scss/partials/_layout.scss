@@ -39,6 +39,7 @@ span.logo {
 		}
 	}
 	.data {
+		text-shadow: 1px 1px $dark-green;
 		background: url("../img/data-icon.png") $dark-green no-repeat;
 		background-position-x: right;	
 	}
@@ -51,5 +52,43 @@ span.logo {
 		text-shadow: 1px 1px $dark-green;
 		background: url("../img/achieve-icon.png") $dark-green no-repeat;
 		background-position-x: right;	
+	}
+}
+
+// FUTURE RELEASE
+
+#future-release {
+	.leftbox {
+		background: url("../img/bike.jpg");
+		background-size: cover;
+		padding-top: 40px;
+		text-align: center;
+		margin: auto;
+		min-height: 400px;
+	}
+	.rightbox {
+		background: url("../img/freedom.jpg");
+		background-size: cover;
+		min-height: 350px;
+	}
+	span {
+		display: inline-block;
+		line-height: 48px;
+		display: block;
+		float: left;
+		margin-left: 10px;
+	}
+	ul {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		li {
+			overflow: hidden;
+			line-height: 48px;
+			list-style: none;
+			color: white;
+			font-size: 18px;
+			margin-top: 30px;
+		}
 	}
 }
