@@ -1,17 +1,22 @@
 
-//font weights
+// FONT WEIGHTS
+
 $light: 100;
 $regular: 400;
 $bold: bold;
 
-// Base Font
+// BASE FONT
+
 $base-font-family: 'avenir';
 
-//default colors
+// DEFAULT COLORS
+
 $orange: #f8533b;
 $dark-green: #364447;
 $dark-orange: #d54e3e;
 $light-grey: #eeeeee;
+
+// IMPORTS
 
 @import "partials/hamburger";
 @import "partials/typography";
