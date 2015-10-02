@@ -30,10 +30,28 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 16px;
-    width: 80%;
+    width: 292px;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+    @media screen and (min-width: 992px) {
+		width: 238px;
+		margin: auto;
+	}
+}
+
+.button-grey {
+	border-radius: 10px;
+    border: none;
+    color: $dark-green;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: $light-grey;
     @media screen and (min-width: 992px) {
 		width: 238px;
 		margin: auto;
@@ -82,6 +100,7 @@
 }
 
 // FUTURE RELEASE
+
 .check {
 	background-image: url("../img/check.png");
 	height: 46px;
