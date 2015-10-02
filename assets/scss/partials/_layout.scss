@@ -1,9 +1,7 @@
 //  GLOBAL
 
 .container {
-	@media (min-width: 1200px) {
-		width: 1200px;
-	}
+	width: 100%;
 }
 
 // LOGO
@@ -11,6 +9,7 @@
 span.logo {
 	margin-top: 26px;
 	display: block;
+	text-align: center;
 	img {
 		width: 100%;
 	}
@@ -41,7 +40,13 @@ span.logo {
 	.data {
 		text-shadow: 1px 1px $dark-green;
 		background: url("../img/data-icon.png") $dark-green no-repeat;
-		background-position-x: right;	
+		background-position-x: right;
+		p {
+			width: 100%;
+			@media screen and (min-width: 992px) {
+				width: 70%;
+			}
+		}	
 	}
 	.analyze {
 		text-shadow: 1px 1px $orange;
@@ -101,8 +106,39 @@ span.logo {
 #signup {
 	background: $dark-green;
 	color: white;
+	text-align: center;
 	p {
 		padding: 21px;
 		font-size: 21px;
 	}
+}
+
+// REQUEST ACCESS
+
+#request-access {
+	.button-orange,
+	.button-grey {
+		margin: 10px;
+	}
+	.form-control:focus {
+		box-shadow: inset 0 1px 1px $orange, 0 0 8px $orange;
+	}
+	.form-group {
+		margin: auto;
+		width: 320px;
+	}
+	button.button-orange {
+		background: none;
+	}
+}
+
+// FOOTER 
+
+#footer {
+	text-align: center;
+	background-image: url("../img/footer-bg.jpg");
+	background-size: cover;
+	min-height: 100px;
+	margin-top: 20px;
+	color: white;
 }

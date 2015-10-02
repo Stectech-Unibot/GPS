@@ -1,209 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPS</title>
-    <!-- Bootstrap -->
-    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="./assets/css/main.css" rel="stylesheet">
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GPS</title>
+        <!-- Bootstrap -->
+        <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="./assets/css/main.css" rel="stylesheet">
+    </head>
+    <body>
     
-    <!-- HEADER -->
+        <!-- HEADER -->
 
-    <div id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-10 col-lg-4">
-                    <span class="logo"><img src="./assets/img/logo.png" /></span>
-                </div>
-                <div class="col-xs-2 col-lg-4">
-                    <div class="burger-nav"></div>
-                </div>
-                <div class="col-xs-12 col-lg-4">
-                    <div class="button-orange">Sign Me Up</div>
-                </div>
-                
-            </div>
-        </div>  
-    </div>
-
-    <!-- SAMPLE VIDEO -->
-    <!--
-    <div id="video">
-        <video id="v0" width="100%" height="100%" tabindex="0" autobuffer="autobuffer" preload="preload">
-            <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="./assets/img/maze2.webm"></source>
-            <source src="./assets/img/maze2.mov"></source>
-           
-        </video>
-    </div>
-    -->
-
-    <!-- EVENT FORECAST -->
-
-    <div id="event-forecast">
-        <div class="container">
-            <h1>EVENT FORECAST</h1>
-            <div class="row circles">
-                <div class="col-lg-4 col-md-4">
-                    <div class="red-circle">
-                        <span>78%</span>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-4 pull-right">
+                        <div class="burger-nav"></div>
                     </div>
-                    <div class="clabel">Horribly Hilly Hundreds</div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="blue-circle">
-                        <span>100%</span>
+                    <div class="col-xs-12 col-lg-4">
+                        <span class="logo"><img src="./assets/img/logo.png" /></span>
                     </div>
-                    <div class="clabel">Horribly Hilly Hundreds</div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="green-circle">
-                        <span>90%</span>
-                    </div>
-                    <div class="clabel">Horribly Hilly Hundreds</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FEATURES -->
-
-    <div id="features">
-        <h1>FEATURES</h1>
-        <div class="container">
-            <div class="row data">
-                <h2>ALL YOUR DATA</h2>
-                <div class="col-xs-12">
-                    <p>
-                        Let us do the heavy lifting. Upload your data and we will push it to all your other GPS sites. The more historical data the Fitness Forecast engine has the more accurate the predictions. Give us permission and we will pull historical data from other GPS sites.
-                    </p>
-                </div>
-            </div>
-            <div class="row analyze">
-                <h2>ANALYZE</h2>
-                <div class="col-xs-12">
-                    <p>
-                        Stop guessing what the data means. The Fitness Forecast™ engine provides personalize data analysis, Fitness Insights™, Auto Segment creation and analysis, pace analysis, goal tracking, event success forecasting and optimized course planning. 
-                    </p>
-                </div>
-                <div class="col-xs-12">
-                    <p>
-                        “As you train and add more data, the accuracy of the forecasts increase and your results improve.”
-                    </p>
-                </div> 
-            </div>
-            <div class="row achieve">
-                <h2>ACHIEVE</h2>
-                <div class="col-xs-12">
-                    <p>
-                        Take your training to the next level. Get Faster. Climb Quicker. Be more competitive.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- BUTTON -->
-
-    <div id="signup-button">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="button-orange">Sign Me Up</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--FUTURE RELEASE-->
-
-    <div id="future-release">
-        <h1>FUTURE RELEASE FEATURE</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 leftbox">
-                    <ul>
-                        <li>
-                            <i class="check"></i>
-                             <span>iOS App</span>
-                        </li>
-                        <li>
-                            <i class="check"></i>
-                             <span>Android App</span>
-                        </li>
-                        <li>
-                            <i class="check"></i>
-                             <span>GPS Tracker</span>
-                        </li>
-                        <li>
-                            <i class="check"></i>
-                             <span>GPS Tracker</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 logo">
-                    <div class="diamond">
-                        <img src="./assets/img/logo-small.png" />
+                    <div class="col-xs-12 col-lg-4">
+                        <div class="button-orange">Sign Me Up</div>
                     </div>
                 </div>
-                <div class="col-xs-12 rightbox">
-                    <ul>
-                        <li>
-                            <i class="check"></i>
-                             <span>More Activities</span>
-                        </li>
-                        <li>
-                            <i class="check"></i>
-                             <span>Additional Devices</span>
-                        </li>
-                        <li>
-                            <i class="check"></i>
-                             <span>Offline Function</span>
-                        </li>
-                        <li>
-                            <i class="check"></i>
-                             <span>Improved Personalization</span>
-                        </li>
-                    </ul>
+            </div>  
+        </div>
+
+        <!-- SAMPLE VIDEO -->
+        <!--
+        <div id="video">
+            <video id="v0" width="100%" height="100%" tabindex="0" autobuffer="autobuffer" preload="preload">
+                <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="./assets/img/maze2.webm"></source>
+                <source src="./assets/img/maze2.mov"></source>
+               
+            </video>
+        </div>
+        -->
+
+        <!-- EVENT FORECAST -->
+
+        <div id="event-forecast">
+            <div class="container">
+                <h1>EVENT FORECAST</h1>
+                <div class="row circles">
+                    <div class="col-sm-4">
+                        <div class="red-circle">
+                            <span>78%</span>
+                        </div>
+                        <div class="clabel">Horribly Hilly Hundreds</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="blue-circle">
+                            <span>100%</span>
+                        </div>
+                        <div class="clabel">Horribly Hilly Hundreds</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="green-circle">
+                            <span>90%</span>
+                        </div>
+                        <div class="clabel">Horribly Hilly Hundreds</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- SIGN UP FOR BETA TESTING -->
-    <div id="signup">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>
-                        Sign Up Now to participate in the Beta testing program.
-                        All Beta testers will have FREE access to all features and functionality.
-                    </p>
+        <!-- FEATURES -->
+
+        <div id="features">
+            <h1>FEATURES</h1>
+            <div class="container">
+                <div class="row data">
+                    <h2>ALL YOUR DATA</h2>
+                    <div class="col-xs-12">
+                        <p>
+                            Let us do the heavy lifting. Upload your data and we will push it to all your other GPS sites. The more historical data the Fitness Forecast engine has the more accurate the predictions. Give us permission and we will pull historical data from other GPS sites.
+                        </p>
+                    </div>
+                </div>
+                <div class="row analyze">
+                    <h2>ANALYZE</h2>
+                    <div class="col-xs-12">
+                        <p>
+                            Stop guessing what the data means. The Fitness Forecast™ engine provides personalize data analysis, Fitness Insights™, Auto Segment creation and analysis, pace analysis, goal tracking, event success forecasting and optimized course planning. 
+                        </p>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>
+                            “As you train and add more data, the accuracy of the forecasts increase and your results improve.”
+                        </p>
+                    </div> 
+                </div>
+                <div class="row achieve">
+                    <h2>ACHIEVE</h2>
+                    <div class="col-xs-12">
+                        <p>
+                            Take your training to the next level. Get Faster. Climb Quicker. Be more competitive.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- BUTTON -->
+
+        <div id="signup-button">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="button-orange">Sign Me Up</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--FUTURE RELEASE-->
+
+        <div id="future-release">
+            <h1>FUTURE RELEASE FEATURE</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 leftbox">
+                        <ul>
+                            <li>
+                                <i class="check"></i>
+                                 <span>iOS App</span>
+                            </li>
+                            <li>
+                                <i class="check"></i>
+                                 <span>Android App</span>
+                            </li>
+                            <li>
+                                <i class="check"></i>
+                                 <span>GPS Tracker</span>
+                            </li>
+                            <li>
+                                <i class="check"></i>
+                                 <span>GPS Tracker</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 logo">
+                        <div class="diamond">
+                            <img src="./assets/img/logo-small.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 rightbox">
+                        <ul>
+                            <li>
+                                <i class="check"></i>
+                                 <span>More Activities</span>
+                            </li>
+                            <li>
+                                <i class="check"></i>
+                                 <span>Additional Devices</span>
+                            </li>
+                            <li>
+                                <i class="check"></i>
+                                 <span>Offline Function</span>
+                            </li>
+                            <li>
+                                <i class="check"></i>
+                                 <span>Improved Personalization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIGN UP FOR BETA TESTING -->
+
+        <div id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>
+                            Sign Up Now to participate in the Beta testing program.
+                            All Beta testers will have FREE access to all features and functionality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--- REQUEST EARLY ACCESS -->
+
+        <div id="request-access">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>REQUEST EARLY ACCESS</h1>
+                        <h2>
+                            We are looking for Alpha and Beta testers 
+                            and Crowdfunding contributors.
+                        </h2>
+                        <p>
+                            Please provide us your name and email and we will notify you when we launch our 
+                            Crowdfunding campaign and when we are ready for beta testers.
+                            All information is kept strictly confidential.
+                        </p>
+                    </div>
+                 </div>
+            </div>
+            <div class="container">
+                <div class= "row">
+                    <form>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <input type="text" class="form-control button-grey" id="name" placeholder="Enter Your Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <input type="email" class="form-control button-grey" id="email" placeholder="Enter Your Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <button type="submit" class="button-orange">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>GET IN TOUCH</h2>
+                        <p>@ info@MypersonalBest.com</p>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>&copy; 2015 My Personal Best, LLC. All Rights Reserved.</p>
+                        <p>Designed &amp; Developed by Stectech Industries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./assets/js/bootstrap.min.js"></script>
 
-    <!-- play on scroll: http://codepen.io/ollieRogers/pen/lfeLc/-->
-    <script>
-        // select video element
-        var vid = document.getElementById('v0');
-        //var vid = $('#v0')[0]; // jquery option
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="./assets/js/bootstrap.min.js"></script>
 
-        // pause video on load
-        vid.pause();
-        window.onscroll = function(){
-            vid.currentTime = window.pageYOffset/100;
-        };
-    </script>
-  </body>
+        <!-- play on scroll: http://codepen.io/ollieRogers/pen/lfeLc/-->
+        <script>
+            // select video element
+            var vid = document.getElementById('v0');
+            //var vid = $('#v0')[0]; // jquery option
+
+            // pause video on load
+            vid.pause();
+            window.onscroll = function(){
+                vid.currentTime = window.pageYOffset/100;
+            };
+        </script>
+    </body>
 </html>
