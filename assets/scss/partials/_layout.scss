@@ -156,80 +156,95 @@ div#placeholder {
 
 // FUTURE RELEASE
 
-// #future-release {
-//     .container {
-//         background: url("../img/future-release-bg-small.jpg");
-//         background-size: cover;
-//         @media screen and (min-width: $medium) {
-//             background: url("../img/future-release-bg.jpg");
-//         }
+#future-release {
+    overflow: hidden;
 
-//         @media screen and (min-width: $full) {
-//             min-height: 483px;
-//         }
-//     }
+    h1 {
+        margin-bottom: 70px;
+    }
 
-//     h1 {
-//         margin-bottom: 70px;
-//     }
+    ul {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        li {
+            overflow: hidden;
+            line-height: 48px;
+            list-style: none;
+            color: white;
+            font-size: 21px;
+            margin-top: 25px;
+        }
+    }
 
-//     ul {
-//         width: 100%;
-//         margin: auto;
-//         text-align: center;
-//         li {
-//             overflow: hidden;
-//             line-height: 48px;
-//             list-style: none;
-//             color: white;
-//             font-size: 21px;
-//             margin-top: 25px;
-//         }
-//     }
+    span {
+        display: inline-block;
+        line-height: 48px;
+        display: block;
+        float: left;
+        margin-left: 17px;
+    }
 
-//     .leftbox {
-//         //background: url("../img/bike.jpg");
-//         background-size: cover;
-//         padding-top: 40px;
-//         text-align: center;
-//         margin: auto;
-//         height: 400px;
-//         ul {
-//             @media screen and (min-width: $medium) {
-//                 margin-left: 31px;
-//             }
-//             @media screen and (min-width: $full) {
-//                 margin-left: 120px;
-//                 padding-top: 12px;
-//             }
-//         }
-//     }
 
-//     .rightbox {
-//         //background: url("../img/freedom.jpg");
-//         background-size: cover;
-//         height: 350px;
-//         ul {
-//             @media screen and (min-width: $medium) {
-//                 width: auto;
-//                 margin-left: 157px;
-//                 padding-top: 53px;
-//             }
-//         }
-//     }
+    .left {
+        position: relative;
+        background-image: url("../img/bike.jpg");
+        float: left;
+        background-size: cover;
+        width: 100%;
+        padding-bottom: 86px;
+        @media screen and (min-width: $medium) {
+            width: 50%;
+        }
 
-//     span {
-//         display: inline-block;
-//         line-height: 48px;
-//         display: block;
-//         float: left;
-//         margin-left: 17px;
-//     }
+        ul {
+            width: 346px;
+            margin: auto;
+            padding-top: 60px;
+            @media screen and (min-width: $medium) {
+                padding-left: 27%;  
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
 
-//     .diamond {
-//         text-align: center;
-//     }
-// }
+    .right {
+        background-image: url("../img/freedom.jpg");
+        width: 100%;
+        background-size: cover;
+        float: left;
+        padding-bottom: 86px;
+        @media screen and (min-width: $medium) {
+            width: 50%;
+        }
+        ul {
+            width: 346px;
+            margin: auto;
+            padding-top: 60px;
+            @media screen and (min-width: $medium) {
+                padding-left: 33%;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .logo-small {
+        display: none;
+        @media screen and (min-width: $medium) {
+            display: block;
+            right: -133px;
+            left: unset;
+            top: 69px;
+            position: absolute;
+            background-image: url("../img/logo-small.png");
+            background-size: cover;
+            height: 265px;
+            width: 265px;
+        }
+    }
+}
 
 // SIGN UP BUTTON 
 
@@ -354,98 +369,6 @@ div#placeholder {
                 text-align: right;
                 font-size: 14px;
             }
-        }
-    }
-}
-
-// FUTURE RELEASE
-
-#future-release {
-    overflow: hidden;
-
-    h1 {
-        margin-bottom: 70px;
-    }
-
-    ul {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        li {
-            overflow: hidden;
-            line-height: 48px;
-            list-style: none;
-            color: white;
-            font-size: 21px;
-            margin-top: 25px;
-        }
-    }
-
-    span {
-        display: inline-block;
-        line-height: 48px;
-        display: block;
-        float: left;
-        margin-left: 17px;
-    }
-
-
-    .left {
-        position: relative;
-        background-image: url("../img/bike.jpg");
-        float: left;
-        background-size: cover;
-        width: 100%;
-        padding-bottom: 86px;
-        @media screen and (min-width: $medium) {
-            width: 50%;
-        }
-
-        ul {
-            width: 346px;
-            margin: auto;
-            padding-top: 60px;
-            @media screen and (min-width: $medium) {
-                padding-left: 27%;  
-                margin: 0;
-                width: 100%;
-            }
-        }
-    }
-
-    .right {
-        background-image: url("../img/freedom.jpg");
-        width: 100%;
-        background-size: cover;
-        float: left;
-        padding-bottom: 86px;
-        @media screen and (min-width: $medium) {
-            width: 50%;
-        }
-        ul {
-            width: 346px;
-            margin: auto;
-            padding-top: 60px;
-            @media screen and (min-width: $medium) {
-                padding-left: 33%;
-                margin: 0;
-                width: 100%;
-            }
-        }
-    }
-
-    .logo-small {
-        display: none;
-        @media screen and (min-width: $medium) {
-            display: block;
-            right: -133px;
-            left: unset;
-            top: 69px;
-            position: absolute;
-            background-image: url("../img/logo-small.png");
-            background-size: cover;
-            height: 265px;
-            width: 265px;
         }
     }
 }
