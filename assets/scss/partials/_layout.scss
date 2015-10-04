@@ -156,80 +156,80 @@ div#placeholder {
 
 // FUTURE RELEASE
 
-#future-release {
-    .container {
-        background: url("../img/future-release-bg-small.jpg");
-        background-size: cover;
-        @media screen and (min-width: $medium) {
-            background: url("../img/future-release-bg.jpg");
-        }
+// #future-release {
+//     .container {
+//         background: url("../img/future-release-bg-small.jpg");
+//         background-size: cover;
+//         @media screen and (min-width: $medium) {
+//             background: url("../img/future-release-bg.jpg");
+//         }
 
-        @media screen and (min-width: $full) {
-            min-height: 483px;
-        }
-    }
+//         @media screen and (min-width: $full) {
+//             min-height: 483px;
+//         }
+//     }
 
-    h1 {
-        margin-bottom: 70px;
-    }
+//     h1 {
+//         margin-bottom: 70px;
+//     }
 
-    ul {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        li {
-            overflow: hidden;
-            line-height: 48px;
-            list-style: none;
-            color: white;
-            font-size: 21px;
-            margin-top: 25px;
-        }
-    }
+//     ul {
+//         width: 100%;
+//         margin: auto;
+//         text-align: center;
+//         li {
+//             overflow: hidden;
+//             line-height: 48px;
+//             list-style: none;
+//             color: white;
+//             font-size: 21px;
+//             margin-top: 25px;
+//         }
+//     }
 
-    .leftbox {
-        //background: url("../img/bike.jpg");
-        background-size: cover;
-        padding-top: 40px;
-        text-align: center;
-        margin: auto;
-        height: 400px;
-        ul {
-            @media screen and (min-width: $medium) {
-                margin-left: 31px;
-            }
-            @media screen and (min-width: $full) {
-                margin-left: 120px;
-                padding-top: 12px;
-            }
-        }
-    }
+//     .leftbox {
+//         //background: url("../img/bike.jpg");
+//         background-size: cover;
+//         padding-top: 40px;
+//         text-align: center;
+//         margin: auto;
+//         height: 400px;
+//         ul {
+//             @media screen and (min-width: $medium) {
+//                 margin-left: 31px;
+//             }
+//             @media screen and (min-width: $full) {
+//                 margin-left: 120px;
+//                 padding-top: 12px;
+//             }
+//         }
+//     }
 
-    .rightbox {
-        //background: url("../img/freedom.jpg");
-        background-size: cover;
-        height: 350px;
-        ul {
-            @media screen and (min-width: $medium) {
-                width: auto;
-                margin-left: 157px;
-                padding-top: 53px;
-            }
-        }
-    }
+//     .rightbox {
+//         //background: url("../img/freedom.jpg");
+//         background-size: cover;
+//         height: 350px;
+//         ul {
+//             @media screen and (min-width: $medium) {
+//                 width: auto;
+//                 margin-left: 157px;
+//                 padding-top: 53px;
+//             }
+//         }
+//     }
 
-    span {
-        display: inline-block;
-        line-height: 48px;
-        display: block;
-        float: left;
-        margin-left: 17px;
-    }
+//     span {
+//         display: inline-block;
+//         line-height: 48px;
+//         display: block;
+//         float: left;
+//         margin-left: 17px;
+//     }
 
-    .diamond {
-        text-align: center;
-    }
-}
+//     .diamond {
+//         text-align: center;
+//     }
+// }
 
 // SIGN UP BUTTON 
 
@@ -362,6 +362,33 @@ div#placeholder {
 
 #future-release {
     overflow: hidden;
+
+    h1 {
+        margin-bottom: 70px;
+    }
+
+    ul {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        li {
+            overflow: hidden;
+            line-height: 48px;
+            list-style: none;
+            color: white;
+            font-size: 21px;
+            margin-top: 25px;
+        }
+    }
+
+    span {
+        display: inline-block;
+        line-height: 48px;
+        display: block;
+        float: left;
+        margin-left: 17px;
+    }
+
 
     .left {
         position: relative;
