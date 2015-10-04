@@ -63,6 +63,7 @@
 	margin-top: 50px;
 	@media screen and (min-width: 992px) {
 		@include burger(51px, 5px, 10.5px, $orange);
+		margin-top: 63px;
 	}
 }
 

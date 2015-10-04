@@ -10,8 +10,30 @@ span.logo {
 	margin-top: 26px;
 	display: block;
 	text-align: center;
+
 	img {
 		width: 100%;
+
+		@media screen and (min-width: 400px) {
+			width: auto;
+		}
+
+		@media screen and (min-width: $medium) {
+			width: auto;
+			margin-left: 154px;
+			margin-top: -9px;
+		}
+	}
+}
+
+// PLACEHOLDER - DELETE WHEN THE ACTUAL ANIMATIONS ARE IN PLACE
+
+div#placeholder {
+	margin-top: 40px;
+	margin-bottom: 70px;
+
+	img {
+    	width: 100%;
 	}
 }
 
@@ -27,9 +49,25 @@ span.logo {
     background-position-x: 30%;
 }
 
+// HEADER 
+
+#header {
+	.button-orange {
+		margin-top: 20px;
+		@media screen and (min-width: $medium) {
+			margin-top: 44px;
+			margin-left: 42px;
+		}
+	}
+}
+
 // FEATURES
 
 #features {
+	h1 {
+	    margin-bottom: 74px;
+		margin-top: 120px;
+	}
 	.row {
 		color: white;
 		min-height: 200px;
@@ -37,45 +75,109 @@ span.logo {
 			margin-left: 12px;
 		}
 	}
+
 	.data {
 		text-shadow: 1px 1px $dark-green;
 		background: url("../img/data-icon.png") $dark-green no-repeat;
 		background-position-x: right;
+
+		@media screen and (min-width: $medium) {
+		    padding-top: 33px;
+		    padding-bottom: 40px;
+		    padding-left: 95px;
+			padding-right: 95px;
+		}
 		p {
 			width: 100%;
-			@media screen and (min-width: 992px) {
+			text-align: left;
+			@media screen and (min-width: $medium) {
 				width: 70%;
 			}
 		}	
 	}
+
 	.analyze {
 		text-shadow: 1px 1px $orange;
 		background: url("../img/analyze-icon.png") $orange no-repeat;
-		background-position-x: right;	
+		background-position-x: left;
+		position: relative;
+		text-align: right;
+		padding-bottom: 80px;
+		@media screen and (min-width: $medium) {
+			min-height: 390px;
+		}
+
+		.bottom-text {
+			padding-top: 30px;
+			@media screen and (min-width: $medium) {
+				padding-top: 0;
+				position: absolute;
+				top: 247px;
+				padding-right: 95px;
+			}
+		}	
+
+		p {
+			text-align: right;
+		}
+
+		.achieve {
+			p {
+				text-align: left;	
+			}
+		}
 	}
+
 	.achieve {
 		text-shadow: 1px 1px $dark-green;
 		background: url("../img/achieve-icon.png") $dark-green no-repeat;
-		background-position-x: right;	
+		background-position-x: right;
+		@media screen and (min-width: $medium) {
+		    padding-top: 18px;
+		    padding-left: 95px;
+		}
 	}
 }
 
 // FUTURE RELEASE
 
 #future-release {
+	.container {
+		background: url("../img/future-release-bg.jpg");
+		background-size: cover;
+	}
+
+	h1 {
+		margin-bottom: 70px;
+	}
+
 	.leftbox {
-		background: url("../img/bike.jpg");
+		//background: url("../img/bike.jpg");
 		background-size: cover;
 		padding-top: 40px;
 		text-align: center;
 		margin: auto;
 		height: 400px;
+		ul {
+			@media screen and (min-width: $medium) {
+			    margin-left: 31px;
+			}
+		}
 	}
+
 	.rightbox {
-		background: url("../img/freedom.jpg");
+		//background: url("../img/freedom.jpg");
 		background-size: cover;
 		height: 350px;
+		ul {
+			@media screen and (min-width: $medium) {
+				width: auto;
+			    margin-left: 157px;
+			    padding-top: 53px;
+			}
+		}
 	}
+
 	span {
 		display: inline-block;
 		line-height: 48px;
@@ -83,6 +185,7 @@ span.logo {
 		float: left;
 		margin-left: 10px;
 	}
+
 	ul {
 		width: 100%;
 		margin: auto;
@@ -101,34 +204,77 @@ span.logo {
 	}
 }
 
+// SIGN UP BUTTON 
+
+#signup-button {
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
 // SIGN UP
 
 #signup {
 	background: $dark-green;
 	color: white;
 	text-align: center;
-	p {
+
+	p {	
 		padding: 21px;
-		font-size: 21px;
+		width: 100%;
+	    margin: auto;
+		@media screen and (min-width: $medium) {
+			width: 76%;
+		}
 	}
 }
 
 // REQUEST ACCESS
 
 #request-access {
+	margin-top: 40px;
 	.button-orange,
 	.button-grey {
 		margin: 10px;
 	}
+
 	.form-control:focus {
 		box-shadow: inset 0 1px 1px $orange, 0 0 8px $orange;
 	}
+
 	.form-group {
 		margin: auto;
 		width: 320px;
+		@media screen and (min-width: $medium) {
+			width: auto;
+		}
 	}
+
 	button.button-orange {
 		background: none;
+	}
+
+	h2 {
+		@media screen and (min-width: $medium) {
+			font-size: 32px;
+			width: 66%;
+			margin: auto;
+			line-height: 52px;
+			letter-spacing: .70px;
+		}
+	}
+
+	.button-grey {
+		padding-top: 24px;
+		padding-bottom: 23px;
+		@media screen and (min-width: $medium) {
+			width: 100%;
+		}
+	}
+
+	.button-orange {
+		@media screen and (min-width: $medium) {
+			width: 100%;
+		}
 	}
 }
 
