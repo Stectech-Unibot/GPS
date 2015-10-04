@@ -1,10 +1,9 @@
 // REUSABLE MIXINS
 
 @mixin circles {
-	width: 218px;
 	background-image: url(../img/circles.png);
-	width: 218px;
-	height: 218px;
+	width: 217px;
+	height: 217px;
 	margin: auto;
 }
 
@@ -71,9 +70,9 @@
 
 .circles {
 	span {
-		line-height: 218px;
+		line-height: 217px;
 		text-align: center;
-		width: 218px;
+		width: 217px;
 		display: block;
 		font-size: 30px;
 	}
