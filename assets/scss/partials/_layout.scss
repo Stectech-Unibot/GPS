@@ -357,3 +357,68 @@ div#placeholder {
 		}
 	}
 }
+
+// FUTURE RELEASE
+
+#future-release {
+	overflow: hidden;
+
+	.left {
+		position: relative;
+		background-image: url("../img/bike.jpg");
+	    float: left;
+	    background-size: cover;
+	    width: 100%;
+	    padding-bottom: 86px;
+	    @media screen and (min-width: $medium) {
+	    	width: 50%;
+	    }
+
+	    ul {
+	    	width: 346px;
+	    	margin: auto;
+	    	padding-top: 60px;
+    		@media screen and (min-width: $medium) {
+				padding-left: 27%;	
+				margin: 0;
+				width: 100%;
+			}
+	    }
+	}
+
+	.right {
+		background-image: url("../img/freedom.jpg");
+	    width: 100%;
+	    background-size: cover;
+	    float: left;
+	    padding-bottom: 86px;
+	    @media screen and (min-width: $medium) {
+	    	width: 50%;
+	    }
+	    ul {
+	    	width: 346px;
+	    	margin: auto;
+	    	padding-top: 60px;
+			@media screen and (min-width: $medium) {
+				padding-left: 33%;
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	.logo-small {
+		display: none;
+		@media screen and (min-width: $medium) {
+			display: block;
+	    	right: -133px;
+	    	left: unset;
+	    	top: 69px;
+	    	position: absolute;
+			background-image: url("../img/logo-small.png");
+			background-size: cover;
+			height: 265px;
+			width: 265px;
+	    }
+	}
+}
