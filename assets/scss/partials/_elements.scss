@@ -19,6 +19,27 @@
 	zoom: 1;
 }
 
+@mixin navtoggle($onoff) {
+	opacity: $onoff;
+	position: absolute;
+	background: $orange;
+	color: white;
+	padding: 20px;
+	z-index: 10;
+	transition: all 0.5s ease;
+	@media screen and (min-width: $medium) {
+		left: -120px;
+	}
+	ul {
+		padding: 0;
+	}
+	li {
+	    list-style: none;
+	    font-size: 21px;
+	    margin-bottom: 11px;
+	}
+}
+
 // TOP HEADER
 
 .button-orange {
@@ -58,12 +79,32 @@
 }
 
 .burger-nav {
-	@include burger(40px, 2.5px, 5.5px, $orange);
+	@include burger(51px, 5px, 10.5px, $orange);
 	margin-top: 50px;
 	@media screen and (min-width: 992px) {
-		@include burger(51px, 5px, 10.5px, $orange);
 		margin-top: 63px;
 	}
+}
+
+.nav-container {
+	    position: relative;
+	.nav {
+		@include navtoggle(0); 
+	}
+	.show-nav {
+		@include navtoggle(1);
+	}
+}
+
+.circle {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    transition: all 5s;
+}
+
+.circle.is-active .burger-nav {
+    @include burger-to-cross;
 }
 
 // EVENT FORECAST
