@@ -16,8 +16,20 @@
         <div id="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-md-1 pull-right">
-                        <div class="burger-nav"></div>
+                    <div class="col-xs-12 col-md-1 pull-right nav-container">
+                        <div class="circle">
+                            <div class="burger-nav"></div>
+                            <div class="nav">
+                                <ul>
+                                     <li>Data</li>
+                                     <li>Forecast</li>
+                                    <li>Features</li>
+                                    <li>Future</li>
+                                    <li>Login / Signup</li>
+                                    <li>Contact Us</li>
+                                </ul>
+                             </div>                        
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-7">
                         <span class="logo"><img src="./assets/img/logo.png" /></span>
@@ -248,5 +260,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="./assets/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('.circle').click(function(){
+                    $(this).toggleClass('is-active');
+                    $('.nav').toggleClass('show-nav');
+                });
+            });
+        </script>
     </body>
 </html>
