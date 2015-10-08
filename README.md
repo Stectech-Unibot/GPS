@@ -6,3 +6,7 @@
 4. bower install
 5. on the terminal run `gulp`
 
+# Staging Server
+URL: https://mail.stectech.com:2083
+user: demostectech
+password: 971DpCcny
