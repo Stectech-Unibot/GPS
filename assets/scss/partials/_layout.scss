@@ -10,7 +10,9 @@ span.logo {
     margin-top: 26px;
     display: block;
     text-align: center;
-
+    @media screen and (min-width: $medium) {
+        text-align: left;
+    }
     img {
         width: 100%;
 
@@ -20,7 +22,7 @@ span.logo {
 
         @media screen and (min-width: $medium) {
             width: auto;
-            margin-left: 154px;
+            text-align: left;
             margin-top: -9px;
         }
     }
