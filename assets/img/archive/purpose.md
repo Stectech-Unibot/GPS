@@ -1,0 +1,1 @@
+This "archive" called folder is used to store the original images for different sprite sheets.
