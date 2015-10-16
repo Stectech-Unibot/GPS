@@ -7,7 +7,7 @@ $bold: bold;
 
 // BASE FONT
 
-$base-font-family: 'avenir';
+$base-font-family: 'avenir, Arial';
 
 // DEFAULT COLORS
 
@@ -28,3 +28,4 @@ $full: 1280px;
 @import "partials/typography";
 @import "partials/elements";
 @import "partials/layout";
+@import "partials/isko";
