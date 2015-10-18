@@ -41,7 +41,7 @@
             </div>  
         </div>
 
-        <div id="roadContainer">
+       <div id="roadContainer">
         <p id="topTitle">Real Data. Real Analysis. Real Results.</p>
         <p id="elevation" class="iconText"><span>1500</span><br/>ft elevation</p>
         <p id="pace" class="iconText"><span>90</span><br/>pace</p>
@@ -51,7 +51,8 @@
         <p id="grade" class="iconText"><span>3.1</span><br/>grade</p>
         <p id="sunny" class="iconText"><span>72 &deg;F</span><br/>sunny</p>
         <p id="miles" class="iconText"><span>3.1</span><br/>miles</p>
-        </div>
+       </div>
+        <h1 id="funnelTitle">TURN YOUR DATA INTO GOLD</h1>
        <div class="funnel" id="funnelTop"></div>
         <div class="roadicons" id="iconShoe"></div>
         <div class="roadicons" id="iconSun"></div>
@@ -295,6 +296,21 @@
                     $(this).toggleClass('is-active');
                     $('.nav').toggleClass('show-nav');
                 });
+                var  controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                    triggerElement: "#funnelTitle",
+                })
+                .setTween(new TimelineMax().add([
+                        TweenMax.to("#iconPeaks", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconRun", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconBiker", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconHeartbeat", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconSpeedometer", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconWaves", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconShoe", 1.0, {top:1067, left:520}),
+                        TweenMax.to("#iconSun", 1.0, {top:1067, left:520}),
+                    ]))
+                .addTo(controller);
             });
         </script>
     </body>
