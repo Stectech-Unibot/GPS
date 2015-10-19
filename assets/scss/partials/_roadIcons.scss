@@ -17,6 +17,12 @@ top:850px; left:300px;
 #funnelBase { background-position: -2px -0px; width: 499px; height: 380px; 
 top:874px; left:299px;
 }
+h1#funnelTitle {
+	position: absolute;
+    top: 804px;
+    margin: 0px;
+    left: 280px;
+}
 
 #funnelTop {position:absolute; z-index:1;}
 #roadContainer {position:absolute; z-index:500;}
