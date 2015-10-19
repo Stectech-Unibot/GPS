@@ -41,39 +41,40 @@
             </div>  
         </div>
 
-        <div id="roadContainer">
-        <p id="topTitle">Real Data. Real Analysis. Real Results.</p>
-        <p id="elevation" class="iconText"><span>1500</span><br/>ft elevation</p>
-        <p id="pace" class="iconText"><span>90</span><br/>pace</p>
-        <p id="bpm" class="iconText"><span>90</span><br/>bpm</p>
-        <p id="mph" class="iconText"><span>8</span><br/>mph</p>
-        <p id="power" class="iconText"><span>14</span><br/>power</p>
-        <p id="grade" class="iconText"><span>3.1</span><br/>grade</p>
-        <p id="sunny" class="iconText"><span>72 &deg;F</span><br/>sunny</p>
-        <p id="miles" class="iconText"><span>3.1</span><br/>miles</p>
-        </div>
-       <div class="funnel" id="funnelTop"></div>
-        <div class="roadicons" id="iconShoe"></div>
-        <div class="roadicons" id="iconSun"></div>
-        <div class="roadicons" id="iconBiker"></div>
-        <div class="roadicons" id="iconHeartbeat"></div>
-        <div class="roadicons" id="iconRun"></div>
-        <div class="roadicons" id="iconWaves"></div>
-        <div class="roadicons" id="iconPeaks"></div>
-        <div class="roadicons" id="iconSpeedometer"></div>
-       <div class="funnel" id="funnelBase"></div>
 
-
-        <!-- PLACEHOLDER DELETE THIS WHEN ACTUAL ANIMATION IS IN PLACE-->
-
-
-        <div id="placeholder">
-            <div class="container">
-                <div class="row">
-                    <div class="placeholder-img">
-                    </div>
-                </div>
+        <div id="topAnimationsWrapper">
+            <div id="roadContainer">
+             <p id="topTitle">Real Data. Real Analysis. Real Results.</p>
+             <p id="elevation" class="iconText"><span>1500</span><br/>ft elevation</p>
+             <p id="pace" class="iconText"><span>90</span><br/>pace</p>
+             <p id="bpm" class="iconText"><span>90</span><br/>bpm</p>
+             <p id="mph" class="iconText"><span>8</span><br/>mph</p>
+             <p id="power" class="iconText"><span>14</span><br/>power</p>
+             <p id="grade" class="iconText"><span>3.1</span><br/>grade</p>
+             <p id="sunny" class="iconText"><span>72 &deg;F</span><br/>sunny</p>
+             <p id="miles" class="iconText"><span>3.1</span><br/>miles</p>
+             <div class="roadicons iconShoe"></div>
+             <div class="roadicons iconSun"></div>
+             <div class="roadicons iconBiker"></div>
+             <div class="roadicons iconHeartbeat"></div>
+             <div class="roadicons iconRun"></div>
+             <div class="roadicons iconWaves"></div>
+             <div class="roadicons iconPeaks"></div>
+             <div class="roadicons iconSpeedometer"></div>
+             <div class="roadiconsDark iconShoe"></div>
+             <div class="roadiconsDark iconSun"></div>
+             <div class="roadiconsDark iconBiker"></div>
+             <div class="roadiconsDark iconHeartbeat"></div>
+             <div class="roadiconsDark iconRun"></div>
+             <div class="roadiconsDark iconWaves"></div>
+             <div class="roadiconsDark iconPeaks"></div>
+             <div class="roadiconsDark iconSpeedometer"></div>
             </div>
+             <h1 id="funnelTitle">TURN YOUR DATA INTO GOLD</h1>
+            <div class="funnel" id="funnelTop"></div>
+            <div class="funnel" id="funnelBase"></div>
+
+
         </div>
 
         <!-- EVENT FORECAST -->
@@ -295,6 +296,47 @@
                     $(this).toggleClass('is-active');
                     $('.nav').toggleClass('show-nav');
                 });
+                var controller = new ScrollMagic.Controller();
+                var Xease = Sine.easeOut,
+                    // Yease = SlowMo.ease.config(0.3, 0.4, false),
+                    Yease = Sine.easeIn,
+                    delayStep=0.1,
+                    endPositions={
+                        left : {x:450, y:1066},
+                        right: {x:560, y:1066},
+                    }
+                    yInTunnel = 1066,
+                    xLeft = 420,
+                    xRight = 580,
+                tweensInsideFunnel = [
+                    {icon:".iconShoe",        pos:"right", duration:1.0},//goes out 1st
+                    {icon:".iconSpeedometer", pos:"left" , duration:1.1},//2nd
+                    {icon:".iconSun",         pos:"right", duration:1.2},
+                    {icon:".iconBiker",       pos:"left" , duration:1.35},
+                    {icon:".iconRun",         pos:"right", duration:1.45},
+                    {icon:".iconHeartbeat",   pos:"left" , duration:1.55},
+                    {icon:".iconWaves",       pos:"right", duration:1.75},
+                    {icon:".iconPeaks",       pos:"left" , duration:1.85},
+                ].map(function(settings, index){
+                    var element = $(settings.icon),
+                    pos = endPositions[settings.pos]
+                    iconTweens = [
+                        TweenMax.to(element, settings.duration, { force3D:true, left: pos.x, ease: Xease}),
+                        TweenMax.to(element, settings.duration, { force3D:true, top : pos.y, ease: Yease}),
+                    ];
+                    return iconTweens;
+                }).reduce(function(last, next){
+                    return last.concat(next);
+                },[]);
+                var scene = new ScrollMagic.Scene({
+                    // triggerElement: "#elevation>span",
+                    duration:1000,// keep this synched with the value used with TweenMax.to(element)
+                    offset:0,
+                    triggerHook:"onLeave"
+                    // triggerHook:"onCenter"
+                })
+                .setTween(new TimelineMax().add(tweensInsideFunnel))
+                .addTo(controller);
             });
         </script>
     </body>
