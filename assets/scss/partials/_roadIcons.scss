@@ -28,13 +28,13 @@ h1#funnelTitle {
 #roadContainer {
 position:absolute; z-index:500;
 	/*Chrome,Safari*/
-	-webkit-clip-path: url(iconsClipMask.svg);
+	-webkit-clip-path: url(../img/iconsClipMask.svg);
 
 	/* Firefox*/
-	clip-path: url(iconsClipMask.svg#svgClip);
+	clip-path: url(../img/iconsClipMask.svg#svgClip);
 
 	/* iOS support */
-	 -webkit-mask: url(iconsClipMask.svg);
+	 -webkit-mask: url(../img/iconsClipMask.svg);
 
 }
 #roadContainer2 {
