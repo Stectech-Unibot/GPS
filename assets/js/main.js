@@ -45,17 +45,17 @@ $(document).ready(function(){
     .setTween(new TimelineMax().add(tweensInsideFunnel))
     .addTo(controller);
 
-    var paralax = new ScrollMagic.Scene({
-        triggerElement: "#features .data",
-        duration:1000,
-        // offset:0,
-        triggerHook:"onEnter"
-        // triggerHook:"onCenter"
-    })
-    .setTween(new TimelineMax()
-        .to($("#features .data"), 1.0,
-            {css:{'background-position-y': "-58px"}}
-        )
-    )
-    .addTo(controller);
+    // FEATUREs paralax
+    [
+    {id: "#features .data", startY:"50px", endY:"-78px"},
+    {id: "#features .analyze", startY:"50px", endY:"-78px"},
+    {id: "#features .achieve", startY:"50px", endY:"-78px"},
+    ].forEach(function(element, index){
+        var paralaxScene = new ScrollMagic.Scene({
+            triggerElement: element.id,
+            duration: 1000,
+            triggerHook: "onEnter"})
+        .setTween(new TimelineMax().fromTo($(element.id), 1.0, {css:{'background-position-y': element.startY}}, {css:{'background-position-y': element.endY}})    )
+        .addTo(controller);
+    });
 });
