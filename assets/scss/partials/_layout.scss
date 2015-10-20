@@ -69,8 +69,9 @@ span.logo {
 
     .data {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/data-icon.png") $dark-green no-repeat;
-        background-position-x: right;
+        background: url("../img/paralax/icons.png") $dark-green no-repeat;
+        background-position: right 10px;
+        overflow: hidden;
 
         @media screen and (min-width: $medium) {
             padding-top: 33px;
