@@ -44,4 +44,18 @@ $(document).ready(function(){
     })
     .setTween(new TimelineMax().add(tweensInsideFunnel))
     .addTo(controller);
+
+    var paralax = new ScrollMagic.Scene({
+        triggerElement: "#features .data",
+        duration:1000,
+        // offset:0,
+        triggerHook:"onEnter"
+        // triggerHook:"onCenter"
+    })
+    .setTween(new TimelineMax()
+        .to($("#features .data"), 1.0,
+            {css:{'background-position-y': "-58px"}}
+        )
+    )
+    .addTo(controller);
 });
