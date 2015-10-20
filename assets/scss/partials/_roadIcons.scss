@@ -25,7 +25,21 @@ h1#funnelTitle {
 }
 
 #funnelTop {position:absolute; z-index:1;}
-#roadContainer {position:absolute; z-index:500;}
+#roadContainer {
+position:absolute; z-index:500;
+	/*Chrome,Safari*/
+	-webkit-clip-path: url(iconsClipMask.svg);
+
+	/* Firefox*/
+	clip-path: url(iconsClipMask.svg#svgClip);
+
+	/* iOS support */
+	 -webkit-mask: url(iconsClipMask.svg);
+
+}
+#roadContainer2 {
+	position:absolute; z-index:499;
+}
 #funnelBase{position:absolute; z-index:1000;}
 
 .roadicons{
