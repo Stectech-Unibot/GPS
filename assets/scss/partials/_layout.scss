@@ -98,7 +98,7 @@ span.logo {
 
     .analyze {
         text-shadow: 1px 1px $orange;
-        background: url("../img/analyze-icon.png") $orange no-repeat;
+        background: url("../img/paralax/graph.png") $orange no-repeat;
         background-position-x: 5px;
         background-position-y: 23px;
         position: relative;
@@ -137,7 +137,7 @@ span.logo {
 
     .achieve {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/achieve-icon.png") $dark-green no-repeat;
+        background: url("../img/paralax/mountains.png") $dark-green no-repeat;
         background-position-x: right;
         @media screen and (min-width: $medium) {
             padding-top: 18px;
