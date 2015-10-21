@@ -43,17 +43,21 @@
 // TOP HEADER
 
 .button-orange {
-    border-radius: 10px;
-    border: 2px solid $dark-orange;
-    color: $dark-orange;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 16px;
-    width: 292px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    a {
+    	border-radius: 10px;
+	    border: 2px solid $dark-orange;
+	    color: $dark-orange;
+	    text-align: center;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 16px;
+	    width: 292px;
+	    margin: auto;
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	    cursor: pointer;
+	    display: block;
+    }
     @media screen and (min-width: 992px) {
 		width: 238px;
 		margin: auto;
@@ -78,6 +82,21 @@
 	}
 }
 
+button {
+	border-radius: 10px;
+    border: 2px solid $dark-orange;
+    color: $dark-orange;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    width: 292px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
 .burger-nav {
 	@include burger(51px, 5px, 10.5px, $orange);
 	margin-top: 50px;
@@ -89,10 +108,12 @@
 .nav-container {
 	    position: relative;
 	.nav {
-		@include navtoggle(0); 
+		@include navtoggle(0);
+		visibility: hidden;
 	}
 	.show-nav {
 		@include navtoggle(1);
+		visibility: visible;
 	}
 }
 
