@@ -10,37 +10,34 @@
 	margin-top:100px;
 }
  
-#funnelTop { background-position: -2px -382px; width: 498px; height: 49px;
-top:850px; left:300px;
-}
+#funnelTop {
+	background-position: center -382px;
+	width: 1280px;
+	height: 49px;
+	top:850px; 
+	position:absolute; z-index:1;}
 
-#funnelBase { background-position: -2px -0px; width: 499px; height: 380px; 
-top:874px; left:299px;
+#funnelBase {
+	height: 380px; 
+	top:874px;
+	left:-1px;
+	position:absolute;
+	z-index:1000;
+	background-position: center 0;
+    width: 1280px;
 }
 h1#funnelTitle {
 	position: absolute;
+    top: 804px;
+}
+p.funnelText {
+	position: absolute;
+	z-index:1001;
     top: 804px;
     margin: 0px;
     left: 280px;
 }
 
-#funnelTop {position:absolute; z-index:1;}
-#roadContainer {
-position:absolute; z-index:500;
-	/*Chrome,Safari*/
-	-webkit-clip-path: url(../img/iconsClipMask.svg);
-
-	/* Firefox*/
-	clip-path: url(../img/iconsClipMask.svg#svgClip);
-
-	/* iOS support */
-	 -webkit-mask: url(../img/iconsClipMask.svg);
-
-}
-#roadContainer2 {
-	position:absolute; z-index:499;
-}
-#funnelBase{position:absolute; z-index:1000;}
 
 .roadicons{
 	display: block;
