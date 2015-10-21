@@ -9,8 +9,8 @@ $(document).ready(function(){
         Yease = Sine.easeIn,
         delayStep=0.1,
         endPositions={
-            left : {x:450, y:1066},
-            right: {x:560, y:1066},
+            left : {x:550, y:1066},
+            right: {x:660, y:1066},
         }
         yInTunnel = 1066,
         xLeft = 420,

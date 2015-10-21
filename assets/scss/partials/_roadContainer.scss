@@ -4,7 +4,7 @@
   height: 1993px;
 }
 
-#roadContainer {
+#roadContainer, #roadContainer2 {
     background-image: url("../img/hero.jpg");
     width: 1280px;
     height: 706px;
@@ -17,6 +17,21 @@
     text-align: left;
 } */
 
+#roadContainer {
+position:absolute; z-index:500;
+    /*Chrome,Safari*/
+    -webkit-clip-path: url(../img/iconsClipMask.svg);
+
+    /* Firefox*/
+    clip-path: url(../img/iconsClipMask.svg#svgClip);
+
+    /* iOS support */
+     -webkit-mask: url(../img/iconsClipMask.svg);
+
+}
+#roadContainer2 {
+    position:absolute; z-index:499;
+}
 
 
 #roadContainer p {
