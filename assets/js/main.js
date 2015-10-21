@@ -47,7 +47,7 @@ $(document).ready(function(){
 
     // FEATUREs paralax
     [
-    {id: "#features .data", startY:"50px", endY:"-78px"},
+    {id: "#features .data", startY:"80px", endY:"-78px"},
     {id: "#features .analyze", startY:"50px", endY:"-78px"},
     {id: "#features .achieve", startY:"50px", endY:"-78px"},
     ].forEach(function(element, index){
@@ -58,4 +58,28 @@ $(document).ready(function(){
         .setTween(new TimelineMax().fromTo($(element.id), 1.0, {css:{'background-position-y': element.startY}}, {css:{'background-position-y': element.endY}})    )
         .addTo(controller);
     });
+    [
+        {id:"#MazeWrapper",                     trigger:"#MazeWrapper"   , delay:0.25, tweenTime:0.5, staggerTime:0.3},
+    // signUp button
+        {id:"#signup-button",                   trigger:"#signup-button" , delay:0   , tweenTime:0.5, staggerTime:0},
+    // FUTURE RELEASE FEATUREs paralax
+        {id:"#future-release>div.left>ul>li",   trigger:"#future-release", delay:0.15, tweenTime:0.4, staggerTime:0.3},
+        {id:"#future-release>div.right>ul>li",  trigger:"#future-release", delay:0.15, tweenTime:0.4, staggerTime:0.3},
+    //REQUEST EARLY ACCESS
+        {id:"#request-access>div",              trigger:"#request-access", delay:0.2 , tweenTime:0.4, staggerTime:0.4},
+    ].forEach(function(settings, index){
+        var paralaxScene = new ScrollMagic.Scene({
+            triggerElement: settings.trigger,
+            duration: 700,
+            triggerHook: "onEnter"})
+        .setTween(new TimelineMax().staggerFromTo(
+            $(settings.id).get(),
+            settings.tweenTime,//tween time
+            {css:{'opacity': 0.0}},//from data
+            {css:{'opacity': 1.0}, delay:settings.delay},// to data
+            settings.staggerTime)//distance between starts,
+        )
+        .addTo(controller);
+    });
+
 });
