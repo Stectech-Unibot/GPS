@@ -154,6 +154,20 @@ span.logo {
     }
 }
 
+// EVENT FORECAST
+
+#event-forecast {
+    .label {
+        text-align: center;
+        color: $dark-green;
+        font-size: 18px;
+        margin: auto;
+        width: 193px;
+        display: block;
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+}
 // FUTURE RELEASE
 
 #future-release {
