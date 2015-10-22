@@ -361,6 +361,11 @@ span.logo {
         }
     }
 
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
     .right {
         @media screen and (min-width: $medium) {
             padding-right: 90px;
