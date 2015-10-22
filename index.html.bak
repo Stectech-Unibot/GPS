@@ -21,7 +21,7 @@
                             <div class="burger-nav"></div>
                             <div class="nav">
                                 <ul>
-                                    <li>Data</li>
+                                    <li><Data</li>
                                     <li>Forecast</li>
                                     <li>Features</li>
                                     <li>Future</li>
@@ -41,9 +41,8 @@
             </div>  
         </div>
 
-
-        <div id="topAnimationsWrapper" class="centered">
-            <div id="roadContainer" class="centered">
+<<<<<<< HEAD
+        <div id="mainContent">
         <p id="topTitle">Real Data. Real Analysis. Real Results.</p>
         <p id="elevation" class="iconText"><span>1500</span><br/>ft elevation</p>
         <p id="pace" class="iconText"><span>90</span><br/>pace</p>
@@ -53,6 +52,31 @@
         <p id="grade" class="iconText"><span>3.1</span><br/>grade</p>
         <p id="sunny" class="iconText"><span>72 &deg;F</span><br/>sunny</p>
         <p id="miles" class="iconText"><span>3.1</span><br/>miles</p>
+        </div>
+
+
+        <!-- PLACEHOLDER DELETE THIS WHEN ACTUAL ANIMATION IS IN PLACE-->
+
+
+        <div id="placeholder">
+            <div class="container">
+                <div class="row">
+                    <div class="placeholder-img">
+                    </div>
+                </div>
+=======
+
+        <div id="topAnimationsWrapper" class="centered">
+            <div id="roadContainer" class="centered">
+             <p id="topTitle">Real Data. Real Analysis. Real Results.</p>
+             <p id="elevation" class="iconText"><span>1500</span><br/>ft elevation</p>
+             <p id="pace" class="iconText"><span>90</span><br/>pace</p>
+             <p id="bpm" class="iconText"><span>90</span><br/>bpm</p>
+             <p id="mph" class="iconText"><span>8</span><br/>mph</p>
+             <p id="power" class="iconText"><span>14</span><br/>power</p>
+             <p id="grade" class="iconText"><span>3.1</span><br/>grade</p>
+             <p id="sunny" class="iconText"><span>72 &deg;F</span><br/>sunny</p>
+             <p id="miles" class="iconText"><span>3.1</span><br/>miles</p>
              <div class="whiteRoadIconsContainer clipper1"></div>
              <div class="whiteRoadIconsContainer clipper2"></div>
              <div class="roadicons iconShoe"></div>
@@ -81,12 +105,13 @@
                 <p class="funnelText" id="Meta">Metadata</p>
                 <p class="funnelText" id="insights">Fitness Insights</p>
                 <p class="funnelText" id="analysis">Analysis</p>
+>>>>>>> refs/remotes/Stectech/master
             </div>
             <div id="MazeWrapper" class="centered">
-<!--                 <p class="mazeTop">Our Proprietary Fitness Forecast&trade; Predictive Analytics<br/>engine unlocks the secrets hidden in your data</p>
+                <p class="mazeTop">Our Proprietary Fitness Forecast&trade; Predictive Analytics<br/>engine unlocks the secrets hidden in your data</p>
                 <p class="mazeLeft mazeBottom">Fitness Forecast<br/>Predicts Ability to hit your goals</p>
                 <p class="mazeRight mazeBottom">Event Success<br/>Optimized Course Planning</p>
- -->            </div>
+            </div>
 
 
         </div>
@@ -96,28 +121,24 @@
         <div id="event-forecast">
             <div class="container">
                 <h1>EVENT FORECAST</h1>
-                <p class="label">Likelihood of Success</p>
                 <div class="row circles">
                     <div class="col-md-4">
                         <div class="red-circle">
                             <span>78%</span>
                         </div>
-                        <div class="timelabel">TARGET TIME: 7:45:00</div>
                         <div class="clabel">Horribly Hilly Hundreds</div>
                     </div>
                     <div class="col-md-4">
                         <div class="blue-circle">
                             <span>100%</span>
                         </div>
-                        <div class="timelabel">TARGET TIME: 2:00:00</div>
-                        <div class="clabel">Willow Springs Road Race</div>
+                        <div class="clabel">Horribly Hilly Hundreds</div>
                     </div>
                     <div class="col-md-4">
                         <div class="green-circle">
-                            <span>50%</span>
+                            <span>90%</span>
                         </div>
-                        <div class="timelabel">TARGET TIME: 4:30:00</div>
-                        <div class="clabel">Sub 5 Century</div>
+                        <div class="clabel">Horribly Hilly Hundreds</div>
                     </div>
                 </div>
             </div>
@@ -127,10 +148,9 @@
 
         <div id="features">
             <h1>FEATURES</h1>
-
             <div class="container">
                 <div class="row data">
-                    <h2>ALL YOUR DATA IN ONE LOCATION</h2>
+                    <h2>ALL YOUR DATA</h2>
                     <div class="col-xs-12">
                         <p>
                             Let us do the heavy lifting. Upload your data and we will push it to all your other GPS sites. The more historical data the Fitness Forecast engine has the more accurate the predictions. Give us permission and we will pull historical data from other GPS sites.
@@ -140,6 +160,9 @@
                 <div class="row analyze">
                     
                     <div class="col-xs-12 col-md-6">
+                        <p class="bottom-text">
+                            “As you train and add more data, the accuracy of the forecasts increase and your results improve.”
+                        </p>
                     </div> 
                     <div class="col-xs-12 col-md-6 content">
                         <h2>ANALYZE</h2>
@@ -234,13 +257,22 @@
             </div>
         </div>
 
-        <!--- Request Beta Access -->
+        <!--- REQUEST EARLY ACCESS -->
 
         <div id="request-access">
             <div class="container text-center">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1>Request Beta Access</h1>
+                        <h1>REQUEST EARLY ACCESS</h1>
+                        <h2>
+                            We are looking for Alpha and Beta testers 
+                            and Crowdfunding contributors.
+                        </h2>
+                        <p>
+                            Please provide us your name and email and we will notify you when we launch our 
+                            Crowdfunding campaign and when we are ready for beta testers.
+                            All information is kept strictly confidential.
+                        </p>
                     </div>
                  </div>
             </div>
@@ -275,11 +307,11 @@
                     <div class="col-xs-12 col-md-6 left">
                         <h2>GET IN TOUCH</h2>
                         <hr/>
-                        <p>@ <a href="mailto:info@MypersonalBest.com">info@MypersonalBest.com</a></p>
+                        <p>@ info@MypersonalBest.com</p>
                     </div>
                     <div class="col-xs-12 col-md-6 right">
                         <p>&copy; 2015 My Personal Best, LLC. All Rights Reserved.</p>
-                        <p>Designed &amp; Developed by <a href="http://stectech.com/" target="_blank">Stectech Industries</a></p>
+                        <p>Designed &amp; Developed by Stectech Industries</p>
                     </div>
                 </div>
             </div>
@@ -296,8 +328,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
 
+<<<<<<< HEAD
+=======
 
         <script src= "./assets/js/main.js">
+>>>>>>> refs/remotes/Stectech/master
 
         </script>
     </body>

@@ -1,0 +1,95 @@
+.placeholder-img {
+  background-image: url("../img/placeholder.jpg");
+  width: 1280px;
+  height: 1993px;
+}
+
+div#header {
+    margin-bottom: 30px;
+}
+
+#mainContent {
+    background-image: url("../img/hero.jpg");
+    width: 1280px;
+    height: 706px;
+    display: block;
+/*     background-size: contain; */
+    background-repeat: no-repeat;
+}
+/*@media screen and (min-width: $medium) {
+    text-align: left;
+} */
+
+
+
+#mainContent p {
+    color: white;
+    position: absolute;
+    line-height: 28px;
+}
+
+#mainContent p:first-child {
+    font-size: 40px;
+    text-align: center;
+    font-family: $base-font-family;
+    top: 216px;
+    left: 266px;
+}
+
+#mainContent p#elevation {
+    padding-top: 207px;
+    padding-left: 70px;
+}
+
+#mainContent p#pace {
+    padding-top: 283px;
+    padding-left: 456px;
+}
+
+#mainContent p#bpm {
+    padding-top: 310px;
+    padding-left: 700px;
+}
+
+#mainContent p#grade {
+    padding-top: 323px;
+    padding-left: 656px;
+}
+
+#mainContent p#mph {
+    padding-top: 545px;
+    padding-left: 626px;
+}
+
+#mainContent p#power {
+    padding-top: 545px;
+    padding-left: 165px;
+}
+
+#mainContent p#grade {
+    padding-top: 405px;
+    padding-left: 925px;
+}
+
+#mainContent p#sunny {
+    padding-top: 265px;
+    padding-left: 1090px;
+    white-space: nowrap !important;
+}
+
+#mainContent p#miles {
+    padding-top: 580px;
+    padding-left: 1120px;
+}
+
+.iconText {
+    font-family: $base-font-family;
+    font-size: 20px;
+}
+
+.iconText span {
+    font-size: 40px;
+}
+#placeholder{
+    display: none;
+}
