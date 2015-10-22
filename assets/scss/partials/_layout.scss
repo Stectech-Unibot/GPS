@@ -108,9 +108,7 @@ span.logo {
 
     .analyze {
         text-shadow: 1px 1px $orange;
-        background: url("../img/paralax/graph.png") $orange no-repeat;
-        background-position-x: 5px;
-        background-position-y: 23px;
+        background: url("../img/paralax/graph.png") $orange no-repeat -110px 23px;
         position: relative;
         text-align: right;
         @media screen and (min-width: $medium) {
