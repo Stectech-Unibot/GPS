@@ -154,10 +154,18 @@ button {
 
 	.clabel {
 		text-align: center;
-		margin-top: 26px;
+		margin-top: 15px;
 		margin-bottom: 26px;
-		font-size: 21px;
+		font-size: 27px;
 		letter-spacing: .15px;
+	}
+	.timelabel {
+		text-align: center;
+		margin-top: 26px;
+		margin-bottom: 15px;
+		font-size: 18px;
+		letter-spacing: .15px;
+		font-weight:$bold;
 	}
 }
 
