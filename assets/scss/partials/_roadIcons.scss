@@ -40,6 +40,7 @@ p.funnelText {
 
 
 .roadicons{
+	opacity:0;
 	display: block;
 	background: url('../img/roadIcons.png') no-repeat;
 	overflow: hidden;
@@ -48,6 +49,8 @@ p.funnelText {
 	position:absolute;
 }
 .roadiconsDark{
+	opacity:0;
+
 	display: block;
 	background: url('../img/roadIconsDark.png') no-repeat;
 	overflow: hidden;

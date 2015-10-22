@@ -3,6 +3,16 @@ $(document).ready(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
     });
+//loading finnished
+    var startElements = $("#roadContainer p").get()
+        .concat($(".roadicons").get())
+        .concat($(".roadiconsDark").get());
+    var onLoadTL = new TimelineMax()
+        .add([
+            TweenMax.fromTo($("#header").get(), 0.5, {css:{opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"}},{css:{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}}),
+            TweenMax.fromTo(startElements, 0.5, {css:{opacity:0, top:"-=50px"}},{css:{opacity:1, top:"+=50px"}})
+        ]);
+//start scrolling controllers
     var controller = new ScrollMagic.Controller();
     var Xease = Sine.easeOut,
         // Yease = SlowMo.ease.config(0.3, 0.4, false),

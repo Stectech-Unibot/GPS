@@ -52,6 +52,7 @@ span.logo {
 // HEADER 
 
 #header {
+    opacity: 0;// for preload animation;
     .button-orange {
         margin-top: 20px;
         @media screen and (min-width: $medium) {
