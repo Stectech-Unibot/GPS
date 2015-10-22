@@ -4,12 +4,21 @@
     width: 100%;
 }
 
+.centered {
+    width: 100%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 // LOGO
 
 span.logo {
     margin-top: 26px;
     display: block;
     text-align: center;
+    margin-left: 50px;
     @media screen and (min-width: $medium) {
         text-align: left;
     }
@@ -25,17 +34,6 @@ span.logo {
             text-align: left;
             margin-top: -9px;
         }
-    }
-}
-
-// PLACEHOLDER - DELETE WHEN THE ACTUAL ANIMATIONS ARE IN PLACE
-
-div#placeholder {
-    margin-top: 40px;
-    margin-bottom: 70px;
-
-    img {
-        width: 100%;
     }
 }
 
@@ -80,8 +78,9 @@ div#placeholder {
 
     .data {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/data-icon.png") $dark-green no-repeat;
-        background-position-x: right;
+        background: url("../img/paralax/icons.png") $dark-green no-repeat;
+        background-position: right 10px;
+        overflow: hidden;
 
         @media screen and (min-width: $medium) {
             padding-top: 33px;
@@ -108,7 +107,7 @@ div#placeholder {
 
     .analyze {
         text-shadow: 1px 1px $orange;
-        background: url("../img/analyze-icon.png") $orange no-repeat;
+        background: url("../img/paralax/graph.png") $orange no-repeat;
         background-position-x: 5px;
         background-position-y: 23px;
         position: relative;
@@ -147,7 +146,7 @@ div#placeholder {
 
     .achieve {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/achieve-icon.png") $dark-green no-repeat;
+        background: url("../img/paralax/mountains.png") $dark-green no-repeat;
         background-position-x: right;
         @media screen and (min-width: $medium) {
             padding-top: 18px;
