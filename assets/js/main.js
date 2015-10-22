@@ -58,7 +58,7 @@ $(document).ready(function(){
     // FEATUREs paralax
     [
     {id: "#features .data", startY:"80px", endY:"-78px"},
-    {id: "#features .analyze", startY:"50px", endY:"-78px"},
+    {id: "#features .analyze", startY:"125px", endY:"34px"},
     {id: "#features .achieve", startY:"50px", endY:"-78px"},
     ].forEach(function(element, index){
         var paralaxScene = new ScrollMagic.Scene({
