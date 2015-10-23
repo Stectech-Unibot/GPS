@@ -8,9 +8,13 @@ $bold: bold;
 
 // BASE FONT
 
+<<<<<<< HEAD
+$base-font-family: 'avenir, Arial';
+=======
 $base-font-family: "AvenirBook";
 $roman-font-family: "AvenirRoman";
 $light-font-family: "AvenirLight";
+>>>>>>> refs/remotes/Stectech/master
 
 // DEFAULT COLORS
 
@@ -31,6 +35,10 @@ $full: 1280px;
 @import "partials/typography";
 @import "partials/elements";
 @import "partials/layout";
+<<<<<<< HEAD
+@import "partials/isko";
+=======
 @import "partials/maze";
 @import "partials/roadContainer";
 @import "partials/roadIcons";
+>>>>>>> refs/remotes/Stectech/master
