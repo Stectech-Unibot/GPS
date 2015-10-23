@@ -99,10 +99,11 @@ button {
 }
 
 .burger-nav {
-	@include burger(51px, 5px, 10.5px, $orange);
+	@include burger(35px, 3px, 7.5px, $orange);
 	margin-top: 50px;
 	@media screen and (min-width: 992px) {
 		margin-top: 63px;
+		margin-right: 50px;
 	}
 }
 
@@ -123,6 +124,7 @@ button {
     display: block;
     overflow: hidden;
     transition: all 5s;
+	text-align: center;
 }
 
 .circle.is-active .burger-nav {
