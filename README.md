@@ -3,8 +3,9 @@
 1. Install nodejs
 2. clone repo `git clone git@github.com:Stectech/GPS.git` for ssh or `git clone https://github.com/Stectech/GPS.git` for https
 3. npm install 
-4. bower install
-5. on the terminal run `gulp`
+4. npm install bower //might need it to use next step
+5. bower install
+6. on the terminal run `gulp`
 
 # Staging Server
 ssh demostectech@199.101.48.109 password: 971DpCcny
