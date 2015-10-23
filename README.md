@@ -12,6 +12,10 @@ ssh demostectech@199.101.48.109 password: 971DpCcny
 # Deployment
 How to Deploy sites from local to server using github
 
+For existing project  
+* execute git pull origin master on the root directory of your project
+
+
 For New Project
 
 Clone the repository that you want to work in
@@ -41,6 +45,5 @@ Steps
  * if  the project doesn't have a folder yet create a subfolder under public_html. It should look like public_html/<project-name>
 * clone the repo 
 
-for existing project  just execute git pull origin master on the root directory of your project
 
 
