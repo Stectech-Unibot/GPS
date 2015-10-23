@@ -39,7 +39,7 @@ Note: If you are working with a database changes, (e.g. wordpress settings or ad
 made by the editor or QA
 
 Steps
-* ssh to demo server - ssh demostectech@199.101.48.109 ( ask hanna or dave for credentials)
+* ssh to demo server - ssh demostectech@199.101.48.109 (either in readme.md file or ask hannah or dave for credentials)
 * once on the demo server 
  * if  the project doesn't have a folder yet create a subfolder under public_html. It should look like public_html/<project-name>
 * clone the repo 
