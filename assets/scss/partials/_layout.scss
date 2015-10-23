@@ -376,6 +376,11 @@ span.logo {
         border: 2px solid;
     }
     h2 {
+        padding-bottom: 2px;
+        border-bottom: 4px solid #5ba0cf;
+        margin-bottom: 20px;
+        display: inline-block;
+        
         @media screen and (min-width: $medium) {
             font-size: 18px;
             margin-top: 3px;
