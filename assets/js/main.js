@@ -48,7 +48,7 @@ $(document).ready(function(){
     },[]);
     var scene = new ScrollMagic.Scene({
         // triggerElement: "#elevation>span",
-        duration:1000,// keep this synched with the value used with TweenMax.to(element)
+        duration:500,// keep this synched with the value used with TweenMax.to(element)
         offset:0,
         triggerHook:"onLeave"
         // triggerHook:"onCenter"
@@ -97,24 +97,26 @@ $(document).ready(function(){
 
     var MAZEscene = new ScrollMagic.Scene({
         triggerElement: "#MazeWrapper",
-        duration: 500,
-        triggerHook: "onEnter"});
+        duration: 500, // sliding those number of pixels to complete the MAZE animation
+        triggerHook: "onEnter",
+        offset:300 // wait to pass offset pixel before starting with the SVGdraw
+    });
 
     var timeLine = new TimelineMax()
         .set($("g>path"), {drawSVG:"0% 0%"});
-    //add sequence to timeLine
+
     var sequence = [// if you change the svg config the elements below:
-        {elem:$("g#_x37_>path"), back:false, debugColor:"pink"},
-        {elem:$("g#_x38_>path"), back:false, debugColor:"black"},
-        {elem:$("g#_x35_>path"), back:true , debugColor:"brown"},
-        {elem:$("g#_x34_>path"), back:true , debugColor:"gray"},
-        {elem:$("g#_x33_>path"), back:true , debugColor:"purple",delay:1},
-        {elem:$("g#_x32_>path"), back:true , debugColor:"magenta"},
-        {elem:$("g#_x31_>path"), back:false, debugColor:"cyan"},
-        {elem:$("g#_x31_0>path"), back:false, debugColor:"yellow"},
-        {elem:$("g#_x31_1>path"), back:false, debugColor:"blue", delay:1},
-        {elem:$("g#_x31_2>path"), back:false, debugColor:"red", delay:1},
-        {elem:$("g#_x39_>path"), back:false, debugColor:"green", delay:1},
+        {elem:$("g#_x37_>path"),  back:false, debugColor:"pink"},
+        {elem:$("g#_x38_>path"),  back:false, debugColor:"black"},
+        {elem:$("g#_x35_>path"),  back:true , debugColor:"brown"},
+        {elem:$("g#_x34_>path"),  back:true , debugColor:"gray"},
+        {elem:$("g#_x33_>path"),  back:true , debugColor:"purple", delay:30, time:120},
+        {elem:$("g#_x32_>path"),  back:true , debugColor:"magenta", delay:0, time:40},
+        {elem:$("g#_x31_>path"),  back:false, debugColor:"cyan"},
+        {elem:$("g#_x31_0>path"), back:false, debugColor:"yellow", delay:0, time:45},
+        {elem:$("g#_x31_2>path"), back:false, debugColor:"red",delay:55, time:26},
+        {elem:$("g#_x31_1>path"), back:false, debugColor:"blue",delay:65, time:50},
+        {elem:$("g#_x39_>path"),  back:false, debugColor:"green",delay:48, time:50},
     ].map(function(cfg){
       var self = cfg.elem;
       
@@ -123,15 +125,23 @@ $(document).ready(function(){
       } else {
         timeLine.set(self,{css:{stroke:"#364548"}});
       }
-      if (cfg.back){
-        return TweenMax.fromTo(self, 2, {drawSVG:"0% 0%"}, {drawSVG:"0% 100%", delay:cfg.delay||0}); //back:true
+      if (cfg.back){//some lines might be have drawn the reversed direction
+        return TweenMax.fromTo(self, cfg.time||150, {drawSVG:"0% 0%"}, {
+            drawSVG:"0% 100%",
+            delay:cfg.delay||0,
+            immediateRender:false,//prevents from starting the animation until added to TimeLine 
+            }); //back:true
       } else {
-        return TweenMax.fromTo(self, 2, {drawSVG:"100% 100%"}, {drawSVG:"0% 100%", delay:cfg.delay||0}); //back:false
+        return TweenMax.fromTo(self, cfg.time||150, {drawSVG:"100% 100%"}, {
+            drawSVG:"0% 100%",
+            delay:cfg.delay||0,
+            immediateRender:false,//prevents from starting the animation until added to TimeLine 
+            }); //back:false
       }
     });
 
-    timeLine.add(sequence).restart();
+    timeLine.add(sequence);//.restart();
 
-    // MAZEscene.setTween(timeLine).addTo(controller);
+    MAZEscene.setTween(timeLine).addTo(controller);
 
 })
