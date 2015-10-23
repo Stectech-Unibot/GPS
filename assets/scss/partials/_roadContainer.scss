@@ -1,11 +1,13 @@
 .placeholder-img {
   background-image: url("../img/placeholder.jpg");
-  width: 1280px;
+  width: 100%;
+  // width: 1280px;
   height: 1993px;
 }
 
 #roadContainer {
     background-image: url("../img/hero.jpg");
+    // width: 100%;
     width: 1280px;
     height: 706px;
     display: block;
@@ -20,13 +22,20 @@
     clip-path: url(../img/iconsClipMask.svg#svgClip);
     /* iOS support */
      -webkit-mask: url(../img/iconsClipMask.svg);
+
+    left: 50%;
+    margin-left: -640px;
 }
 
 #roadContainer2 {
+    // width: 100%;
     width: 1280px;
     height: 706px;
     display: block;
-    position:absolute; z-index:499;
+    position:absolute;
+    z-index:499;
+    left: 50%;
+    margin-left: -640px;
 }
 
 
@@ -43,6 +52,27 @@
     font-family: $base-font-family;
     top: 101px;
     left: 266px;
+    line-height: 110%;
+
+    left: 50%;
+    margin-left: -190px;
+    display: block;
+    width: 380px;
+
+    @media screen and (min-width: $minimum) {
+        margin-left: -250px;
+        width: 500px;
+    }
+
+    @media screen and (min-width: $medium) {
+        margin-left: -496px;
+        width: 992px;
+    }
+
+    @media screen and (min-width: $full) {
+        margin-left: -640px;
+        width: 1280px;
+    }
 }
 
 #roadContainer p#elevation {
@@ -106,6 +136,7 @@
     height:1850px;
 
     margin-bottom: 70px;
+    overflow: hidden;
 
     img {
         width: 100%;
