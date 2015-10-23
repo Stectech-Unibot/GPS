@@ -7,9 +7,7 @@
 5. on the terminal run `gulp`
 
 # Staging Server
-URL: https://mail.stectech.com:2083
-user: demostectech
-password: 971DpCcny
+ssh demostectech@199.101.48.109 password: 971DpCcny
 
 # Deployment
 How to Deploy sites from local to server using github
@@ -35,14 +33,14 @@ Important:  Do not commit large files or revisions, as much as possible commit p
 Note: If you are working with a database changes, (e.g. wordpress settings or adding some content) you should change it on the demo site and your local, do not migrate your database settings and overwrite the demo server. This will prevent us to not remove or delete any changes 
 made by the editor or QA
 
-3. Before EOD you need to update the server so that the QA can check your work and comment on it
+<b>Before EOD you need to update the server so that the QA can check your work and comment on it</b>
 
 Steps
 * ssh to demo server - ssh demostectech@199.101.48.109 ( ask hanna or dave for credentials)
 * once on the demo server 
  * if  the project doesn't have a folder yet create a subfolder under public_html. It should look like public_html/<project-name>
-			- clone the repo 
+* clone the repo 
 
-		c. for existing project  just execute git pull origin master on the root directory of your project
+for existing project  just execute git pull origin master on the root directory of your project
 
 
