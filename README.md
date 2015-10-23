@@ -16,6 +16,7 @@ How to Deploy sites from local to server using github
 <b>IMPORTANT</b>
 * Before EOD you need to update the server so that the QA can check your work and comment on it
 * Do not commit large files or revisions, as much as possible commit per task so that other developers can see what are the changes made, this also allows us to revert changes much easier if there are some regressions on the code.
+* Navigate to the project folder e.g. cd public_html/<project name>/.
 
 For existing project  
 * execute git pull origin master on the root directory of your project
