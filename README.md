@@ -12,6 +12,9 @@ ssh demostectech@199.101.48.109 password: 971DpCcny
 # Deployment
 How to Deploy sites from local to server using github
 
+<b>Before EOD you need to update the server so that the QA can check your work and comment on it</b>
+Important:  Do not commit large files or revisions, as much as possible commit per task so that other developers can see what are the changes made, this also allows us to revert changes much easier if there are some regressions on the code.
+
 For existing project  
 * execute git pull origin master on the root directory of your project
 
@@ -32,12 +35,8 @@ Steps
 * git commit -m “message of what you did”
 * git push origin <branch name you are currently on>
 
-Important:  Do not commit large files or revisions, as much as possible commit per task so that other developers can see what are the changes made, this also allows us to revert changes much easier if there are some regressions on the code.
-
 Note: If you are working with a database changes, (e.g. wordpress settings or adding some content) you should change it on the demo site and your local, do not migrate your database settings and overwrite the demo server. This will prevent us to not remove or delete any changes 
 made by the editor or QA
-
-<b>Before EOD you need to update the server so that the QA can check your work and comment on it</b>
 
 Steps
 * ssh to demo server - ssh demostectech@199.101.48.109 ( ask hanna or dave for credentials)
