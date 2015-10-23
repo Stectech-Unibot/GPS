@@ -20,6 +20,11 @@ h2 {
 	font-size: 21px;
 	letter-spacing: .9px;
 	font-weight: $light;
+	padding-bottom: 2px;
+	border-bottom: 4px solid #5ba0cf;
+	margin-bottom: 20px;
+	display: inline-block;
+
 	@media screen and (min-width: 992px) {
 	    font-size: 31px;
 	}
