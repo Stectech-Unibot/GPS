@@ -3,6 +3,7 @@ $(document).ready(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
     });
+
 //loading finnished
     var startElements = $("#roadContainer p").get()
         .concat($(".roadicons").get())
@@ -69,7 +70,7 @@ $(document).ready(function(){
         .addTo(controller);
     });
     [
-        {id:"#MazeWrapper",                     trigger:"#MazeWrapper"   , delay:0.25, tweenTime:0.5, staggerTime:0.3, duration:700},
+        // {id:"#MazeWrapper",                     trigger:"#MazeWrapper"   , delay:0.25, tweenTime:0.5, staggerTime:0.3, duration:700},
     // signUp button
         {id:"#signup-button",                   trigger:"#signup-button" , delay:0   , tweenTime:0.5, staggerTime:0, duration:700},
     // FUTURE RELEASE FEATUREs paralax
@@ -94,34 +95,43 @@ $(document).ready(function(){
 
 
 
+    var MAZEscene = new ScrollMagic.Scene({
+        triggerElement: "#MazeWrapper",
+        duration: 500,
+        triggerHook: "onEnter"});
 
-    // MAZE magics here:
-    var pathPrepare = function ($el) {
-        var lineLength = $el[0].getTotalLength();
-        $el.css("stroke-dasharray", lineLength);
-        $el.css("stroke-dashoffset", lineLength);
-    }
+    var timeLine = new TimelineMax()
+        .set($("g>path"), {drawSVG:"0% 0%"});
+    //add sequence to timeLine
+    var sequence = [// if you change the svg config the elements below:
+        {elem:$("g#_x37_>path"), back:false, debugColor:"pink"},
+        {elem:$("g#_x38_>path"), back:false, debugColor:"black"},
+        {elem:$("g#_x35_>path"), back:true , debugColor:"brown"},
+        {elem:$("g#_x34_>path"), back:true , debugColor:"gray"},
+        {elem:$("g#_x33_>path"), back:true , debugColor:"purple",delay:1},
+        {elem:$("g#_x32_>path"), back:true , debugColor:"magenta"},
+        {elem:$("g#_x31_>path"), back:false, debugColor:"cyan"},
+        {elem:$("g#_x31_0>path"), back:false, debugColor:"yellow"},
+        {elem:$("g#_x31_1>path"), back:false, debugColor:"blue", delay:1},
+        {elem:$("g#_x31_2>path"), back:false, debugColor:"red", delay:1},
+        {elem:$("g#_x39_>path"), back:false, debugColor:"green", delay:1},
+    ].map(function(cfg){
+      var self = cfg.elem;
+      
+      if (1){// if you want to debug something and see different elements in colors
+        timeLine.set(self,{css:{stroke:cfg.debugColor}});
+      } else {
+        timeLine.set(self,{css:{stroke:"#364548"}});
+      }
+      if (cfg.back){
+        return TweenMax.fromTo(self, 2, {drawSVG:"0% 0%"}, {drawSVG:"0% 100%", delay:cfg.delay||0}); //back:true
+      } else {
+        return TweenMax.fromTo(self, 2, {drawSVG:"100% 100%"}, {drawSVG:"0% 100%", delay:cfg.delay||0}); //back:false
+      }
+    });
 
-    var mazeLines = $("#MazeBase").children()
-    mazeLines.forEach(pathPrepare);
+    timeLine.add(sequence).restart();
 
-             $("#black, #gray, #red, #green, #blue, #brown, #yellow, #cyan, #magenta, #purple, #pink");
+    // MAZEscene.setTween(timeLine).addTo(controller);
 
-        // var myAnimation = new DrawFillSVG({
-        //       elementId: "svg"
-        //     });
-                var paralaxScene = new ScrollMagic.Scene({
-                    triggerElement: "#MazeWrapper",
-                    duration: 500,
-                    triggerHook: "onEnter"})
-                .setTween(new TimelineMax().staggerTo(
-                    mazeLines.get(),
-                    1.0,
-                    {strokeDashoffset: 0, ease:Linear.easeNone})
-                )
-                .addTo(controller);
-
-
-        });
-
-
+})
