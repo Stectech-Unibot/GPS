@@ -92,4 +92,36 @@ $(document).ready(function(){
         .addTo(controller);
     });
 
-});
+
+
+
+    // MAZE magics here:
+    var pathPrepare = function ($el) {
+        var lineLength = $el[0].getTotalLength();
+        $el.css("stroke-dasharray", lineLength);
+        $el.css("stroke-dashoffset", lineLength);
+    }
+
+    var mazeLines = $("#MazeBase").children()
+    mazeLines.forEach(pathPrepare);
+
+             $("#black, #gray, #red, #green, #blue, #brown, #yellow, #cyan, #magenta, #purple, #pink");
+
+        // var myAnimation = new DrawFillSVG({
+        //       elementId: "svg"
+        //     });
+                var paralaxScene = new ScrollMagic.Scene({
+                    triggerElement: "#MazeWrapper",
+                    duration: 500,
+                    triggerHook: "onEnter"})
+                .setTween(new TimelineMax().staggerTo(
+                    mazeLines.get(),
+                    1.0,
+                    {strokeDashoffset: 0, ease:Linear.easeNone})
+                )
+                .addTo(controller);
+
+
+        });
+
+
