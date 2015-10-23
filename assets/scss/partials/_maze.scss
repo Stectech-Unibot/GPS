@@ -3,10 +3,15 @@
 div#MazeWrapper{
 	position: absolute;
     top: 1344px;
-    background: url(../img/maze.svg) no-repeat center -140px;
+    /*background: url(../img/maze.svg) no-repeat center -140px;*/
     background-position-y: -140px;
     height: 596px;
     width: 1280px;
 }
 
 p.mazeTop,p.mazeBottom {position:relative; background-color:white; display:none;}
+
+div#MazeWrapper>svg{
+	position: relative;
+	top:-140px;
+}
