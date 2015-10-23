@@ -18,15 +18,15 @@ span.logo {
     margin-top: 26px;
     display: block;
     text-align: center;
-    margin-left: 50px;
     @media screen and (min-width: $medium) {
         text-align: left;
+        margin-left: 50px;
     }
     img {
-        width: 100%;
+        width: 200px;
 
         @media screen and (min-width: 400px) {
-            width: auto;
+            //width: auto;
         }
 
         @media screen and (min-width: $medium) {
@@ -72,25 +72,27 @@ span.logo {
     .row {
         color: white;
         min-height: 200px;
-        h2 {
-            margin-left: 12px;
-        }
     }
 
     .data {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/paralax/icons.png") $dark-green no-repeat;
-        background-position: right 10px;
+        background-position: 120% 10px;
         overflow: hidden;
+        background-color: $dark-green;
+        background-repeat: no-repeat;
+
 
         @media screen and (min-width: $medium) {
             padding-top: 33px;
             padding-bottom: 31px;
             padding-left: 95px;
             padding-right: 95px;
+            background-image: url("../img/paralax/icons.png");
+            background-position-x: 115%;
+
         }
         @media screen and (min-width: $full) {
-            background-position-x: 748px;
+            background-position-x: right;
         }
         p {
             width: 100%;
@@ -108,11 +110,25 @@ span.logo {
 
     .analyze {
         text-shadow: 1px 1px $orange;
-        background: url("../img/paralax/graph.png") $orange no-repeat -110px 23px;
+        background-color: $orange;
+        background-repeat: no-repeat;
         position: relative;
-        text-align: right;
+        text-align: left;
         @media screen and (min-width: $medium) {
             min-height: 349px;
+            padding-top: 18px;
+            padding-right: 95px;
+            background-image: url("../img/paralax/graph.png");
+            background-position: -250px 23px;
+            text-align: right;
+
+            p {
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: $full) {
+            background-position: -110px 23px;
         }
 
         .content {
@@ -130,14 +146,11 @@ span.logo {
                 top: 247px;
                 padding-right: 95px;
             }
-        }   
-
-        p {
-            text-align: right;
-        }
+        } 
 
         .achieve {
             p {
+                // text-align: left;
                 text-align: left;   
             }
         }
@@ -145,11 +158,18 @@ span.logo {
 
     .achieve {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/paralax/mountains.png") $dark-green no-repeat;
-        background-position-x: right;
+        background-color: $dark-green;
+        background-repeat: no-repeat;
+        background-position-x: 140%;
         @media screen and (min-width: $medium) {
             padding-top: 18px;
             padding-left: 95px;
+            background-image: url("../img/paralax/mountains.png");
+            background-repeat: no-repeat;
+        }
+
+        @media screen and (min-width: $full) {
+            background-position-x: right;
         }
     }
 }
@@ -290,7 +310,7 @@ span.logo {
     margin-top: 40px;
     .button-orange,
     .button-grey {
-        margin: 10px;
+        margin: 10px 0px;
     }
 
     .form-control:focus {
@@ -378,6 +398,9 @@ span.logo {
     a {
         text-decoration: none;
         color: #fff;
+        &:hover {
+            color: $orange;
+        }
     }
 
     .right {
