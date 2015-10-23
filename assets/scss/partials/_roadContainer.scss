@@ -9,10 +9,11 @@
     width: 1280px;
     height: 706px;
     display: block;
-    background-position-y: 30px;
-/*     background-size: contain; */
+    // background-position-y: 30px;
+    background-size: cover;
     background-repeat: no-repeat;
-    position:absolute; z-index:500;
+    position:absolute;
+    z-index:500;
 
     /*Chrome,Safari*/
     -webkit-clip-path: url(../img/iconsClipMask.svg);
