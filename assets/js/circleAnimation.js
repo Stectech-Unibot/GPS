@@ -1,5 +1,5 @@
 var CircleAnimation = (function(){
-    var BASE_PATH = "archive/img/pump/";
+    var BASE_PATH = "assets/img/circleBar/";
     var GRAY_IMAGE = BASE_PATH + "circularBarGray.png";
     var CircleAnimation = function(settings){
         this.settings = settings;
