@@ -62,11 +62,23 @@ $(document).ready(function(){
     {id: "#features .analyze", startY:"125px", endY:"34px"},
     {id: "#features .achieve", startY:"50px", endY:"-78px"},
     ].forEach(function(element, index){
+        var tweens = [TweenMax.fromTo($(element.id), 1.0, {
+                    css:{'background-position-y': element.startY}
+                }, {
+                    css:{'background-position-y': element.endY},
+                    immediateRender:false
+                })];
+        if (index===2){//add biker and runner animations
+            tweens = tweens.concat([
+                TweenMax.to($("#slope-biker"),  1.0,{css:{"margin-top":"-=250", "margin-left":"+=100"}}),
+                TweenMax.to($("#slope-runner"), 1.0,{css:{"margin-top":"-=250", "margin-left":"-=100"}}),
+            ]);
+        }
         var paralaxScene = new ScrollMagic.Scene({
             triggerElement: element.id,
             duration: 1000,
             triggerHook: "onEnter"})
-        .setTween(new TimelineMax().fromTo($(element.id), 1.0, {css:{'background-position-y': element.startY}}, {css:{'background-position-y': element.endY}})    )
+        .setTween(new TimelineMax().add(tweens))
         .addTo(controller);
     });
     [
@@ -90,6 +102,7 @@ $(document).ready(function(){
             {css:{'opacity': 1.0}, delay:settings.delay},// to data
             settings.staggerTime)//distance between starts,
         )
+
         .addTo(controller);
     });
 

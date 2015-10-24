@@ -105,7 +105,9 @@ span.logo {
                 font-weight: 100;
                 font-size: 20px;
             }
-        }   
+        }
+
+         
     }
 
     .analyze {
@@ -161,16 +163,39 @@ span.logo {
         background-color: $dark-green;
         background-repeat: no-repeat;
         background-position-x: 140%;
+        div#slope-biker, div#slope-runner{
+            display: inline-block;
+            background: url('../img/slopeBikerAndRunner.png') no-repeat;
+            overflow: hidden;
+        }
+        div#slope-biker {
+            position:absolute;
+            display:block;
+            background-position: -2px -0px; width: 79px; height: 76px;
+            margin-left: 793px;
+            margin-top: 250px;
+        }   
+        div#slope-runner {
+            position:absolute;
+            display:block;
+            background-position: -2px -78px; width: 50px; height: 54px;
+            margin-left:1530px;
+            margin-top:250px;
+        }
         @media screen and (min-width: $medium) {
             padding-top: 18px;
             padding-left: 95px;
             background-image: url("../img/paralax/mountains.png");
             background-repeat: no-repeat;
+            div#slope-biker {
+                margin-left:298px;
+            }
         }
 
         @media screen and (min-width: $full) {
-            background-position-x: right;
+            background-position-x: 950px;
         }
+
     }
 }
 
