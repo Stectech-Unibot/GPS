@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("html,body").animate({scrollTop:0},200);
     $('.circle').click(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
@@ -8,10 +9,10 @@ $(document).ready(function(){
     var startElements = $("#roadContainer p").get()
         .concat($(".roadicons").get())
         .concat($(".roadiconsDark").get());
-    var onLoadTL = new TimelineMax()
+    var onLoadTL = new TimelineMax({delay:0.3})
         .add([
-            TweenMax.fromTo($("#header").get(), 0.5, {css:{opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"}},{css:{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}}),
-            TweenMax.fromTo(startElements, 0.5, {css:{opacity:0, top:"-=50px"}},{css:{opacity:1, top:"+=50px"}})
+            TweenMax.fromTo($("#header").get(), 1.5, {opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"},{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}),
+            TweenMax.fromTo(startElements, 1.5, {opacity:0, top:"-=50px"},{opacity:1, top:"+=50px"})
         ]);
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
@@ -63,15 +64,15 @@ $(document).ready(function(){
     {id: "#features .achieve", startY:"50px", endY:"-78px"},
     ].forEach(function(element, index){
         var tweens = [TweenMax.fromTo($(element.id), 1.0, {
-                    css:{'background-position-y': element.startY}
+                    'background-position-y': element.startY,
                 }, {
-                    css:{'background-position-y': element.endY},
+                    'background-position-y': element.endY,
                     immediateRender:false
                 })];
         if (index===2){//add biker and runner animations
             tweens = tweens.concat([
-                TweenMax.to($("#slope-biker"),  1.0,{css:{"margin-top":"-=250", "margin-left":"+=100"}}),
-                TweenMax.to($("#slope-runner"), 1.0,{css:{"margin-top":"-=250", "margin-left":"-=100"}}),
+                TweenMax.to($("#slope-biker"),  1.0,{"margin-top":"-=250", "margin-left":"+=100",immediateRender:false}),
+                TweenMax.to($("#slope-runner"), 1.0,{"margin-top":"-=250", "margin-left":"-=100",immediateRender:false}),
             ]);
         }
         var paralaxScene = new ScrollMagic.Scene({
@@ -98,8 +99,8 @@ $(document).ready(function(){
         .setTween(new TimelineMax().staggerFromTo(
             $(settings.id).get(),
             settings.tweenTime,//tween time
-            {css:{'opacity': 0.0}},//from data
-            {css:{'opacity': 1.0}, delay:settings.delay},// to data
+            {'opacity': 0.0},//from data
+            {'opacity': 1.0, delay:settings.delay},// to data
             settings.staggerTime)//distance between starts,
         )
 
@@ -134,9 +135,9 @@ $(document).ready(function(){
       var self = cfg.elem;
       
       if (1){// if you want to debug something and see different elements in colors
-        timeLine.set(self,{css:{stroke:cfg.debugColor}});
+        timeLine.set(self,{stroke:cfg.debugColor});
       } else {
-        timeLine.set(self,{css:{stroke:"#364548"}});
+        timeLine.set(self,{stroke:"#364548"});
       }
       if (cfg.back){//some lines might be have drawn the reversed direction
         return TweenMax.fromTo(self, cfg.time||150, {drawSVG:"0% 0%"}, {
@@ -175,8 +176,4 @@ $(document).ready(function(){
         .setTween(new CircleAnimation(settings).timeLine)
         .addTo(controller);
     });
-
-
-
-
 })
