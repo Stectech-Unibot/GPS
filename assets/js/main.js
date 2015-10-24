@@ -144,4 +144,26 @@ $(document).ready(function(){
 
     MAZEscene.setTween(timeLine).addTo(controller);
 
+
+    // CIRCLE bars
+
+    [
+     {parent:"div.red-circle"  , percent:78, image:"circularBarRed.png"},
+     {parent:"div.blue-circle" , percent:100, image:"circularBarBlue.png"},
+     {parent:"div.green-circle", percent:90, image:"circularBarGreen.png"},
+
+    ].forEach(function(settings){
+        var scene = new ScrollMagic.Scene({
+            triggerElement: settings.parent,
+            duration:217,
+            triggerHook:"onEnter",
+            offset:100
+        })
+        .setTween(new CircleAnimation(settings).timeLine)
+        .addTo(controller);
+    });
+
+
+
+
 })
