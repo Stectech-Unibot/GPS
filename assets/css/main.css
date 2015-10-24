@@ -641,9 +641,13 @@ div.red-circle canvas, div.green-circle canvas, div.blue-circle canvas {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
+  overflow: hidden;
   z-index: 500;
   /*Chrome,Safari*/
   -webkit-clip-path: url(../img/iconsClipMask.svg);
+  /* MS IE&Edge*/
+  -ms-clip-path: url(../img/iconsClipMask.svg#svgClip);
+  -mask: url(../img/iconsClipMask.svg#svgClip);
   /* Firefox*/
   clip-path: url(../img/iconsClipMask.svg#svgClip);
   /* iOS support */
