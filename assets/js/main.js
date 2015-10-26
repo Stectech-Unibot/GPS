@@ -6,7 +6,7 @@ $(document).ready(function(){
     });
 
 //loading finnished
-    var startElements = $("#roadContainer p").get()
+    var startElements = []
         .concat($(".roadicons").get())
         .concat($(".roadiconsDark").get());
     var onLoadTL = new TimelineMax({delay:0.3})
@@ -21,12 +21,9 @@ $(document).ready(function(){
         Yease = Sine.easeIn,
         delayStep=0.1,
         endPositions={
-            left : {x:550, y:1066},
-            right: {x:660, y:1066},
+            left : {x:"48%", y:1066},
+            right: {x:"52%", y:1066},
         }
-        yInTunnel = 1066,
-        xLeft = 420,
-        xRight = 580,
     tweensInsideFunnel = [
         {icon:".iconShoe",        pos:"right", duration:1.0},//goes out 1st
         {icon:".iconSpeedometer", pos:"left" , duration:1.1},//2nd

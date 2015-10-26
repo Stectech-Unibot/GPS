@@ -17,8 +17,6 @@
 
 #roadContainer {
     // background-image: url("../img/hero.jpg");
-    // width: 100%;
-    width: 1280px;
     height: 706px;
     display: block;
     // background-position-y: 30px;
@@ -26,47 +24,33 @@
     background-repeat: no-repeat;
     position:absolute;
     z-index:500;
-
-    /*Chrome,Safari*/
-    -webkit-clip-path: url(../img/iconsClipMask.svg);
-    /* Firefox*/
-    clip-path: url(../img/iconsClipMask.svg#svgClip);
-    /* iOS support */
-     -webkit-mask: url(../img/iconsClipMask.svg);
-
-    left: 50%;
-    margin-left: -640px;
+    overflow:hidden;
+    width: 100%;
 }
 
 #roadContainer2 {
-    // width: 100%;
-    width: 1280px;
     height: 706px;
     display: block;
     position:absolute;
     z-index:499;
-    left: 50%;
-    margin-left: -640px;
+    width: 100%;
 }
 
 
-#roadContainer p {
-    opacity:0;
-    color: white;
+#roadContainer>p:first-child {
     position: absolute;
-    line-height: 28px;
-}
-
-#roadContainer p:first-child {
     font-size: 40px;
     text-align: center;
     font-family: $base-font-family;
+    color: white;
     top: 101px;
     left: 266px;
     line-height: 110%;
 
     left: 50%;
     margin-left: -190px;
+    margin-top: -70px;
+
     display: block;
     width: 380px;
 
@@ -77,6 +61,7 @@
 
     @media screen and (min-width: $medium) {
         margin-left: -496px;
+        margin-top: -40px;
         width: 992px;
     }
 
@@ -85,51 +70,50 @@
         width: 1280px;
     }
 }
-
-#roadContainer p#elevation {
-    padding-top: 207px;
-    padding-left: 70px;
+#roadContainer>div>p {
+    opacity:1;
+    color: white;
+    line-height: 28px;
+    position: relative;
+    top:100px
 }
 
-#roadContainer p#pace {
-    padding-top: 283px;
-    padding-left: 456px;
+#roadContainer>div>p#elevation {
+    left: 0px;
+    width:100px;
 }
 
-#roadContainer p#bpm {
-    padding-top: 310px;
-    padding-left: 700px;
+#roadContainer>div>p#pace {
+    left: 0px;
 }
 
-#roadContainer p#grade {
-    padding-top: 323px;
-    padding-left: 656px;
+#roadContainer>div>p#bpm {
+    left: 0px;
 }
 
-#roadContainer p#mph {
-    padding-top: 545px;
-    padding-left: 626px;
+#roadContainer>div>p#grade {
+    left: 0px;
 }
 
-#roadContainer p#power {
-    padding-top: 545px;
-    padding-left: 165px;
+#roadContainer>div>p#mph {
+    left: 0px;
 }
 
-#roadContainer p#grade {
-    padding-top: 405px;
-    padding-left: 925px;
+#roadContainer>div>p#power {
+    left: 0px;
 }
 
-#roadContainer p#sunny {
-    padding-top: 265px;
-    padding-left: 1090px;
+#roadContainer>div>p#grade {
+    left: 0px;
+}
+
+#roadContainer>div>p#sunny {
+    left: 0px;
     white-space: nowrap !important;
 }
 
-#roadContainer p#miles {
-    padding-top: 580px;
-    padding-left: 1120px;
+#roadContainer div>p#miles {
+    left: 0px;
 }
 
 .iconText {
