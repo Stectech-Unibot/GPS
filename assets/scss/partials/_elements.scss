@@ -127,17 +127,18 @@ button {
 		margin: 0 50%;
 	    right: -15px;
 	    width: 200px;
+	    a {
+			color: white;
+		}
 	}
 	.show-nav {
 		@include navtoggle(1);
 		visibility: visible;
+		a {
+			color: white;
+		}
 	}
 }
-
-
-
-
-
 
 .circle {
     cursor: pointer;
