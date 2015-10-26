@@ -3,10 +3,20 @@
 .funnel{
 	display:block;
 	background: url('../img/funnel.png') no-repeat;
+	background-size: 377px 433px;
 	overflow: hidden;
 	text-align: center;
 	position:absolute;
 	margin-top:100px;
+
+	@media screen and (min-width: $medium) {
+		background-size: 452px 433px;
+	}
+	
+	@media screen and (min-width: $full) {
+		background-size: 503px 433px;
+	}
+	 
 }
  
 #funnelTop {
