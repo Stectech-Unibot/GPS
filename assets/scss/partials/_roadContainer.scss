@@ -136,5 +136,17 @@
     img {
         width: 100%;
     }
+    #topAnimationsWrapper>roadicons img {
+      width: 100%;
+      top: -32px;
+      left: -60px;
+      position: relative;
+
+      }
+
 }
+svg.whiteSVG {
+ * {stroke:white !important;}
+}
+svg.darkSVG path {stroke:$dark-green !important;}
 
