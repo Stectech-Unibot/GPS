@@ -6,53 +6,47 @@ $(document).ready(function(){
     });
 
 //loading finnished
-    var startElements = $("#roadContainer p").get()
+    var startElements = []
+        .concat($(".roadicons svg").get())
         .concat($(".roadicons").get())
+        .concat($(".roadiconsDark svg").get())
         .concat($(".roadiconsDark").get());
     var onLoadTL = new TimelineMax({delay:0.3})
+        .set($("#roadContainer,#roadContainer2"), {opacity:1})
         .add([
             TweenMax.fromTo($("#header").get(), 1.5, {opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"},{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}),
             TweenMax.fromTo(startElements, 1.5, {opacity:0, top:"-=50px"},{opacity:1, top:"+=50px"})
         ]);
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
-    var Xease = Sine.easeOut,
-        // Yease = SlowMo.ease.config(0.3, 0.4, false),
-        Yease = Sine.easeIn,
-        delayStep=0.1,
-        endPositions={
-            left : {x:550, y:1066},
-            right: {x:660, y:1066},
+    var endPositions={
+            left : {x:"35%", y:1066},
+            right: {x:"42%", y:1066},
         }
-        yInTunnel = 1066,
-        xLeft = 420,
-        xRight = 580,
     tweensInsideFunnel = [
-        {icon:".iconShoe",        pos:"right", duration:1.0},//goes out 1st
-        {icon:".iconSpeedometer", pos:"left" , duration:1.1},//2nd
-        {icon:".iconSun",         pos:"right", duration:1.2},
-        {icon:".iconBiker",       pos:"left" , duration:1.35},
-        {icon:".iconRun",         pos:"right", duration:1.45},
-        {icon:".iconHeartbeat",   pos:"left" , duration:1.55},
-        {icon:".iconWaves",       pos:"right", duration:1.75},
-        {icon:".iconPeaks",       pos:"left" , duration:1.85},
+        {icon:".iconShoe.imgHolder",        pos:"right", duration:1.0},//goes out 1st
+        {icon:".iconSpeedometer.imgHolder", pos:"left" , duration:1.1},//2nd
+        {icon:".iconSun.imgHolder",         pos:"right", duration:1.2},
+        {icon:".iconBiker.imgHolder",       pos:"left" , duration:1.35},
+        {icon:".iconRun.imgHolder",         pos:"right", duration:1.45},
+        {icon:".iconHeartbeat.imgHolder",   pos:"left" , duration:1.55},
+        {icon:".iconWaves.imgHolder",       pos:"right", duration:1.75},
+        {icon:".iconPeaks.imgHolder",       pos:"left" , duration:1.85},
     ].map(function(settings, index){
         var element = $(settings.icon),
         pos = endPositions[settings.pos]
         iconTweens = [
-            TweenMax.to(element, settings.duration, { force3D:true, left: pos.x, ease: Xease}),
-            TweenMax.to(element, settings.duration, { force3D:true, top : pos.y, ease: Yease}),
+            TweenMax.to(element, settings.duration, { force3D:true, left: pos.x, ease: Sine.easeOut}),
+            TweenMax.to(element, settings.duration, { force3D:true, top : pos.y, ease: Sine.easeIn}),
         ];
         return iconTweens;
     }).reduce(function(last, next){
         return last.concat(next);
     },[]);
     var scene = new ScrollMagic.Scene({
-        // triggerElement: "#elevation>span",
-        duration:500,// keep this synched with the value used with TweenMax.to(element)
-        offset:0,
+        triggerElement: "#roadContainer",
+        duration:900,// scroll some pixels to complete the animation
         triggerHook:"onLeave"
-        // triggerHook:"onCenter"
     })
     .setTween(new TimelineMax().add(tweensInsideFunnel))
     .addTo(controller);

@@ -21,19 +21,21 @@
  
 #funnelTop {
 	background-position: center -382px;
-	// width: 1280px;
 	height: 49px;
 	top:850px; 
-	position:absolute; z-index:1;}
+	position:absolute; z-index:1;
+	margin-left: -50%;
+    left: 50%;
+}
 
 #funnelBase {
 	height: 380px; 
 	top:874px;
-	left:-1px;
 	position:absolute;
 	z-index:1000;
 	background-position: center 0;
-    // width: 1280px;
+	margin-left: -50%;
+    left: 50%;
 }
 h1#funnelTitle {
 	position: absolute;
@@ -54,51 +56,66 @@ p.funnelText:nth-child(1){
 .roadicons{
 	opacity:0;
 	display: block;
-	background: url('../img/roadIcons.png') no-repeat;
-	overflow: hidden;
 	text-align: center; 
 	position:absolute;
 }
 .roadiconsDark{
-	opacity:0;
-
 	display: block;
-	background: url('../img/roadIconsDark.png') no-repeat;
-	overflow: hidden;
-	text-indent: -9999px;
-	text-align: left; 
 	position:absolute;
 }
  
-.iconPeaks { background-position: -2px -383px; width: 61px; height: 60px;
+.iconPeaks {
+	width: 255px;
+	height: 141px;
 	top: 134px;
     left: 88px;
+	left:6%;
 }
-.iconRun { background-position: -2px -250px; width: 67px; height: 67px;
+.iconRun {
+	width: 255px;
+	height: 141px;
 	top: 204px;
     left: 442px;
+	left:32%;
+
 }
-.iconBiker { background-position: -2px -136px; width: 73px; height: 58px;
+.iconBiker {
+	width: 255px;
+	height: 141px;
 	top: 481px;
     left: 149px;
+	left:19%;
 }
-.iconHeartbeat { background-position: -2px -196px; width: 69px; height: 52px;
+.iconHeartbeat {
+	width: 255px;
+	height: 141px;
 	top: 254px;
 	left: 687px;
+	left:57%;
 }
-.iconSpeedometer { background-position: -2px -445px; width: 60px; height: 59px;
+.iconSpeedometer {
+	width: 255px;
+	height: 141px;
     top: 476px;
     left: 607px;
+	left:44%;
 }
-.iconWaves { background-position: -2px -319px; width: 63px; height: 62px;
+.iconWaves {
+	width: 255px;
+	height: 141px;
     top: 332px;
     left: 916px;
+	left:69%;
 }
-.iconShoe { background-position: -2px -0px; width: 101px; height: 60px;
+.iconShoe {
+	width: 255px;
+	height: 141px;
     top: 506px;
     left: 1083px;
+	left:81%;
 }
 .iconSun { background-position: -2px -62px; width: 75px; height: 72px;
     top: 187px;
     left: 1087px;
+	left:94%;
 }
