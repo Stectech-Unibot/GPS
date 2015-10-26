@@ -90,6 +90,11 @@ span.logo {
             background-image: url("../img/paralax/icons.png");
             background-position-x: 115%;
 
+            /*This will work for firefox*/
+            @-moz-document url-prefix() {
+                background-position: 115% 0px;
+            }
+
         }
         @media screen and (min-width: $full) {
             background-position-x: right;
@@ -162,7 +167,8 @@ span.logo {
         text-shadow: 1px 1px $dark-green;
         background-color: $dark-green;
         background-repeat: no-repeat;
-        background-position-x: 140%;
+        background-position-x: 100%;
+        overflow: hidden;
         div#slope-biker, div#slope-runner{
             display: inline-block;
             background: url('../img/slopeBikerAndRunner.png') no-repeat;
@@ -182,15 +188,33 @@ span.logo {
             margin-left:1530px;
             margin-top:250px;
         }
+        .achieve-icons {
+            position: absolute;
+            margin-left: 250px;
+            width: 500px;
+            height: 100px;
+            right: 1020px;
+            display: none;
+
+            @media screen and (min-width: $medium) {
+                display: block;
+            }
+        }
         @media screen and (min-width: $medium) {
             padding-top: 18px;
             padding-left: 95px;
             background-image: url("../img/paralax/mountains.png");
             background-repeat: no-repeat;
+
+            /*This will work for firefox*/
+            @-moz-document url-prefix() {
+                background-position: right 0px;
+            }
+            
         }
 
         @media screen and (min-width: $full) {
-            background-position-x: 950px;
+            background-position-x: right;
         }
 
     }
