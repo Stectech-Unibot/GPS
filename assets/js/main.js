@@ -105,9 +105,9 @@ $(document).ready(function(){
 
     var MAZEscene = new ScrollMagic.Scene({
         triggerElement: "#MazeWrapper",
-        duration: 500, // sliding those number of pixels to complete the MAZE animation
+        duration: 630, // sliding those number of pixels to complete the MAZE animation
         triggerHook: "onEnter",
-        offset:300 // wait to pass offset pixel before starting with the SVGdraw
+        offset:150 // wait to pass offset pixel before starting with the SVGdraw
     });
 
     var timeLine = new TimelineMax()
