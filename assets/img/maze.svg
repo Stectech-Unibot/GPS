@@ -104,6 +104,21 @@
 		c7.268,21.8,27.734,36.598,50.817,36.598c21.978,0,41.653-13.418,49.748-33.681h-50.164l-26.804-24.395l-0.299,0.272l-0.299,0.272
 		L270.954,404.462z M272.021,406.179l18.762,16.895l-18.762-9.508L272.021,406.179z"/>
 </g>
+<defs>
+<g id="redThumbler">
+<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="297.317" cy="421.164" r="11.984"/>
+<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	299.04,431.426 297.317,421.164 285.892,422.469 "/>
+</g>
+<g id="greenThumbler">
+<circle fill="#FFFFFF" stroke="#364447" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="297.317" cy="421.164" r="11.984"/>
+<polyline fill="none" stroke="#364447" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	299.04,431.426 297.317,421.164 285.892,422.469 "/>
+</g>
+</defs>
+ <use xlink:href="#redThumbler" x="50" y="50"/>
+ <use xlink:href="#greenThumbler" x="200" y="50"/>
+
 <g id="logo1">
 </g>
 <g id="logo2">
