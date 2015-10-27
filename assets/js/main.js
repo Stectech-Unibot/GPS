@@ -20,7 +20,7 @@ $(document).ready(function(){
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
     var endPositions={
-            left : {x:"35%", y:1066},
+            left : {x:"38%", y:1066},
             right: {x:"42%", y:1066},
         }
     tweensInsideFunnel = [
