@@ -128,11 +128,6 @@ $(document).ready(function(){
     ].map(function(cfg){
       var self = cfg.elem;
       
-      if (1){// if you want to debug something and see different elements in colors
-        timeLine.set(self,{stroke:cfg.debugColor});
-      } else {
-        timeLine.set(self,{stroke:"#364548"});
-      }
       if (cfg.back){//some lines might be have drawn the reversed direction
         return TweenMax.fromTo(self, cfg.time||150, {drawSVG:"0% 0%"}, {
             drawSVG:"0% 100%",
@@ -153,7 +148,7 @@ $(document).ready(function(){
     MAZEscene.setTween(timeLine).addTo(controller);
 
 
-    // CIRCLE bars
+    // CIRCLE bars EVENT FORECAST
 
     [
      {parent:"div.red-circle"  , percent:78, image:"circularBarRed.png"},
@@ -163,9 +158,8 @@ $(document).ready(function(){
     ].forEach(function(settings){
         var scene = new ScrollMagic.Scene({
             triggerElement: settings.parent,
-            duration:217,
-            triggerHook:"onEnter",
-            offset:100
+            duration:150,
+            triggerHook:"onCenter",
         })
         .setTween(new CircleAnimation(settings).timeLine)
         .addTo(controller);
