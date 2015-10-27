@@ -653,7 +653,9 @@ p.mazeTop, p.mazeBottom {
 
 div#MazeWrapper > svg {
   position: relative;
-  top: -140px; }
+  /* top: -140px; */
+  width: 100%;
+  }
 
 div.red-circle canvas, div.green-circle canvas, div.blue-circle canvas {
   position: relative;
