@@ -116,9 +116,10 @@
 	299.04,431.426 297.317,421.164 285.892,422.469 "/>
 </g>
 </defs>
- <use xlink:href="#redThumbler" x="50" y="50"/>
- <use xlink:href="#greenThumbler" x="200" y="50"/>
-
+<g id="topLeftThumbler">
+ <use xlink:href="#greenThumbler" x="90" y="-150"/>
+ <use xlink:href="#redThumbler" x="90" y="-150"/>
+</g>
 <g id="logo1">
 </g>
 <g id="logo2">
