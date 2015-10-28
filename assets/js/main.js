@@ -37,7 +37,7 @@ var main = function(){
             .attr("width",""+w+"px")
             .attr("height",""+h+"px")
             .css("margin-left","-122px")
-            .css("margin-top","-40px");
+            .css("margin-top","40px");
     }
     if (window.innerWidth<620){//iPhone
         endPositions={
