@@ -137,8 +137,6 @@ $(document).ready(function(){
     // FUTURE RELEASE FEATUREs paralax
         {id:"#future-release>div.left>ul>li",   trigger:"#future-release>div.left>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
         {id:"#future-release>div.right>ul>li",  trigger:"#future-release>div.right>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
-    //REQUEST EARLY ACCESS
-        {id:"#request-access>div",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
     ].forEach(function(settings, index){
         var paralaxScene = new ScrollMagic.Scene({
             triggerElement: settings.trigger,
@@ -150,6 +148,34 @@ $(document).ready(function(){
             {'opacity': 0.0},//from data
             {'opacity': 1.0, delay:settings.delay},// to data
             settings.staggerTime)//distance between starts,
+        )
+
+        .addTo(controller);
+    });
+
+    //REQUEST EARLY ACCESS
+    [
+        {id:"#request-access>div:nth-child(1) div.col-xs-12, #request-access>div:nth-child(2) div.col-xs-12",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
+    ].forEach(function(settings, index){
+        var self = $(settings.id).get();
+        var paralaxScene = new ScrollMagic.Scene({
+            triggerElement: settings.trigger,
+            duration: settings.duration,
+            triggerHook: "onEnter"})
+        .setTween(new TimelineMax({tweens:[
+            TweenMax.staggerFromTo(
+                self,
+                settings.tweenTime,//tween time
+                {'opacity': 0.0},//from data
+                {'opacity': 1.0, delay:settings.delay},// to data
+                settings.staggerTime),//distance between starts,
+            TweenMax.fromTo(
+                self,
+                settings.tweenTime,//tween time
+                {'top': 25.0},//from data
+                {'top': 0.0, delay:settings.delay*2},// to data
+                settings.staggerTime),//distance between starts,
+            ]})
         )
 
         .addTo(controller);
