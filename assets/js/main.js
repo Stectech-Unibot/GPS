@@ -17,7 +17,22 @@ $(document).ready(function(){
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
     var endPositions, tweensInsideFunnel;
-    if (window.innerWidth<620){
+    var w = 620;
+    var h = 620/375*541;
+
+    if (window.innerWidth<620){//iPhone
+        $("#MazeWrapper svg")
+            .attr("width","375px")
+            .attr("height","541px")
+            .css("margin-top","-4px");
+    } else{
+        $("#MazeWrapper svg")
+            .attr("width",""+w+"px")
+            .attr("height",""+h+"px")
+            .css("margin-left","-122px")
+            .css("margin-top","-40px");
+    }
+    if (window.innerWidth<620){//iPhone
         endPositions={
             left : {x:"25%", y:966},
             right: {x:"28%", y:966},

@@ -8,7 +8,11 @@ div#MazeWrapper{
 
 p.mazeTop,p.mazeBottom {position:relative; background-color:white; display:none;}
 
-div#MazeWrapper>svg{
+#sizeWrapMaze {
+	width:375px;
+	height:541px;
+}
+div#MazeWrapper svg{
 	position: relative;
 	top:-140px;
 }
