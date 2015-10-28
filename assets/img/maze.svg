@@ -77,40 +77,46 @@
 		c0,0,18.701,16.14,18.701,16.14l-0.002-0.002c6.767-6.843,14.247-12.979,22.32-18.287l0.447-0.269l-14.577-19.86l-0.001-0.002
 		c20.291-13.432,43.772-22.431,69.064-25.617L277,245v-99"/>
 </g>
-<g id="clock3">
+<g id="clock8">
 	
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="385.317" cy="272.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 		388.826,260.703 385.921,274.506 374.313,271.117 	"/>
 </g>
-<g id="clock2">
+<g id="clock7">
 	
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="326.317" cy="493.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 		331.229,483.991 326.317,493.164 336.155,499.118 	"/>
-	
+</g>
+<g id="clock6">
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="444.317" cy="335.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 		453.191,329.729 444.317,335.164 449.8,345.272 	"/>
-	
+</g>
+<g id="clock5">
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="469.317" cy="484.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 		475.636,475.896 469.317,484.164 478.074,491.617 	"/>
-	
+</g>
+<g id="clock4">
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="248.317" cy="510.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 		248.038,499.762 248.317,510.164 259.813,510.461 	"/>
-	
+</g>
+<g id="clock3">
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="134.317" cy="405.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 		132.608,394.9 134.317,405.164 145.744,403.874 	"/>
-	
+</g>
+<g id="clock2">
+
 		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="184.317" cy="258.164" r="11.984"/>
 	
 		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
