@@ -7,10 +7,7 @@ $(document).ready(function(){
 
 //loading finnished
     var startElements = []
-        .concat($(".roadicons svg").get())
-        .concat($(".roadicons").get())
-        .concat($(".roadiconsDark svg").get())
-        .concat($(".roadiconsDark").get());
+        .concat($(".roadiconsDark, .roadiconsDark svg, .roadicons, .roadicons svg, topTitle").get());
     var onLoadTL = new TimelineMax({delay:0.3})
         .set($("#roadContainer,#roadContainer2"), {opacity:1})
         .add([
@@ -19,10 +16,33 @@ $(document).ready(function(){
         ]);
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
-    var endPositions={
+    var endPositions, tweensInsideFunnel;
+    if (window.innerWidth<620){
+        endPositions={
+            left : {x:"25%", y:966},
+            right: {x:"28%", y:966},
+        };
+    } else if(window.innerWidth<1207){
+        endPositions={
+            left : {x:"38%", y:966},
+            right: {x:"42%", y:966},
+        };
+    } else {
+        endPositions={
             left : {x:"38%", y:1066},
             right: {x:"42%", y:1066},
-        }
+        };
+    }
+
+    if (window.innerWidth<1207){
+        TweenMax.set($("#slideHeader"),{height:"611px","background-position-y":"50px"});
+        TweenMax.set($("#roadContainer,#roadContainer2"), {"height":"561px", top:"+=50px"})
+        TweenMax.set($(".funnel"), {"margin-top":"0px"})
+        TweenMax.set($("h1#funnelTitle"), {"top":"-=100px"})
+    } else {
+        TweenMax.set($("#slideHeader"), {"background-position-y":"0px"})
+    }
+
     tweensInsideFunnel = [
         {icon:".iconShoe.imgHolder",        pos:"right", duration:1.0},//goes out 1st
         {icon:".iconSpeedometer.imgHolder", pos:"left" , duration:1.1},//2nd
@@ -43,18 +63,15 @@ $(document).ready(function(){
     }).reduce(function(last, next){
         return last.concat(next);
     },[]);
+    if (window.innerWidth<1207){
+        tweensInsideFunnel.push(TweenMax.to($("#slideHeader"),1.3, {"background-position-y":"-=50px"}));//paralax of banner
+    }
     var scene = new ScrollMagic.Scene({
         triggerElement: "#roadContainer",
         duration:900,// scroll some pixels to complete the animation
         triggerHook:"onLeave"
     })
-    .setTween(new TimelineMax().add(tweensInsideFunnel
-        .concat([
-            TweenMax.fromTo($("#slideHeader"),1.3, {"background-position-y":"0px"}, {"background-position-y":"-20px"}),
-            TweenMax.fromTo($("#roadContainer"),1.3, {"height":"686px"}, {"height":"666px"}),
-            TweenMax.fromTo($("#roadContainer2"),1.3, {"height":"686px"}, {"height":"666px"}),
-            ])
-    ))
+    .setTween(new TimelineMax().add(tweensInsideFunnel))
     .addTo(controller);
 
     // FEATUREs paralax

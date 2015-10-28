@@ -6,15 +6,14 @@
     background-repeat: no-repeat;
     position:absolute;
     z-index:499;
+    background-position-y: 0px;
 
 }
 
 #roadContainer {
-    // background-image: url("../img/hero.jpg");
     height: 686px;
     opacity:0;
     display: block;
-    // background-position-y: 30px;
     background-size: cover;
     background-repeat: no-repeat;
     position:absolute;
@@ -28,6 +27,8 @@
     height: 686px;
     display: block;
     position:absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index:498;
     width: 100%;
 }
