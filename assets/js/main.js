@@ -49,7 +49,11 @@ $(document).ready(function(){
         triggerHook:"onLeave"
     })
     .setTween(new TimelineMax().add(tweensInsideFunnel
-        .concat([TweenMax.fromTo($("#slideHeader"),1.3, {"background-position-y":"0px"}, {"background-position-y":"-20px"})])
+        .concat([
+            TweenMax.fromTo($("#slideHeader"),1.3, {"background-position-y":"0px"}, {"background-position-y":"-20px"}),
+            TweenMax.fromTo($("#roadContainer"),1.3, {"height":"686px"}, {"height":"666px"}),
+            TweenMax.fromTo($("#roadContainer2"),1.3, {"height":"686px"}, {"height":"666px"}),
+            ])
     ))
     .addTo(controller);
 
