@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("html,body").animate({scrollTop:0},200);
+    // $("html,body").animate({scrollTop:0},200);
     $('.circle').click(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
@@ -7,10 +7,7 @@ $(document).ready(function(){
 
 //loading finnished
     var startElements = []
-        .concat($(".roadicons svg").get())
-        .concat($(".roadicons").get())
-        .concat($(".roadiconsDark svg").get())
-        .concat($(".roadiconsDark").get());
+        .concat($(".roadiconsDark, .roadiconsDark svg, .roadicons, .roadicons svg, topTitle").get());
     var onLoadTL = new TimelineMax({delay:0.3})
         .set($("#roadContainer,#roadContainer2"), {opacity:1})
         .add([
@@ -19,10 +16,54 @@ $(document).ready(function(){
         ]);
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
-    var endPositions={
+    var endPositions, tweensInsideFunnel;
+    var w = 620;
+    var h = 620/375*541;
+
+    if (window.innerWidth<620){//iPhone
+        $("#MazeWrapper svg")
+            .attr("width","375px")
+            .attr("height","541px")
+            .css("margin-top","-4px");
+        $("#topAnimationsWrapper").css("height","1600px");
+    } else{
+        $("#MazeWrapper svg")
+            .attr("width",""+w+"px")
+            .attr("height",""+h+"px")
+            .css("margin-left","-122px")
+            .css("margin-top","-40px");
+    }
+    if (window.innerWidth<620){//iPhone
+        endPositions={
+            left : {x:"25%", y:966},
+            right: {x:"28%", y:966},
+        };
+    } else if(window.innerWidth<1207){
+        endPositions={
+            left : {x:"38%", y:966},
+            right: {x:"42%", y:966},
+        };
+    } else if (window.innerWidth>1900){
+        endPositions={
+            left : {x:"45%", y:1066},
+            right: {x:"48%", y:1066},
+        };
+    } else {
+        endPositions={
             left : {x:"38%", y:1066},
             right: {x:"42%", y:1066},
-        }
+        };
+    }
+
+    if (window.innerWidth<1207){
+        TweenMax.set($("#slideHeader"),{height:"611px","background-position-y":"50px"});
+        TweenMax.set($("#roadContainer,#roadContainer2"), {"height":"561px", top:"+=50px"})
+        TweenMax.set($(".funnel"), {"margin-top":"0px"})
+        TweenMax.set($("h1#funnelTitle"), {"top":"-=100px"})
+    } else {
+        TweenMax.set($("#slideHeader"), {"background-position-y":"0px"})
+    }
+
     tweensInsideFunnel = [
         {icon:".iconShoe.imgHolder",        pos:"right", duration:1.0},//goes out 1st
         {icon:".iconSpeedometer.imgHolder", pos:"left" , duration:1.1},//2nd
@@ -43,18 +84,15 @@ $(document).ready(function(){
     }).reduce(function(last, next){
         return last.concat(next);
     },[]);
+    if (window.innerWidth<1207){
+        tweensInsideFunnel.push(TweenMax.to($("#slideHeader"),1.3, {"background-position-y":"-=50px"}));//paralax of banner
+    }
     var scene = new ScrollMagic.Scene({
         triggerElement: "#roadContainer",
         duration:900,// scroll some pixels to complete the animation
         triggerHook:"onLeave"
     })
-    .setTween(new TimelineMax().add(tweensInsideFunnel
-        .concat([
-            TweenMax.fromTo($("#slideHeader"),1.3, {"background-position-y":"0px"}, {"background-position-y":"-20px"}),
-            TweenMax.fromTo($("#roadContainer"),1.3, {"height":"686px"}, {"height":"666px"}),
-            TweenMax.fromTo($("#roadContainer2"),1.3, {"height":"686px"}, {"height":"666px"}),
-            ])
-    ))
+    .setTween(new TimelineMax().add(tweensInsideFunnel))
     .addTo(controller);
 
     // FEATUREs paralax
@@ -88,7 +126,7 @@ $(document).ready(function(){
         {id:"#signup-button",                   trigger:"#signup-button" , delay:0   , tweenTime:0.5, staggerTime:0, duration:700},
     // FUTURE RELEASE FEATUREs paralax
         {id:"#future-release>div.left>ul>li",   trigger:"#future-release>div.left>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
-        {id:"#future-release>div.right>ul>li",  trigger:"#future-release>div.left>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
+        {id:"#future-release>div.right>ul>li",  trigger:"#future-release>div.right>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
     //REQUEST EARLY ACCESS
         {id:"#request-access>div",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
     ].forEach(function(settings, index){
@@ -108,10 +146,11 @@ $(document).ready(function(){
     });
 
 
+    //MAZE animations
 
     var MAZEscene = new ScrollMagic.Scene({
         triggerElement: "#MazeWrapper",
-        duration: 630, // sliding those number of pixels to complete the MAZE animation
+        duration: (window.innerWidth<620)?300:630, // sliding those number of pixels to complete the MAZE animation
         triggerHook: "onEnter",
         offset:150 // wait to pass offset pixel before starting with the SVGdraw
     });
@@ -149,9 +188,38 @@ $(document).ready(function(){
       }
     });
 
-    timeLine.add(sequence);//.restart();
 
+
+
+    // THUMBLERS animations
+    thumblers = [
+        {delay:0, rotation: -150, time:45, index:1},
+        {delay:0, rotation:   60, time:25, index:2},
+        {delay:0, rotation:   90, time:55, index:3},
+        {delay:0, rotation: -150, time:67, index:4},
+        {delay:0, rotation:  170, time:55, index:5},
+        {delay:0, rotation:  -90, time:29, index:6},
+        {delay:0, rotation:  140, time:70, index:7},
+        {delay:0, rotation:  -70, time:15, index:8},
+        ].map(function(settings ){
+        var self = $("g#clock"+(settings.index));
+        return TweenMax.to(self, settings.time, {
+            rotation:settings.rotation,
+            transformOrigin:"50% 50%",
+            delay:settings.delay,
+            immediateRender:false,//prevents from starting the animation until added to TimeLine 
+            onUpdate:function(){
+                self.children().attr("stroke","#ED684B");
+            },
+            onComplete:function(){
+                self.children().attr("stroke","#73C2A9");
+            }
+            }); //back:true
+    });
+
+    timeLine.add(sequence.concat(thumblers));//.restart();
     MAZEscene.setTween(timeLine).addTo(controller);
+    //end MAZE animations
 
 
     // CIRCLE bars EVENT FORECAST
