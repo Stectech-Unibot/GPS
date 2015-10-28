@@ -48,7 +48,9 @@ $(document).ready(function(){
         duration:900,// scroll some pixels to complete the animation
         triggerHook:"onLeave"
     })
-    .setTween(new TimelineMax().add(tweensInsideFunnel))
+    .setTween(new TimelineMax().add(tweensInsideFunnel
+        .concat([TweenMax.fromTo($("#slideHeader"),1.3, {"background-position-y":"0px"}, {"background-position-y":"-20px"})])
+    ))
     .addTo(controller);
 
     // FEATUREs paralax
