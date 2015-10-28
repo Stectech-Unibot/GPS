@@ -4,6 +4,12 @@
     width: 100%;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .centered {
     width: 100%;
     left:0;
@@ -18,15 +24,15 @@ span.logo {
     margin-top: 26px;
     display: block;
     text-align: center;
-    margin-left: 50px;
     @media screen and (min-width: $medium) {
         text-align: left;
+        margin-left: 50px;
     }
     img {
-        width: 100%;
+        width: 200px;
 
         @media screen and (min-width: 400px) {
-            width: auto;
+            //width: auto;
         }
 
         @media screen and (min-width: $medium) {
@@ -72,25 +78,32 @@ span.logo {
     .row {
         color: white;
         min-height: 200px;
-        h2 {
-            margin-left: 12px;
-        }
     }
 
     .data {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/paralax/icons.png") $dark-green no-repeat;
-        background-position: right 10px;
+        background-position: 120% 10px;
         overflow: hidden;
+        background-color: $dark-green;
+        background-repeat: no-repeat;
+
 
         @media screen and (min-width: $medium) {
             padding-top: 33px;
             padding-bottom: 31px;
             padding-left: 95px;
             padding-right: 95px;
+            background-image: url("../img/paralax/icons.png");
+            background-position-x: 115%;
+
+            /*This will work for firefox*/
+            @-moz-document url-prefix() {
+                background-position: 115% 0px;
+            }
+
         }
         @media screen and (min-width: $full) {
-            background-position-x: 748px;
+            background-position-x: right;
         }
         p {
             width: 100%;
@@ -103,16 +116,32 @@ span.logo {
                 font-weight: 100;
                 font-size: 20px;
             }
-        }   
+        }
+
+         
     }
 
     .analyze {
         text-shadow: 1px 1px $orange;
-        background: url("../img/paralax/graph.png") $orange no-repeat -110px 23px;
+        background-color: $orange;
+        background-repeat: no-repeat;
         position: relative;
-        text-align: right;
+        text-align: left;
         @media screen and (min-width: $medium) {
             min-height: 349px;
+            padding-top: 18px;
+            padding-right: 95px;
+            background-image: url("../img/paralax/graph.png");
+            background-position: -250px 23px;
+            text-align: right;
+
+            p {
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: $full) {
+            background-position: -110px 23px;
         }
 
         .content {
@@ -130,14 +159,11 @@ span.logo {
                 top: 247px;
                 padding-right: 95px;
             }
-        }   
-
-        p {
-            text-align: right;
-        }
+        } 
 
         .achieve {
             p {
+                // text-align: left;
                 text-align: left;   
             }
         }
@@ -145,12 +171,59 @@ span.logo {
 
     .achieve {
         text-shadow: 1px 1px $dark-green;
-        background: url("../img/paralax/mountains.png") $dark-green no-repeat;
-        background-position-x: right;
+        background-color: $dark-green;
+        background-repeat: no-repeat;
+        // background-position-x: 100%;
+        background-position: right 70px top;
+        overflow: hidden;
+        div#slope-biker, div#slope-runner{
+            display: inline-block;
+            background: url('../img/slopeBikerAndRunner.png') no-repeat;
+            overflow: hidden;
+        }
+        div#slope-biker {
+            position:absolute;
+            display:block;
+            background-position: -2px -0px; width: 79px; height: 76px;
+            margin-left: 793px;
+            margin-top: 250px;
+        }   
+        div#slope-runner {
+            position:absolute;
+            display:block;
+            background-position: -2px -78px; width: 50px; height: 54px;
+            margin-left:1530px;
+            margin-top:250px;
+        }
+        .achieve-icons {
+            position: absolute;
+            margin-left: 250px;
+            width: 500px;
+            height: 100px;
+            right: 1090px;
+            display: none;
+
+            @media screen and (min-width: $medium) {
+                display: block;
+            }
+        }
         @media screen and (min-width: $medium) {
             padding-top: 18px;
             padding-left: 95px;
+            background-image: url("../img/paralax/mountains.png");
+            background-repeat: no-repeat;
+
+            /*This will work for firefox*/
+            @-moz-document url-prefix() {
+                // background-position: right 0px;
+            }
+            
         }
+
+        @media screen and (min-width: $full) {
+            // background-position-x: right;
+        }
+
     }
 }
 
@@ -290,7 +363,7 @@ span.logo {
     margin-top: 40px;
     .button-orange,
     .button-grey {
-        margin: 10px;
+        margin: 10px 0px;
     }
 
     .form-control:focus {
@@ -320,11 +393,10 @@ span.logo {
     }
 
     .button-grey {
-        padding-top: 24px;
-        padding-bottom: 23px;
-        @media screen and (min-width: $medium) {
+        //@media screen and (min-width: $medium) {
             width: 100%;
-        }
+            padding: 24px;
+        //}
     }
 
     .button-orange {
@@ -356,6 +428,11 @@ span.logo {
         border: 2px solid;
     }
     h2 {
+        padding-bottom: 2px;
+        border-bottom: 4px solid #5ba0cf;
+        margin-bottom: 20px;
+        display: inline-block;
+        
         @media screen and (min-width: $medium) {
             font-size: 18px;
             margin-top: 3px;

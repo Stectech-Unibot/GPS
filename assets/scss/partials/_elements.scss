@@ -1,7 +1,6 @@
 // REUSABLE MIXINS
 
 @mixin circles {
-	background-image: url(../img/circles.png);
 	width: 217px;
 	height: 217px;
 	margin: auto;
@@ -19,6 +18,23 @@
 	zoom: 1;
 }
 
+@mixin button-orange {
+	border-radius: 10px;
+    border: 2px solid $dark-orange;
+    color: $dark-orange;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    max-width: 292px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
 @mixin navtoggle($onoff) {
 	opacity: $onoff;
 	position: absolute;
@@ -28,7 +44,9 @@
 	z-index: 10000;
 	transition: all 0.5s ease;
 	@media screen and (min-width: $medium) {
-		left: -120px;
+		left: -150px;
+	    right: auto;
+	    margin: 0;
 	}
 	ul {
 		padding: 0;
@@ -42,22 +60,15 @@
 
 // TOP HEADER
 
+input.button-orange {
+    background: white;
+    @include button-orange;
+    max-width: 100%;
+}
+
 .button-orange {
     a {
-    	border-radius: 10px;
-	    border: 2px solid $dark-orange;
-	    color: $dark-orange;
-	    text-align: center;
-	    padding-top: 10px;
-	    padding-bottom: 10px;
-	    font-size: 16px;
-	    width: 292px;
-	    margin: auto;
-	    margin-top: 30px;
-	    margin-bottom: 30px;
-	    cursor: pointer;
-	    display: block;
-	    text-decoration: none;
+    	@include button-orange;
     }
     @media screen and (min-width: 992px) {
 		width: 238px;
@@ -99,10 +110,12 @@ button {
 }
 
 .burger-nav {
-	@include burger(51px, 5px, 10.5px, $orange);
+	@include burger(35px, 3px, 7.5px, $orange);
 	margin-top: 50px;
+
 	@media screen and (min-width: 992px) {
 		margin-top: 63px;
+		margin-right: 50px;
 	}
 }
 
@@ -111,10 +124,20 @@ button {
 	.nav {
 		@include navtoggle(0);
 		visibility: hidden;
+
+		margin: 0 50%;
+	    right: -15px;
+	    width: 200px;
+	    a {
+			color: white;
+		}
 	}
 	.show-nav {
 		@include navtoggle(1);
 		visibility: visible;
+		a {
+			color: white;
+		}
 	}
 }
 
@@ -123,6 +146,7 @@ button {
     display: block;
     overflow: hidden;
     transition: all 5s;
+	text-align: center;
 }
 
 .circle.is-active .burger-nav {

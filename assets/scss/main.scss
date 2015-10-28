@@ -16,12 +16,14 @@ $light-font-family: "AvenirLight";
 
 $orange: #f8533b;
 $dark-green: #364447;
+$thumbler-red: #ED684B;
 $dark-orange: #d54e3e;
 $light-grey: #eeeeee;
 $blue: #5ba0cf;
 
 // LAYOUT
 
+$minimum: 500px;
 $medium: 992px;
 $full: 1280px;
 
@@ -32,5 +34,6 @@ $full: 1280px;
 @import "partials/elements";
 @import "partials/layout";
 @import "partials/maze";
+@import "partials/forecast";
 @import "partials/roadContainer";
 @import "partials/roadIcons";

@@ -1,94 +1,80 @@
-.placeholder-img {
-  background-image: url("../img/placeholder.jpg");
-  width: 1280px;
-  height: 1993px;
+#slideHeader {
+    background-image: url("../img/hero.jpg");
+    width: 100%;
+    height: 686px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    z-index:499;
+
 }
 
 #roadContainer {
-    background-image: url("../img/hero.jpg");
-    width: 1280px;
-    height: 706px;
+    // background-image: url("../img/hero.jpg");
+    height: 686px;
+    opacity:0;
     display: block;
-    background-position-y: 30px;
-/*     background-size: contain; */
+    // background-position-y: 30px;
+    background-size: cover;
     background-repeat: no-repeat;
-    position:absolute; z-index:500;
-
-    /*Chrome,Safari*/
-    -webkit-clip-path: url(../img/iconsClipMask.svg);
-    /* Firefox*/
-    clip-path: url(../img/iconsClipMask.svg#svgClip);
-    /* iOS support */
-     -webkit-mask: url(../img/iconsClipMask.svg);
+    position:absolute;
+    z-index:500;
+    overflow:hidden;
+    width: 100%;
 }
 
 #roadContainer2 {
-    width: 1280px;
-    height: 706px;
-    display: block;
-    position:absolute; z-index:499;
-}
-
-
-#roadContainer p {
     opacity:0;
-    color: white;
-    position: absolute;
-    line-height: 28px;
+    height: 686px;
+    display: block;
+    position:absolute;
+    z-index:498;
+    width: 100%;
 }
 
-#roadContainer p:first-child {
+#roadContainer p#topTitle {
+    position: absolute;
     font-size: 40px;
     text-align: center;
     font-family: $base-font-family;
+    color: white;
     top: 101px;
     left: 266px;
+    line-height: 110%;
+
+    left: 50%;
+    margin-left: -190px;
+    margin-top: -70px;
+
+    display: block;
+    width: 380px;
+
+    @media screen and (min-width: $minimum) {
+        margin-left: -250px;
+        width: 500px;
+    }
+
+    @media screen and (min-width: $medium) {
+        margin-left: -496px;
+        margin-top: -40px;
+        width: 992px;
+    }
+
+    @media screen and (min-width: $full) {
+        margin-left: -640px;
+        width: 1280px;
+    }
+}
+#roadContainer>div>p {
+    opacity:1;
+    color: white;
+    line-height: 28px;
+    position: relative;
+    top:120px
 }
 
-#roadContainer p#elevation {
-    padding-top: 207px;
-    padding-left: 70px;
-}
-
-#roadContainer p#pace {
-    padding-top: 283px;
-    padding-left: 456px;
-}
-
-#roadContainer p#bpm {
-    padding-top: 310px;
-    padding-left: 700px;
-}
-
-#roadContainer p#grade {
-    padding-top: 323px;
-    padding-left: 656px;
-}
-
-#roadContainer p#mph {
-    padding-top: 545px;
-    padding-left: 626px;
-}
-
-#roadContainer p#power {
-    padding-top: 545px;
-    padding-left: 165px;
-}
-
-#roadContainer p#grade {
-    padding-top: 405px;
-    padding-left: 925px;
-}
-
-#roadContainer p#sunny {
-    padding-top: 265px;
-    padding-left: 1090px;
+#roadContainer>div>p#sunny {
     white-space: nowrap !important;
-}
-
-#roadContainer p#miles {
-    padding-top: 580px;
-    padding-left: 1120px;
 }
 
 .iconText {
@@ -106,9 +92,34 @@
     height:1850px;
 
     margin-bottom: 70px;
+    overflow: hidden;
 
     img {
         width: 100%;
     }
+    #topAnimationsWrapper>roadicons img {
+      width: 100%;
+      top: -32px;
+      left: -60px;
+      position: relative;
+
+      }
+
+}
+svg.whiteSVG {
+ * {
+ stroke:white !important;
+ }
+}
+svg.darkSVG {
+ * {
+     stroke:$dark-green !important;
+ }
+}
+
+svg.mazeSVG #redThumbler {
+ * {
+     stroke:$thumbler-red;
+ }
 }
 

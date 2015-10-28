@@ -3,32 +3,45 @@
 .funnel{
 	display:block;
 	background: url('../img/funnel.png') no-repeat;
+	background-size: 377px 433px;
 	overflow: hidden;
 	text-align: center;
 	position:absolute;
 	margin-top:100px;
+
+	@media screen and (min-width: $medium) {
+		background-size: 452px 433px;
+	}
+	
+	@media screen and (min-width: $full) {
+		background-size: 503px 433px;
+	}
+
+	 
 }
  
 #funnelTop {
 	background-position: center -382px;
-	width: 1280px;
 	height: 49px;
 	top:850px; 
-	position:absolute; z-index:1;}
+	position:absolute; z-index:1;
+	margin-left: -50%;
+    left: 50%;
+}
 
 #funnelBase {
 	height: 380px; 
 	top:874px;
-	left:-1px;
 	position:absolute;
 	z-index:1000;
 	background-position: center 0;
-    width: 1280px;
+	margin-left: -50%;
+    left: 50%;
 }
 h1#funnelTitle {
 	position: absolute;
     top: 804px;
-    width: 1280px;
+    // width: 1280px;
 
 }
 p.funnelText {
@@ -43,52 +56,138 @@ p.funnelText:nth-child(1){
 
 .roadicons{
 	opacity:0;
-	display: block;
-	background: url('../img/roadIcons.png') no-repeat;
-	overflow: hidden;
+	display: none;
 	text-align: center; 
 	position:absolute;
+	@media screen and (min-width: $medium) {
+		display: block !important;
+	}
+
 }
 .roadiconsDark{
-	opacity:0;
-
-	display: block;
-	background: url('../img/roadIconsDark.png') no-repeat;
-	overflow: hidden;
-	text-indent: -9999px;
-	text-align: left; 
+	display: none;
 	position:absolute;
+	@media screen and (min-height: 707px) {
+		margin-top:-30px
+	}
+	@media screen and (min-width: $medium) {
+		display: block !important;
+	}
+
 }
  
-.iconPeaks { background-position: -2px -383px; width: 61px; height: 60px;
+.iconPeaks {
+	width: 255px;
+	height: 141px;
 	top: 134px;
-    left: 88px;
+	left:1%;
+	display: block;
+
+	@media screen and (min-width: $minimum) {
+		display: block !important;
+	}
+
 }
-.iconRun { background-position: -2px -250px; width: 67px; height: 67px;
-	top: 204px;
-    left: 442px;
+.iconRun {
+	display: block;
+	width: 255px;
+	height: 141px;
+	top: 184px;
+	left:28%;
+	svg {height:120px;}
+	@media screen and (min-height: 707px) {
+		top:154px;
+	}
+	@media screen and (max-width: 400px) {
+		left:10%;
+	}
+	@media screen and (min-width: 400px) {
+		display: block !important;
+		left:28%;
+	}
+
 }
-.iconBiker { background-position: -2px -136px; width: 73px; height: 58px;
-	top: 481px;
-    left: 149px;
+.iconBiker {
+	width: 255px;
+	height: 141px;
+	top: 364px;
+	left:15%;
+	display: block;
+	@media screen and (min-height: 707px) {
+		top:324px;
+	}
+	@media screen and (min-width: $minimum) {
+		display: block !important;
+	}
+
 }
-.iconHeartbeat { background-position: -2px -196px; width: 69px; height: 52px;
-	top: 254px;
-	left: 687px;
+.iconHeartbeat {
+	width: 255px;
+	height: 141px;
+	top: 234px;
+	left:54%;
+	@media screen and (min-height: 707px) {
+		top:154px;
+	}
+	@media screen and (min-width: $minimum) {
+		display: block !important;
+	}
+
 }
-.iconSpeedometer { background-position: -2px -445px; width: 60px; height: 59px;
-    top: 476px;
-    left: 607px;
+.iconSpeedometer {
+	width: 255px;
+	height: 141px;
+    top: 364px;
+	left:40%;
+	display: block;
+	@media screen and (min-height: 707px) {
+		top:294px;
+	}
+	@media screen and (min-width: $minimum) {
+		display: block !important;
+	}
+
+
 }
-.iconWaves { background-position: -2px -319px; width: 63px; height: 62px;
-    top: 332px;
-    left: 916px;
+.iconWaves {
+	width: 255px;
+	height: 141px;
+    top: 312px;
+	left:65%;
+	@media screen and (min-height: 707px) {
+		top:244px;
+	}
+	@media screen and (min-width: $minimum) {
+		display: block !important;
+	}
+
 }
-.iconShoe { background-position: -2px -0px; width: 101px; height: 60px;
-    top: 506px;
-    left: 1083px;
+.iconShoe {
+	width: 255px;
+	height: 141px;
+    top: 376px;
+	left:78%;
+	@media screen and (min-height: 707px) {
+		top:306px;
+	}
+	@media screen and (min-width: $medium) {
+		display: block !important;
+	}
+
 }
 .iconSun { background-position: -2px -62px; width: 75px; height: 72px;
-    top: 187px;
+    top: 167px;
     left: 1087px;
+	left:89%;
+	img.sun, svg.sun {
+			margin-left:-89px;
+	}
+	@media screen and (min-height: 707px) {
+		top:154px;
+	}
+	@media screen and (min-width: $medium) {
+		display: block !important;
+	}
+
+
 }
