@@ -68,18 +68,6 @@ var main = function(){
         TweenMax.set($("h1#funnelTitle"), {"top":"-=100px"})
     }
 
-    var $bgobj = $("#slideHeader") // assigning the object
-
-    $(window).scroll(function() {
-        var yPos = -($(window).scrollTop() / 3); 
-        
-        // Put together our final background position
-        var coords = '50% '+ yPos + 'px';
-
-        // Move the background
-        $bgobj.css({ backgroundPosition: coords });
-    }); 
-
     tweensInsideFunnel = [
         {icon:".iconShoe.imgHolder",        pos:"right", duration:1.0},//goes out 1st
         {icon:".iconSpeedometer.imgHolder", pos:"left" , duration:1.1},//2nd
@@ -283,6 +271,23 @@ var main = function(){
     });
 };
 $(document).ready(function(){
+
+    var $bgobj = $("#slideHeader") // assigning the object
+
+    $(window).scroll(function() {
+        var yPos = -($(window).scrollTop() / 3); 
+        
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+    });
+    $("html,body").animate({scrollTop:"+=1"},200);
+
+
+
+
     var imagesToEmbed = jQuery('img.svg');
     var afterN = imagesToEmbed.size();
     console.log();
