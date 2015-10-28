@@ -124,3 +124,8 @@ svg.mazeSVG #redThumbler {
  }
 }
 
+g.darkThumbler{
+    * {
+        stroke:$dark-green !important;
+    }
+}

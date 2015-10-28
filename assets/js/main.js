@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("html,body").animate({scrollTop:0},200);
+    // $("html,body").animate({scrollTop:0},200);
     $('.circle').click(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
@@ -146,6 +146,7 @@ $(document).ready(function(){
     });
 
 
+    //MAZE animations
 
     var MAZEscene = new ScrollMagic.Scene({
         triggerElement: "#MazeWrapper",
@@ -187,9 +188,29 @@ $(document).ready(function(){
       }
     });
 
-    timeLine.add(sequence);//.restart();
 
+
+
+    // THUMBLERS animations
+    thumblers = [{delay:0,rotation:-160, time:40}].map(function(settings, index){
+        var self = $("g#clock"+(index+1));
+        return TweenMax.to(self, settings.time, {
+            rotation:settings.rotation,
+            transformOrigin:"50% 50%",
+            delay:settings.delay,
+            immediateRender:false,//prevents from starting the animation until added to TimeLine 
+            onUpdate:function(){
+                self.children().attr("stroke","#ED684B");
+            },
+            onComplete:function(){
+                self.children().attr("stroke","#73C2A9");
+            }
+            }); //back:true
+    });
+
+    timeLine.add(sequence.concat(thumblers));//.restart();
     MAZEscene.setTween(timeLine).addTo(controller);
+    //end MAZE animations
 
 
     // CIRCLE bars EVENT FORECAST
