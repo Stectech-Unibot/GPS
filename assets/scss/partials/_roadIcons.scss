@@ -16,6 +16,7 @@
 	@media screen and (min-width: $full) {
 		background-size: 503px 433px;
 	}
+
 	 
 }
  
@@ -62,60 +63,90 @@ p.funnelText:nth-child(1){
 .roadiconsDark{
 	display: block;
 	position:absolute;
+	@media screen and (min-height: 707px) {
+		margin-top:-30px
+	}
+
 }
  
 .iconPeaks {
 	width: 255px;
 	height: 141px;
 	top: 134px;
-    left: 88px;
-	left:6%;
+	left:1%;
 }
 .iconRun {
 	width: 255px;
 	height: 141px;
-	top: 204px;
-    left: 442px;
-	left:32%;
+	top: 184px;
+	left:28%;
 	svg {height:120px;}
+	@media screen and (min-height: 707px) {
+		top:154px
+	}
+
 }
 .iconBiker {
 	width: 255px;
 	height: 141px;
-	top: 481px;
-    left: 149px;
-	left:19%;
+	top: 364px;
+	left:15%;
+	@media screen and (min-height: 707px) {
+		top:324px
+	}
+
 }
 .iconHeartbeat {
 	width: 255px;
 	height: 141px;
-	top: 254px;
-	left: 687px;
-	left:57%;
+	top: 234px;
+	left:54%;
+	@media screen and (min-height: 707px) {
+		top:154px
+	}
+
 }
 .iconSpeedometer {
 	width: 255px;
 	height: 141px;
-    top: 476px;
-    left: 607px;
-	left:44%;
+    top: 364px;
+	left:40%;
+	@media screen and (min-height: 707px) {
+		top:294px
+	}
+
+
 }
 .iconWaves {
 	width: 255px;
 	height: 141px;
-    top: 332px;
-    left: 916px;
-	left:69%;
+    top: 312px;
+	left:65%;
+	@media screen and (min-height: 707px) {
+		top:244px
+	}
+
 }
 .iconShoe {
 	width: 255px;
 	height: 141px;
-    top: 506px;
-    left: 1083px;
-	left:81%;
+    top: 376px;
+	left:78%;
+	@media screen and (min-height: 707px) {
+		top:306px
+	}
+
 }
 .iconSun { background-position: -2px -62px; width: 75px; height: 72px;
-    top: 187px;
+    top: 167px;
     left: 1087px;
-	left:94%;
+	left:89%;
+	img.sun, svg.sun {
+			margin-left:-89px;
+	}
+	@media screen and (min-height: 707px) {
+		top:154px;
+	}
+
+
 }

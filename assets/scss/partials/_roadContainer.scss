@@ -1,16 +1,17 @@
 #slideHeader {
     background-image: url("../img/hero.jpg");
     width: 100%;
-    height: 706px;
+    height: 686px;
     background-size: cover;
     background-repeat: no-repeat;
     position:absolute;
     z-index:499;
+
 }
 
 #roadContainer {
     // background-image: url("../img/hero.jpg");
-    height: 706px;
+    height: 686px;
     opacity:0;
     display: block;
     // background-position-y: 30px;
@@ -24,13 +25,12 @@
 
 #roadContainer2 {
     opacity:0;
-    height: 706px;
+    height: 686px;
     display: block;
     position:absolute;
     z-index:498;
     width: 100%;
 }
-
 
 #roadContainer p#topTitle {
     position: absolute;
@@ -114,6 +114,17 @@ svg.whiteSVG {
 svg.darkSVG {
  * {
      stroke:$dark-green !important;
+ }
+}
+svg.mazeSVG {
+ * {
+     stroke:$dark-green;
+ }
+}
+
+svg.mazeSVG #redThumbler {
+ * {
+     stroke:$thumbler-red;
  }
 }
 
