@@ -24,7 +24,7 @@ var main = function(){
         $("#MazeWrapper svg")
             .attr("width","375px")
             .attr("height","541px")
-            .css("margin-top","-4px");
+            .css("margin-top","-104px");
         $("#topAnimationsWrapper").css("height","1600px");
     } else{
         $("#MazeWrapper svg")
