@@ -94,7 +94,17 @@ p.funnelText:nth-child(1){
 		top:154px;
 	}
 	@media screen and (max-width: 400px) {
-		left:10%;
+
+		&.textHolder {
+			//left: 50%;
+		}
+
+		&.imgHolder {
+			margin-left: -100px;
+		}
+
+		left: 55% !important;
+    	margin-left: -100px;
 	}
 	@media screen and (min-width: 400px) {
 		display: block !important;
@@ -107,7 +117,6 @@ p.funnelText:nth-child(1){
 	height: 141px;
 	top: 364px;
 	left:15%;
-	display: block;
 	@media screen and (min-height: 707px) {
 		top:324px;
 	}
@@ -121,11 +130,23 @@ p.funnelText:nth-child(1){
 	height: 141px;
 	top: 234px;
 	left:54%;
+	display: block !important;
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
-	@media screen and (min-width: $minimum) {
-		display: block !important;
+
+	@media screen and (max-width: 500px) {
+
+		&.textHolder {
+			//left: 50%;
+		}
+
+		&.imgHolder {
+			margin-left: -100px;
+		}
+
+		left: 24% !important;
+    	margin-left: -100px;
 	}
 
 }
