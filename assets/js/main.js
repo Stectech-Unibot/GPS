@@ -25,6 +25,7 @@ $(document).ready(function(){
             .attr("width","375px")
             .attr("height","541px")
             .css("margin-top","-4px");
+        $("#topAnimationsWrapper").css("height","1600px");
     } else{
         $("#MazeWrapper svg")
             .attr("width",""+w+"px")
@@ -148,7 +149,7 @@ $(document).ready(function(){
 
     var MAZEscene = new ScrollMagic.Scene({
         triggerElement: "#MazeWrapper",
-        duration: 630, // sliding those number of pixels to complete the MAZE animation
+        duration: (window.innerWidth<620)?300:630, // sliding those number of pixels to complete the MAZE animation
         triggerHook: "onEnter",
         offset:150 // wait to pass offset pixel before starting with the SVGdraw
     });
