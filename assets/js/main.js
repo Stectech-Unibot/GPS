@@ -193,11 +193,16 @@ $(document).ready(function(){
 
     // THUMBLERS animations
     thumblers = [
-        {delay:0, rotation: -150, time:45},
-        {delay:0, rotation:   60, time:25},
-        {delay:0, rotation:   90, time:55},
-        ].map(function(settings, index){
-        var self = $("g#clock"+(index+1));
+        {delay:0, rotation: -150, time:45, index:1},
+        {delay:0, rotation:   60, time:25, index:2},
+        {delay:0, rotation:   90, time:55, index:3},
+        {delay:0, rotation: -150, time:67, index:4},
+        {delay:0, rotation:  170, time:55, index:5},
+        {delay:0, rotation:  -90, time:29, index:6},
+        {delay:0, rotation:  140, time:70, index:7},
+        {delay:0, rotation:  -70, time:15, index:8},
+        ].map(function(settings ){
+        var self = $("g#clock"+(settings.index));
         return TweenMax.to(self, settings.time, {
             rotation:settings.rotation,
             transformOrigin:"50% 50%",
