@@ -78,10 +78,50 @@
 		c20.291-13.432,43.772-22.431,69.064-25.617L277,245v-99"/>
 </g>
 <g id="clock3">
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="385.317" cy="272.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		388.826,260.703 385.921,274.506 374.313,271.117 	"/>
 </g>
 <g id="clock2">
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="326.317" cy="493.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		331.229,483.991 326.317,493.164 336.155,499.118 	"/>
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="444.317" cy="335.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		453.191,329.729 444.317,335.164 449.8,345.272 	"/>
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="469.317" cy="484.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		475.636,475.896 469.317,484.164 478.074,491.617 	"/>
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="248.317" cy="510.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		248.038,499.762 248.317,510.164 259.813,510.461 	"/>
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="134.317" cy="405.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		132.608,394.9 134.317,405.164 145.744,403.874 	"/>
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="184.317" cy="258.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		183.749,247.774 184.317,258.164 195.817,258.141 	"/>
 </g>
 <g id="clock1">
+	
+		<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="187.317" cy="418.164" r="11.984"/>
+	
+		<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		194.403,425.093 188.358,415.397 178.244,422.835 	"/>
 </g>
 <g id="logo">
 	<g>
@@ -104,34 +144,19 @@
 		c7.268,21.8,27.734,36.598,50.817,36.598c21.978,0,41.653-13.418,49.748-33.681h-50.164l-26.804-24.395l-0.299,0.272l-0.299,0.272
 		L270.954,404.462z M272.021,406.179l18.762,16.895l-18.762-9.508L272.021,406.179z"/>
 </g>
-<defs>
-<g id="redThumbler">
-<circle fill="#FFFFFF" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="297.317" cy="421.164" r="11.984"/>
-<polyline fill="none" stroke="#ED684B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	299.04,431.426 297.317,421.164 285.892,422.469 "/>
+<g id="logo1" display="none">
+	<path id="_x31__1_" display="inline" opacity="0.8" fill="#FFFFFF" d="M298.963,407.975l-43.904,32.49
+		c9.95,13.387,25.883,22.062,43.844,22.062c17.987,0,33.938-8.701,43.885-22.12L298.963,407.975z"/>
 </g>
-<g id="greenThumbler">
-<circle fill="#FFFFFF" stroke="#364447" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" cx="297.317" cy="421.164" r="11.984"/>
-<polyline fill="none" stroke="#364447" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	299.04,431.426 297.317,421.164 285.892,422.469 "/>
+<g id="logo2" display="none">
+	<path display="inline" opacity="0.8" fill="#FFFFFF" d="M298.963,407.975L299,353.333c30.146,0,54.833,24.477,54.845,54.619
+		c0-0.008,0.001-0.015,0.001-0.022c0-30.153-24.444-54.597-54.597-54.597c-30.153,0-54.597,24.444-54.597,54.597
+		c0,12.131,3.715,23.472,10.408,32.535L298.963,407.975z"/>
 </g>
-</defs>
-<g id="topLeftThumbler">
- <use xlink:href="#greenThumbler" x="90" y="-150"/>
- <use xlink:href="#redThumbler" x="90" y="-150"/>
+<g id="logo3" display="none">
+	<path display="inline" opacity="0.8" fill="#FFFFFF" d="M299.076,353.378l-0.113,54.597l43.825,32.432
+		c0,0,11.134-2.279,11.134-32.432C353.922,377.822,329.23,353.378,299.076,353.378z"/>
 </g>
-<g id="topRightThumbler">
- <use xlink:href="#greenThumbler" x="-90" y="-150"/>
- <use xlink:href="#redThumbler" x="-90" y="-150"/>
-</g>
-<g id="bottomThumbler">
- <use xlink:href="#greenThumbler" x="70" y="0"/>
- <use xlink:href="#redThumbler" x="70" y="0"/>
-</g>
-<g id="logo1">
-</g>
-<g id="logo2">
-</g>
-<g id="logo3">
+<g id="Слой_20">
 </g>
 </svg>
