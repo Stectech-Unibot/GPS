@@ -155,18 +155,27 @@ $(document).ready(function(){
 
     //REQUEST EARLY ACCESS
     [
-        {id:"#request-access>div",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
+        {id:"#request-access>div:nth-child(1) div.col-xs-12, #request-access>div:nth-child(2) div.col-xs-12",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
     ].forEach(function(settings, index){
+        var self = $(settings.id).get();
         var paralaxScene = new ScrollMagic.Scene({
             triggerElement: settings.trigger,
             duration: settings.duration,
             triggerHook: "onEnter"})
-        .setTween(new TimelineMax().staggerFromTo(
-            $(settings.id).get(),
-            settings.tweenTime,//tween time
-            {'opacity': 0.0},//from data
-            {'opacity': 1.0, delay:settings.delay},// to data
-            settings.staggerTime)//distance between starts,
+        .setTween(new TimelineMax({tweens:[
+            TweenMax.staggerFromTo(
+                self,
+                settings.tweenTime,//tween time
+                {'opacity': 0.0},//from data
+                {'opacity': 1.0, delay:settings.delay},// to data
+                settings.staggerTime),//distance between starts,
+            TweenMax.fromTo(
+                self,
+                settings.tweenTime,//tween time
+                {'top': 25.0},//from data
+                {'top': 0.0, delay:settings.delay*2},// to data
+                settings.staggerTime),//distance between starts,
+            ]})
         )
 
         .addTo(controller);
