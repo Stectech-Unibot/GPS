@@ -67,9 +67,6 @@ p.funnelText:nth-child(1){
 .roadiconsDark{
 	display: none;
 	position:absolute;
-	@media screen and (min-height: 707px) {
-		margin-top:-30px
-	}
 	@media screen and (min-width: $medium) {
 		display: block !important;
 	}
@@ -179,9 +176,6 @@ p.funnelText:nth-child(1){
     top: 167px;
     left: 1087px;
 	left:89%;
-	img.sun, svg.sun {
-			margin-left:-89px;
-	}
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
@@ -190,4 +184,7 @@ p.funnelText:nth-child(1){
 	}
 
 
+}
+.iconSun img.sun, .iconSun svg.sun {
+	margin-left:-89px;
 }
