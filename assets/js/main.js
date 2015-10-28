@@ -192,7 +192,11 @@ $(document).ready(function(){
 
 
     // THUMBLERS animations
-    thumblers = [{delay:0,rotation:-160, time:40}].map(function(settings, index){
+    thumblers = [
+        {delay:0, rotation: -150, time:45},
+        {delay:0, rotation:   60, time:25},
+        {delay:0, rotation:   90, time:55},
+        ].map(function(settings, index){
         var self = $("g#clock"+(index+1));
         return TweenMax.to(self, settings.time, {
             rotation:settings.rotation,
