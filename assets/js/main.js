@@ -268,8 +268,9 @@ $(document).ready(function(){
     ].forEach(function(settings){
         var scene = new ScrollMagic.Scene({
             triggerElement: settings.parent,
-            duration:150,
-            triggerHook:"onCenter",
+            duration:450,
+            triggerHook:"onEnter",
+            offset:150
         })
         .setTween(new CircleAnimation(settings).timeLine)
         .addTo(controller);
