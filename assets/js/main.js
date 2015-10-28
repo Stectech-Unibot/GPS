@@ -27,6 +27,11 @@ $(document).ready(function(){
             left : {x:"38%", y:966},
             right: {x:"42%", y:966},
         };
+    } else if (window.innerWidth>1900){
+        endPositions={
+            left : {x:"45%", y:1066},
+            right: {x:"48%", y:1066},
+        };
     } else {
         endPositions={
             left : {x:"38%", y:1066},
