@@ -120,6 +120,14 @@
  <use xlink:href="#greenThumbler" x="90" y="-150"/>
  <use xlink:href="#redThumbler" x="90" y="-150"/>
 </g>
+<g id="topRightThumbler">
+ <use xlink:href="#greenThumbler" x="-90" y="-150"/>
+ <use xlink:href="#redThumbler" x="-90" y="-150"/>
+</g>
+<g id="bottomThumbler">
+ <use xlink:href="#greenThumbler" x="70" y="0"/>
+ <use xlink:href="#redThumbler" x="70" y="0"/>
+</g>
 <g id="logo1">
 </g>
 <g id="logo2">
