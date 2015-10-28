@@ -26,7 +26,13 @@ var main = function(){
             .attr("height","541px")
             .css("margin-top","-104px");
         $("#topAnimationsWrapper").css("height","1600px");
-    } else{
+    } else if (window.innerWidth<1200){
+        $("#MazeWrapper svg")
+            .attr("width",""+w+"px")
+            .attr("height",""+h+"px")
+            .css("margin-left","-122px")
+            .css("margin-top","-140px");
+    } else {
         $("#MazeWrapper svg")
             .attr("width",""+w+"px")
             .attr("height",""+h+"px")
