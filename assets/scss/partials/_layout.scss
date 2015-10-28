@@ -4,6 +4,12 @@
     width: 100%;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .centered {
     width: 100%;
     left:0;
@@ -167,7 +173,8 @@ span.logo {
         text-shadow: 1px 1px $dark-green;
         background-color: $dark-green;
         background-repeat: no-repeat;
-        background-position-x: 100%;
+        // background-position-x: 100%;
+        background-position: right 70px top;
         overflow: hidden;
         div#slope-biker, div#slope-runner{
             display: inline-block;
@@ -193,7 +200,7 @@ span.logo {
             margin-left: 250px;
             width: 500px;
             height: 100px;
-            right: 1020px;
+            right: 1090px;
             display: none;
 
             @media screen and (min-width: $medium) {
@@ -208,13 +215,13 @@ span.logo {
 
             /*This will work for firefox*/
             @-moz-document url-prefix() {
-                background-position: right 0px;
+                // background-position: right 0px;
             }
             
         }
 
         @media screen and (min-width: $full) {
-            background-position-x: right;
+            // background-position-x: right;
         }
 
     }
@@ -386,11 +393,10 @@ span.logo {
     }
 
     .button-grey {
-        padding-top: 24px;
-        padding-bottom: 23px;
-        @media screen and (min-width: $medium) {
+        //@media screen and (min-width: $medium) {
             width: 100%;
-        }
+            padding: 24px;
+        //}
     }
 
     .button-orange {

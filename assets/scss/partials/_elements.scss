@@ -26,7 +26,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 16px;
-    width: 292px;
+    max-width: 292px;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -62,7 +62,8 @@
 
 input.button-orange {
     background: white;
-    @include button-orange
+    @include button-orange;
+    max-width: 100%;
 }
 
 .button-orange {
