@@ -60,9 +60,19 @@ $(document).ready(function(){
         TweenMax.set($("#roadContainer,#roadContainer2"), {"height":"561px", top:"+=50px"})
         TweenMax.set($(".funnel"), {"margin-top":"0px"})
         TweenMax.set($("h1#funnelTitle"), {"top":"-=100px"})
-    } else {
-        TweenMax.set($("#slideHeader"), {"background-position-y":"0px"})
     }
+
+    var $bgobj = $("#slideHeader") // assigning the object
+
+    $(window).scroll(function() {
+        var yPos = -($(window).scrollTop() / 5); 
+        
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+    }); 
 
     tweensInsideFunnel = [
         {icon:".iconShoe.imgHolder",        pos:"right", duration:1.0},//goes out 1st
