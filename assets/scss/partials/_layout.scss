@@ -432,6 +432,8 @@ span.logo {
         border-bottom: 4px solid #5ba0cf;
         margin-bottom: 20px;
         display: inline-block;
+        line-height: 120%;
+        width: auto;
         
         @media screen and (min-width: $medium) {
             font-size: 18px;

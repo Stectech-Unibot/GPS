@@ -64,6 +64,7 @@ input.button-orange {
     background: white;
     @include button-orange;
     max-width: 100%;
+    width: 100%;
 }
 
 .button-orange {
