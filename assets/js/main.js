@@ -1,9 +1,28 @@
 var main = function(){
-    // $("html,body").animate({scrollTop:0},200);
+    $("html,body").animate({scrollTop:0},10);
     $('.circle').click(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
     });
+    var KEY_DISTANCES = {
+        32: +200, // space
+        38: -100, //pageup
+        40: +100, //pagedown
+        34: +window.innerHeight, //pagedown
+        33: -window.innerHeight, //pageup
+    };
+    $(document).keydown(function (event) {
+        console.log(event.keyCode);
+        if (!!KEY_DISTANCES[event.keyCode]) {
+            event.preventDefault();
+            TweenMax.to($("html,body"), 1.0, {
+                overwrite: "none",
+                scrollTop:"+="+KEY_DISTANCES[event.keyCode],
+            });
+
+        }
+    });
+
 
 //loading finnished
     var startElements = []
