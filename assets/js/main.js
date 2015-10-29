@@ -283,8 +283,6 @@ var main = function(){
     });
 };
 var loadingFX = function(callback){
-    $("html,body").animate({scrollTop:0},10);
-
     var startElements = $([
         "#topTitle",
         ".roadiconsDark",
