@@ -78,6 +78,7 @@ p.funnelText:nth-child(1){
 	top: 134px;
 	left:1%;
 
+	svg {height:110px;}
 	@media screen and (min-width: $minimum) {
 		display: block !important;
 	}
@@ -89,7 +90,8 @@ p.funnelText:nth-child(1){
 	height: 141px;
 	top: 184px;
 	left:28%;
-	svg {height:120px;}
+
+	svg {height:85px;}
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
@@ -110,13 +112,15 @@ p.funnelText:nth-child(1){
 		display: block !important;
 		left:28%;
 	}
-
 }
+
 .iconBiker {
 	width: 255px;
 	height: 141px;
 	top: 364px;
 	left:15%;
+
+	svg {height:105px;}
 	@media screen and (min-height: 707px) {
 		top:324px;
 	}
@@ -131,6 +135,8 @@ p.funnelText:nth-child(1){
 	top: 234px;
 	left:54%;
 	display: block !important;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
@@ -156,6 +162,8 @@ p.funnelText:nth-child(1){
     top: 364px;
 	left:40%;
 	display: block;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
 		top:294px;
 	}
@@ -170,6 +178,8 @@ p.funnelText:nth-child(1){
 	height: 141px;
     top: 312px;
 	left:65%;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
 		top:244px;
 	}
@@ -183,6 +193,8 @@ p.funnelText:nth-child(1){
 	height: 141px;
     top: 376px;
 	left:78%;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
 		top:306px;
 	}
@@ -195,6 +207,8 @@ p.funnelText:nth-child(1){
     top: 167px;
     left: 1087px;
 	left:89%;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
