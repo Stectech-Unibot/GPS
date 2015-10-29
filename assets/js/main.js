@@ -24,14 +24,14 @@ var main = function(){
         $("#MazeWrapper svg")
             .attr("width","375px")
             .attr("height","541px")
-            .css("margin-top","-104px");
+            .css("margin-top","-4px");
         $("#topAnimationsWrapper").css("height","1600px");
     } else if (window.innerWidth<1207){
         $("#MazeWrapper svg")
             .attr("width",""+w+"px")
             .attr("height",""+h+"px")
             .css("margin-left","-122px")
-            .css("margin-top","-140px");
+            .css("margin-top","-40px");
     } else {
         $("#MazeWrapper svg")
             .attr("width",""+w+"px")
