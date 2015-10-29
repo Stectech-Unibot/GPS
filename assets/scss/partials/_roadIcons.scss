@@ -96,22 +96,22 @@ p.funnelText:nth-child(1){
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 500px) {
 
 		&.textHolder {
 			//left: 50%;
 		}
 
 		&.imgHolder {
-			margin-left: -100px;
+			margin-left: -65px;
 		}
 
 		left: 55% !important;
-    	margin-left: -100px;
+    	margin-left: -65px;
 	}
-	@media screen and (min-width: 400px) {
+	@media screen and (min-width: 500px) {
 		display: block !important;
-		left:28%;
+		
 	}
 }
 
@@ -165,8 +165,17 @@ p.funnelText:nth-child(1){
 	@media screen and (max-height: 707px) {
 		top:314px;
 	}
-	@media screen and (min-width: $minimum) {
-		display: block !important;
+	@media screen and (max-width: 500px) {
+
+		&.textHolder {
+			//left: 50%;
+		}
+
+		&.imgHolder {
+			margin-left: -75px;
+		}
+
+    	margin-left: -75px;
 	}
 
 
