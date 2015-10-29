@@ -248,6 +248,9 @@ var main = function(){
     });
 
     timeLine.add(sequence.concat(thumblers));//.restart();
+
+    // add LOGO animation
+    timeLine.add(TweenMax.staggerFromTo($("g#logo1,g#logo2,g#logo3"),30,{opacity:1},{opacity:0,immediateRender:false}, 30), "-=100");
     MAZEscene.setTween(timeLine).addTo(controller);
     //end MAZE animations
 
