@@ -75,7 +75,7 @@ p.funnelText:nth-child(1){
 .iconPeaks {
 	width: 255px;
 	height: 141px;
-	top: 134px;
+	top: 94px;
 	left:1%;
 
 	svg {height:110px;}
@@ -84,6 +84,7 @@ p.funnelText:nth-child(1){
 	}
 
 }
+
 .iconRun {
 	display: block;
 	width: 255px;
@@ -132,14 +133,11 @@ p.funnelText:nth-child(1){
 .iconHeartbeat {
 	width: 255px;
 	height: 141px;
-	top: 234px;
+	top: 184px;
 	left:54%;
 	display: block !important;
 
 	svg {height:100px;}
-	@media screen and (min-height: 707px) {
-		top:154px;
-	}
 
 	@media screen and (max-width: 500px) {
 
@@ -164,8 +162,8 @@ p.funnelText:nth-child(1){
 	display: block;
 
 	svg {height:100px;}
-	@media screen and (min-height: 707px) {
-		top:294px;
+	@media screen and (max-height: 707px) {
+		top:314px;
 	}
 	@media screen and (min-width: $minimum) {
 		display: block !important;
@@ -181,7 +179,7 @@ p.funnelText:nth-child(1){
 
 	svg {height:100px;}
 	@media screen and (min-height: 707px) {
-		top:244px;
+		top:344px;
 	}
 	@media screen and (min-width: $minimum) {
 		display: block !important;
@@ -196,7 +194,7 @@ p.funnelText:nth-child(1){
 
 	svg {height:100px;}
 	@media screen and (min-height: 707px) {
-		top:306px;
+		top:376px;
 	}
 	@media screen and (min-width: $medium) {
 		display: block !important;
