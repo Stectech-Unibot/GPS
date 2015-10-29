@@ -1,5 +1,4 @@
 var main = function(){
-    $("html,body").animate({scrollTop:0},10);
     $('.circle').click(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
@@ -23,16 +22,6 @@ var main = function(){
         }
     });
 
-
-//loading finnished
-    var startElements = []
-        .concat($(".roadiconsDark, .roadiconsDark svg, .roadicons, .roadicons svg, topTitle").get());
-    var onLoadTL = new TimelineMax({delay:0.3})
-        .set($("#roadContainer,#roadContainer2"), {opacity:1})
-        .add([
-            TweenMax.fromTo($("#header").get(), 1.5, {opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"},{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}),
-            TweenMax.fromTo(startElements, 1.5, {opacity:0, top:"-=50px"},{opacity:1, top:"+=50px"})
-        ]);
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
     var endPositions, tweensInsideFunnel;
@@ -293,6 +282,27 @@ var main = function(){
         .addTo(controller);
     });
 };
+var loadingFX = function(callback){
+    var startElements = $([
+        "#topTitle",
+        ".roadiconsDark",
+        ".roadiconsDark svg",
+        ".roadicons",
+        ".roadicons svg"
+        ].join(", ")).get();
+    var onLoadTL = new TimelineMax({delay:0.3})
+        .set($("html,body"),{scrollTop:0})
+        .set($("#roadContainer,#roadContainer2"), {opacity:1})
+        .add([
+            TweenMax.fromTo($("#header").get(), 1.5, {opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"},{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}),
+            TweenMax.fromTo(startElements, 1.5, {opacity:0, top:"-=50px"},{opacity:1, top:"+=50px"})
+        ])
+        .addCallback(function(){
+            callback && callback();
+        });
+
+
+};
 $(document).ready(function(){
 
     var $bgobj = $("#slideHeader") // assigning the object
@@ -316,7 +326,7 @@ $(document).ready(function(){
     var wrapAfter = function(){
         afterN -= 1;
         if (!afterN){
-            main();   
+            loadingFX(main);
         }
     };
     imagesToEmbed.each(function(){
