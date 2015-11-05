@@ -21,9 +21,10 @@ gulp.task('server', function() {
 gulp.task('sass', function() {
     return gulp.src(['./assets/scss/*.scss',
                      './assets/scss/*/*.scss'])
-        .pipe(sourcemaps.init())
-        .pipe(sass({style: 'compact'}))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.init()) // uncomment for debug only
+        .pipe(sass({style: 'compressed'}))
+        .pipe(minifyCSS())
+        // .pipe(sourcemaps.write()) // uncomment for debug only
         .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream());
 });
@@ -31,9 +32,9 @@ gulp.task('sass', function() {
 // Concatenate & Minify CSS
 gulp.task('minify-css', function() {
     return gulp.src('./bower_components/bootstrap/dist/css/bootstrap.css')
-    	.pipe(sourcemaps.init())
+    	// .pipe(sourcemaps.init())// uncomment for debug only
     	.pipe(minifyCSS())
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())// uncomment for debug only
         .pipe(gulp.dest('./assets/css'));
 });
 
