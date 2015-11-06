@@ -11,7 +11,6 @@ var main = function(){
         33: -window.innerHeight, //pageup
     };
     $(document).keydown(function (event) {
-        console.log(event.keyCode);
         if (!!KEY_DISTANCES[event.keyCode]) {
             event.preventDefault();
             TweenMax.to($("html,body"), 1.0, {

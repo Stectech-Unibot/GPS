@@ -388,11 +388,8 @@
                 }, Math.floor(distance / scroll_speed),
                 "swing",//easing
                 function(){//callback
-                    console.log(target.id);
-                    if (target.id==="signup"){
-                        // $('input[@type="text"]')[0].focus();
+                    if (target.selector==="#signup"){
                         document.getElementById("mce-FNAME").focus();
-                        // $("input#mce-FNAME").focus();
                     }
                 });
             }
