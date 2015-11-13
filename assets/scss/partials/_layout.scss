@@ -174,7 +174,7 @@ span.logo {
         background-color: $dark-green;
         background-repeat: no-repeat;
         // background-position-x: 100%;
-        background-position: right 70px top;
+        background-position: right 8px top;
         overflow: hidden;
         div#slope-biker, div#slope-runner{
             display: inline-block;
@@ -432,6 +432,8 @@ span.logo {
         border-bottom: 4px solid #5ba0cf;
         margin-bottom: 20px;
         display: inline-block;
+        line-height: 120%;
+        width: auto;
         
         @media screen and (min-width: $medium) {
             font-size: 18px;

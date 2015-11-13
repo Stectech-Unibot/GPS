@@ -75,39 +75,53 @@ p.funnelText:nth-child(1){
 .iconPeaks {
 	width: 255px;
 	height: 141px;
-	top: 134px;
+	top: 94px;
 	left:1%;
 
+	svg {height:110px;}
 	@media screen and (min-width: $minimum) {
 		display: block !important;
 	}
 
 }
+
 .iconRun {
 	display: block;
 	width: 255px;
 	height: 141px;
 	top: 184px;
 	left:28%;
-	svg {height:120px;}
+
+	svg {height:85px;}
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}
-	@media screen and (max-width: 400px) {
-		left:10%;
-	}
-	@media screen and (min-width: 400px) {
-		display: block !important;
-		left:28%;
-	}
+	@media screen and (max-width: 500px) {
 
+		&.textHolder {
+			//left: 50%;
+		}
+
+		&.imgHolder {
+			margin-left: -65px;
+		}
+
+		left: 55% !important;
+    	margin-left: -65px;
+	}
+	@media screen and (min-width: 500px) {
+		display: block !important;
+		
+	}
 }
+
 .iconBiker {
 	width: 255px;
 	height: 141px;
 	top: 364px;
 	left:15%;
-	display: block;
+
+	svg {height:105px;}
 	@media screen and (min-height: 707px) {
 		top:324px;
 	}
@@ -119,13 +133,24 @@ p.funnelText:nth-child(1){
 .iconHeartbeat {
 	width: 255px;
 	height: 141px;
-	top: 234px;
+	top: 184px;
 	left:54%;
-	@media screen and (min-height: 707px) {
-		top:154px;
-	}
-	@media screen and (min-width: $minimum) {
-		display: block !important;
+	display: block !important;
+
+	svg {height:100px;}
+
+	@media screen and (max-width: 500px) {
+
+		&.textHolder {
+			//left: 50%;
+		}
+
+		&.imgHolder {
+			margin-left: -100px;
+		}
+
+		left: 24% !important;
+    	margin-left: -100px;
 	}
 
 }
@@ -135,11 +160,22 @@ p.funnelText:nth-child(1){
     top: 364px;
 	left:40%;
 	display: block;
-	@media screen and (min-height: 707px) {
-		top:294px;
+
+	svg {height:100px;}
+	@media screen and (max-height: 707px) {
+		top:314px;
 	}
-	@media screen and (min-width: $minimum) {
-		display: block !important;
+	@media screen and (max-width: 500px) {
+
+		&.textHolder {
+			//left: 50%;
+		}
+
+		&.imgHolder {
+			margin-left: -75px;
+		}
+
+    	margin-left: -75px;
 	}
 
 
@@ -149,8 +185,10 @@ p.funnelText:nth-child(1){
 	height: 141px;
     top: 312px;
 	left:65%;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
-		top:244px;
+		top:344px;
 	}
 	@media screen and (min-width: $minimum) {
 		display: block !important;
@@ -162,8 +200,10 @@ p.funnelText:nth-child(1){
 	height: 141px;
     top: 376px;
 	left:78%;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
-		top:306px;
+		top:376px;
 	}
 	@media screen and (min-width: $medium) {
 		display: block !important;
@@ -174,6 +214,8 @@ p.funnelText:nth-child(1){
     top: 167px;
     left: 1087px;
 	left:89%;
+
+	svg {height:100px;}
 	@media screen and (min-height: 707px) {
 		top:154px;
 	}

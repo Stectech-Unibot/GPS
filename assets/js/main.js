@@ -1,19 +1,26 @@
-$(document).ready(function(){
-    // $("html,body").animate({scrollTop:0},200);
+var main = function(){
     $('.circle').click(function(){
         $(this).toggleClass('is-active');
         $('.nav').toggleClass('show-nav');
     });
+    var KEY_DISTANCES = {
+        32: +200, // space
+        38: -100, //pageup
+        40: +100, //pagedown
+        34: +window.innerHeight, //pagedown
+        33: -window.innerHeight, //pageup
+    };
+    $(document).keydown(function (event) {
+        if (!!KEY_DISTANCES[event.keyCode]) {
+            event.preventDefault();
+            TweenMax.to($("html,body"), 1.0, {
+                overwrite: "none",
+                scrollTop:"+="+KEY_DISTANCES[event.keyCode],
+            });
 
-//loading finnished
-    var startElements = []
-        .concat($(".roadiconsDark, .roadiconsDark svg, .roadicons, .roadicons svg, topTitle").get());
-    var onLoadTL = new TimelineMax({delay:0.3})
-        .set($("#roadContainer,#roadContainer2"), {opacity:1})
-        .add([
-            TweenMax.fromTo($("#header").get(), 1.5, {opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"},{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}),
-            TweenMax.fromTo(startElements, 1.5, {opacity:0, top:"-=50px"},{opacity:1, top:"+=50px"})
-        ]);
+        }
+    });
+
 //start scrolling controllers
     var controller = new ScrollMagic.Controller();
     var endPositions, tweensInsideFunnel;
@@ -26,12 +33,18 @@ $(document).ready(function(){
             .attr("height","541px")
             .css("margin-top","-4px");
         $("#topAnimationsWrapper").css("height","1600px");
-    } else{
+    } else if (window.innerWidth<1207){
         $("#MazeWrapper svg")
             .attr("width",""+w+"px")
             .attr("height",""+h+"px")
             .css("margin-left","-122px")
             .css("margin-top","-40px");
+    } else {
+        $("#MazeWrapper svg")
+            .attr("width",""+w+"px")
+            .attr("height",""+h+"px")
+            .css("margin-left","-122px")
+            .css("margin-top","40px");
     }
     if (window.innerWidth<620){//iPhone
         endPositions={
@@ -60,8 +73,6 @@ $(document).ready(function(){
         TweenMax.set($("#roadContainer,#roadContainer2"), {"height":"561px", top:"+=50px"})
         TweenMax.set($(".funnel"), {"margin-top":"0px"})
         TweenMax.set($("h1#funnelTitle"), {"top":"-=100px"})
-    } else {
-        TweenMax.set($("#slideHeader"), {"background-position-y":"0px"})
     }
 
     tweensInsideFunnel = [
@@ -123,16 +134,15 @@ $(document).ready(function(){
     [
         // {id:"#MazeWrapper",                     trigger:"#MazeWrapper"   , delay:0.25, tweenTime:0.5, staggerTime:0.3, duration:700},
     // signUp button
-        {id:"#signup-button",                   trigger:"#signup-button" , delay:0   , tweenTime:0.5, staggerTime:0, duration:700},
+        {id:"#signup-button"                 , offset:  0, trigger:"#signup-button" , delay:0   , tweenTime:0.5, staggerTime:0, duration:700},
     // FUTURE RELEASE FEATUREs paralax
-        {id:"#future-release>div.left>ul>li",   trigger:"#future-release>div.left>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
-        {id:"#future-release>div.right>ul>li",  trigger:"#future-release>div.right>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:500},
-    //REQUEST EARLY ACCESS
-        {id:"#request-access>div",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
+        {id:"#future-release>div.left>ul>li" , offset:200, trigger:"#future-release>div.left>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:300},
+        {id:"#future-release>div.right>ul>li", offset:200, trigger:"#future-release>div.right>ul>li:first-child", delay:0.15, tweenTime:0.4, staggerTime:0.1, duration:300},
     ].forEach(function(settings, index){
         var paralaxScene = new ScrollMagic.Scene({
             triggerElement: settings.trigger,
             duration: settings.duration,
+            offset: settings.offset||0,
             triggerHook: "onEnter"})
         .setTween(new TimelineMax().staggerFromTo(
             $(settings.id).get(),
@@ -140,6 +150,34 @@ $(document).ready(function(){
             {'opacity': 0.0},//from data
             {'opacity': 1.0, delay:settings.delay},// to data
             settings.staggerTime)//distance between starts,
+        )
+
+        .addTo(controller);
+    });
+
+    //REQUEST EARLY ACCESS
+    [
+        {id:"#request-access>div:nth-child(1) div.col-xs-12, #request-access>div:nth-child(2) div.col-xs-12",              trigger:"#request-access", delay:1 , tweenTime:1, staggerTime:0.25, duration:350},
+    ].forEach(function(settings, index){
+        var self = $(settings.id).get();
+        var paralaxScene = new ScrollMagic.Scene({
+            triggerElement: settings.trigger,
+            duration: settings.duration,
+            triggerHook: "onEnter"})
+        .setTween(new TimelineMax({tweens:[
+            TweenMax.staggerFromTo(
+                self,
+                settings.tweenTime,//tween time
+                {'opacity': 0.0},//from data
+                {'opacity': 1.0, delay:settings.delay},// to data
+                settings.staggerTime),//distance between starts,
+            TweenMax.fromTo(
+                self,
+                settings.tweenTime,//tween time
+                {'top': 25.0},//from data
+                {'top': 0.0, delay:settings.delay*2},// to data
+                settings.staggerTime),//distance between starts,
+            ]})
         )
 
         .addTo(controller);
@@ -218,6 +256,9 @@ $(document).ready(function(){
     });
 
     timeLine.add(sequence.concat(thumblers));//.restart();
+
+    // add LOGO animation
+    timeLine.add(TweenMax.staggerFromTo($("g#logo1,g#logo2,g#logo3"),30,{opacity:1},{opacity:0,immediateRender:false}, 30), "-=100");
     MAZEscene.setTween(timeLine).addTo(controller);
     //end MAZE animations
 
@@ -232,10 +273,97 @@ $(document).ready(function(){
     ].forEach(function(settings){
         var scene = new ScrollMagic.Scene({
             triggerElement: settings.parent,
-            duration:150,
-            triggerHook:"onCenter",
+            duration:450,
+            triggerHook:"onEnter",
+            offset:150
         })
         .setTween(new CircleAnimation(settings).timeLine)
         .addTo(controller);
     });
-})
+};
+var loadingFX = function(callback){
+    var startElements = $([
+        "#topTitle",
+        ".roadiconsDark",
+        ".roadiconsDark svg",
+        ".roadicons",
+        ".roadicons svg"
+        ].join(", ")).get();
+    var onLoadTL = new TimelineMax({delay:0.3})
+        .set($("html,body"),{scrollTop:0})
+        .set($("#roadContainer,#roadContainer2"), {opacity:1})
+        .add([
+            TweenMax.fromTo($("#header").get(), 1.5, {opacity:0, "margin-top":"-=50px", "margin-bottom":"+=50px"},{opacity:1, "margin-top":"+=50px", "margin-bottom":"-=50px"}),
+            TweenMax.fromTo(startElements, 1.5, {opacity:0, top:"-=50px"},{opacity:1, top:"+=50px"})
+        ])
+        .addCallback(function(){
+            callback && callback();
+        });
+
+
+};
+$(document).ready(function(){
+
+    var $bgobj = $("#slideHeader") // assigning the object
+
+    $(window).scroll(function() {
+        var yPos = -($(window).scrollTop() / 3); 
+        
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+    });
+    $("html,body").animate({scrollTop:"+=1"},200);
+
+
+
+
+    var imagesToEmbed = jQuery('img.svg');
+    var afterN = imagesToEmbed.size();
+    var wrapAfter = function(){
+        afterN -= 1;
+        if (!afterN){
+            loadingFX(main);
+        }
+    };
+    imagesToEmbed.each(function(){
+        // <img> with svg source to embedded svgs. http://stackoverflow.com/a/24933495 -->
+
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+
+
+            wrapAfter();
+        }, 'xml');
+
+    });
+
+});

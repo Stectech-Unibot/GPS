@@ -1,5 +1,4 @@
-@import "partials/webFonts";
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 // FONT WEIGHTS
 
 $light: 100;
@@ -8,9 +7,9 @@ $bold: bold;
 
 // BASE FONT
 
-$base-font-family: "AvenirBook";
-$roman-font-family: "AvenirRoman";
-$light-font-family: "AvenirLight";
+$base-font-family: "Open Sans";
+$roman-font-family: "Open Sans";
+$light-font-family: "Open Sans";
 
 // DEFAULT COLORS
 
