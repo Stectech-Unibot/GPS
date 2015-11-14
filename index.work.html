@@ -380,6 +380,24 @@
         var scroll_speed = Math.abs( $("#signup").offset().top -
             $('div#signup-button .button-orange>a').offset().top
         ) / 1000; // short scroll time
+        // the following is used for the gif animation creation
+        // $(document).on("click",function(event){
+        //     var target = $("#event-forecast");
+        //     var start_pos = 0;
+        //     var target_pos = target.offset().top;
+        //     var distance = Math.abs(target_pos - start_pos);
+        //     if( target.length ) {
+        //         event.preventDefault();
+        //         $('html, body').animate({
+        //             scrollTop: target_pos-300
+        //         },6200,
+        //         "swing", function(){
+        //         $('html, body').animate({
+        //             scrollTop: 0
+        //         },1400);
+        //         });
+        //     }
+        // });
         $('a[href^="#"]').on('click', function(event) {
             var target = $( $(this).attr('href') );
             var start_pos = $(this).offset().top;
