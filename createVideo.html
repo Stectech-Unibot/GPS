@@ -6,12 +6,13 @@
 <style>
 * {-webkit-transform: translateZ(0);
 margin:auto 0px; padding: 0px;	background-color: darkgray;
+	border:0;
 
 }
 body {
 	width: 700px;
 	height: 550px;
-	/*border: 100px solid black;*/
+	transform: scale(0.65);
 }
 .video {
 	/*background-color: black;*/
@@ -19,8 +20,9 @@ body {
 }
 #black {
 	background-color: black;
-	width:350px;
-	height: 950px;
+	left: -200px;
+    width: 875px;
+	height: 200%;
 	display: block;
 	position: absolute;
 }
@@ -32,11 +34,16 @@ body {
 	display: block;
 	position: absolute;
 }
+iframe{
+	overflow: hidden;
+}
+iframe html{
+	overflow: hidden;
+}
 </style>
 </head>
 <body>
 <div id="black"></div>
-<img class="video" width="600" width="450" src="6s_base.gif" />
-
+<iframe class="video" width="1280" height="670" src="./index.html" scrolling="no" seamless="seamless" ></iframe>
 </body>
 </html>
