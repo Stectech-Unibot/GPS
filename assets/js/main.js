@@ -303,6 +303,29 @@ var loadingFX = function(callback){
 
 };
 $(document).ready(function(){
+    // scroll animation
+    var scroll_speed = Math.abs( $("#signup").offset().top -
+        $('div#signup-button .button-orange>a').offset().top
+    ) / 1000; // short scroll time
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $( $(this).attr('href') );
+        var start_pos = $(this).offset().top;
+        var target_pos = target.offset().top;
+        var distance = Math.abs(target_pos - start_pos);
+
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target_pos
+            }, Math.floor(distance / scroll_speed),
+            "swing",//easing
+            function(){//callback
+                if (target.selector==="#signup"){
+                    document.getElementById("signup_name").focus();
+                }
+            });
+        }
+    });
 
     var $bgobj = $("#slideHeader") // assigning the object
 
