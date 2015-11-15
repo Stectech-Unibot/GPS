@@ -310,8 +310,8 @@
                           <input name="utf8" type="hidden" value="✓"/>
                        </div>
                         <div class="form-group">
-                            <div class="col-xs-12 col-md-4">
-                                <input type="text" class="mimi_field form-control button-grey" id="mce-FNAME" name="FNAME" placeholder="Enter Your Name">
+                            <div class="col-xs-12 col-md-4 mimi_field required">
+                                <input id="signup_name" class="form-control button-grey"value=""  name="signup[name]" type="text" data-required-field="This field is required" placeholder="Enter Your Name">
                             </div>
                         </div>
                         <div class="form-group">
@@ -327,7 +327,8 @@
                         <div style="position: absolute; left: -5000px;">
                             <input type="text" name="b_5725d0dbf3cd69fc937a032e0_a06bed355c" tabindex="-1" value="">
                         </div>
-                    </form>                </div>
+                    </form>
+                </div>
             </div>
             <div class="container">
                 <div class="row">
@@ -375,7 +376,7 @@
         <script src= "./assets/js/main.js"></script>
         <!-- mail chimp
         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-        <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='signup[email]';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));//var $mcj = jQuery.noConflict(true);
+        <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='signup[email]';ftypes[0]='email';fnames[1]='signup[name]';ftypes[1]='text';}(jQuery));//var $mcj = jQuery.noConflict(true);
         </script>
         -->
 
@@ -637,18 +638,12 @@
     onSubmitCallback: function(response) {
       if (response.success) {
         this.onSubmitSuccess(response.result);
-      } else {
-        top.location.href = this.formUrl('html');
       }
     },
 
     onSubmitSuccess: function(result) {
-      if (result.has_redirect) {
-        top.location.href = result.redirect;
-      } else {
         this.disableForm();
         this.updateSubmitButtonText(this.submit.getAttribute('data-thanks'));
-      }
     },
 
     showConfirmationText: function(html) {
@@ -729,7 +724,7 @@
                 "swing",//easing
                 function(){//callback
                     if (target.selector==="#signup"){
-                        document.getElementById("mce-FNAME").focus();
+                        document.getElementById("signup_name").focus();
                     }
                 });
             }
