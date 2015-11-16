@@ -460,6 +460,12 @@ span.logo {
         &:hover {
             color: $orange;
         }
+        .socialIcon *{
+            fill:#FFFFFF;
+        }
+        .socialIcon:hover *{
+            fill:#5ba0cf;
+        }
     }
 
     .right {
