@@ -5,21 +5,25 @@
 	<title>Scroll video test</title>
 <style>
 * {-webkit-transform: translateZ(0);
-margin:auto 0px; padding: 0px;	background-color: darkgray;
+margin:auto 0px; padding: 0px;
+	/*background-color: darkgray;*/
 	border:0;
 
 }
-body {
-	width: 700px;
-	height: 550px;
+body.wrapper {
+	width: 1500px;
+	height: 900px;
+	background-image: url("./bg1500x900_1280x670px.png");
+	background-repeat:  no-repeat;
+	background-size: 975px 585px;
 	transform: scale(0.65);
 }
 .video {
-	/*background-color: black;*/
-	margin: 200px;
+    margin-top: -98px;
+    margin-left: -307px;
 }
 #black {
-	background-color: black;
+	/*background-color: black;*/
 	left: -200px;
     width: 875px;
 	height: 200%;
@@ -27,7 +31,7 @@ body {
 	position: absolute;
 }
 #gray {
-	background-color: darkgray;
+	/*background-color: darkgray;*/
 	width:70%;
 	left:50%;
 	height: 550px;
@@ -35,6 +39,8 @@ body {
 	position: absolute;
 }
 iframe{
+	width: 1282px;
+	height: 630px;
 	overflow: hidden;
 }
 iframe html{
@@ -42,7 +48,7 @@ iframe html{
 }
 </style>
 </head>
-<body>
+<body class="wrapper">
 <div id="black"></div>
 <iframe class="video" width="1280" height="670" src="./index.html" scrolling="no" seamless="seamless" ></iframe>
 </body>
