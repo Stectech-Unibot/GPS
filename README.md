@@ -1,9 +1,6 @@
 # Informations
 
-### Staging Server
-* URL: [demo.stectech.com/gps][GPS Staging Server]
-* Server: ssh demostectech@199.101.48.109
-* Password: 971DpCcny
+
 
 # How work with branches
 
